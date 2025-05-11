@@ -1,0 +1,109 @@
+.cellar {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #f0f0f0;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+  }
+  
+  .cellar h1 {
+    color: #ffccbb;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .cellar p {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .add-wine-button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #a03e4e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-wine-button:hover {
+    background-color: #c75a68;
+  }
+  
+  .wine-dropdown {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #444;
+  }
+  
+  .wine-dropdown h2 {
+    margin-bottom: 15px;
+    color: #f4b8a3;
+  }
+  
+  .wine-dropdown select,
+  .wine-dropdown input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    border-radius: 6px;
+  }
+  
+  .wine-dropdown input::placeholder {
+    color: #888;
+  }
+  
+  .wine-list {
+    margin-top: 20px;
+  }
+  
+  .wine-item {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .wine-item h2 {
+    color: #ffd4b2;
+    margin-bottom: 10px;
+  }
+  
+  .wine-item p {
+    margin: 4px 0;
+    color: #ddd;
+  }
+
+  .cancel-wine-button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #a03e4e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .cancel-wine-button:hover {
+    background-color: #666;
+  }
+  
+  

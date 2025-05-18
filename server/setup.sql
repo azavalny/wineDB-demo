@@ -22,6 +22,47 @@ CREATE TABLE profile (
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
--- Insert sample user
-INSERT INTO users (username, email, password_hash) 
-VALUES ('Test', 'test@gmail.com', 'test1234');
+CREATE TABLE vineyard(
+    vineyard_id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    owner VARCHAR(50),
+    appelation VARCHAR(35),
+    country VARCHAR(20),
+    region VARCHAR(20)
+);
+
+CREATE TABLE wine(
+    wine_id SERIAL PRIMARY KEY,
+    vineyard_id INT,
+    FOREIGN KEY (vineyard_id) REFERENCES vineyard(vineyard_id) ON DELETE CASCADE,
+    name VARCHAR(50),
+    classification VARCHAR(20),
+    grape VARCHAR(20),
+    year SMALLINT,
+    price INT
+);
+
+CREATE TABLE food_pairing(
+    food_id SERIAL PRIMARY KEY,
+    wine_id INT,
+    FOREIGN KEY (wine_id) REFERENCES wine(wine_id) ON DELETE CASCADE,
+    name VARCHAR(50)
+);
+
+
+CREATE TABLE verifications (
+    verification_id SERIAL PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    verification_hash VARCHAR(50)
+);
+
+CREATE TABLE rating(
+    wine_id INT,
+    user_id INT,
+    value INT,
+    description VARCHAR(255),
+    FOREIGN KEY (wine_id) REFERENCES wine(wine_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    PRIMARY KEY (wine_id, user_id)
+);

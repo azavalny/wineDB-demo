@@ -50,20 +50,26 @@ const sampleWines: userWine[] = [
 
 function App() {
   const [status, setStatus] = useState(false);
+  const [cellar, setCellar] = useState(false);
   const [username, setUsernameMain] = useState("");
 
   return (
-    <>
-      {status ? (
-        <Home></Home>
+  <>
+    {status ? (
+      cellar ? (
+        <Cellar wineList={sampleWines}/>
       ) : (
-        <Account 
-          setStatus={setStatus} 
-          setUsernameMain={setUsernameMain}
-        />
-      )}
-    </>
-  );
+        <Home setCellar={setCellar} />
+      )
+    ) : (
+      <Account 
+        setStatus={setStatus} 
+        setUsernameMain={setUsernameMain}
+      />
+    )}
+  </>
+);
+
 }
 
 export default App;

@@ -17,7 +17,11 @@ type Wine = {
   reviews: string[]; 
 };
 
-function Home() {
+interface HomeProps{
+  setCellar: (val: boolean) => void;
+}
+
+function Home({setCellar}: HomeProps) {
   const [query, setQuery] = useState("");
   const [wines, setWines] = useState<Wine[]>([]);
   const [expandedWineId, setExpandedWineId] = useState<number | null>(null);
@@ -64,6 +68,9 @@ function Home() {
     <div className="home">
       <h1>Welcome to the Wine Database</h1>
       <p>Explore our collection of wines and find your perfect match!</p>
+      <button onClick={ () =>{
+        setCellar(true);
+      }}>Personal Cellar</button>
 
       <input
         className="search"

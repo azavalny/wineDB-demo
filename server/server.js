@@ -128,6 +128,45 @@ app.get("/api-wine-list", (req, res) => {
 });
 
 
+//get user cellar
+app.get("/api-user-cellar", (req, res) => {
+  const username = req.query.username;
+  const params = [username];
+
+  const userQuery = `
+    SELECT user_id 
+    FROM users
+    WHERE username = $1
+  `;
+
+  pool.query(userQuery, params)
+    .then(result => {
+      if (result.rows.length === 0) {
+        return res.status(404).json({ error: "User not found" });
+      }
+
+      const user_id = result.rows[0].user_id;
+      const cellarQuery = `
+        SELECT wine.*, rating.value AS user_rating, rating.description
+        FROM cellar
+        JOIN wine ON wine.wine_id = cellar.wine_id
+        LEFT JOIN rating ON rating.rating_id = cellar.rating_id
+        WHERE cellar.user_id = $1
+      `;
+
+      return pool.query(cellarQuery, [user_id]);
+    })
+    .then(cellarResult => {
+      res.status(200).json({ cellar: cellarResult.rows });
+    })
+    .catch(err => {
+      console.error("Error executing query", err.stack);
+      res.status(500).json({ error: "Internal server error" });
+    });
+});
+
+
+
 /*async function insertIntoVerify(user_id, token) {
   const verifyText = 'INSERT INTO verifications (user_id, verification_token) VALUES ($1, $2)';
   const parameters = [user_id, token];

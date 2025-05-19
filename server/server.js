@@ -165,6 +165,47 @@ app.get("/api-user-cellar", (req, res) => {
     });
 });
 
+//removing wine from cellar
+app.post("/api-remove", (req, res) => {
+  const {username, wine_id} = req.body;
+  getUserId(username)
+  .then(user_id => {
+    if(!user_id){
+      return res.status(404).json({ error: "User not found" });
+    }
+    const call = `DELETE FROM cellar WHERE user_id = $1 AND wine_id = $2`;
+    const params = [user_id, wine_id];
+    pool.query(call, params)
+    .then(result => {
+      if (result.rowCount === 0) {
+      res.status(404).json({ error: "No matching entry found." });
+    } else {
+      res.status(200).json({ message: "Wine removed from cellar." });
+    }
+  }).catch(err => {
+      console.error("Error executing query", err.stack);
+      res.status(500).json({ error: "Internal server error" });
+    });
+  
+});
+
+async function getUserId(username) {
+  const userQuery = `
+    SELECT user_id 
+    FROM users
+    WHERE username = $1
+  `;
+
+  try {
+    const result = await pool.query(userQuery, [username]);
+    return result.rows.length > 0 ? result.rows[0].user_id : null;
+  } catch (err) {
+    console.error("Error fetching user_id:", err);
+    throw err; // optional: rethrow or handle as needed
+  }
+}
+
+
 
 
 /*async function insertIntoVerify(user_id, token) {

@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const { Pool } = require('pg');
-const { Resend } = require('resend');
+//const { Resend } = require('resend');
 const port = 8080; 
 
 const env = require("./env.json");
@@ -49,7 +49,6 @@ app.post("/api-login", (req, res) => {
 
     pool.query(text, params)
         .then(result => {
-            console.log("Query result:", result);
             if (result.rows.length > 0) {
                 console.log("User found:", result.rows[0]);
                 res.status(200).json({ response: ["ok"] });
@@ -90,7 +89,7 @@ app.post("/api-create", async (req, res) => {
     const user_id = result.rows[0].user_id;
     const verificationToken = crypto.randomBytes(32).toString('hex');
 
-    const status = await insertIntoVerify(user_id, verificationToken);
+    /*const status = await insertIntoVerify(user_id, verificationToken);
 
     if (status) {
       let verify = `http://localhost:8080/verify?token=${verificationToken}`;
@@ -101,7 +100,7 @@ app.post("/api-create", async (req, res) => {
       });
     } else {
       res.status(500).json({ error: "Verification DB error" });
-    }
+    } */
 
   } catch (err) {
     console.error("Error executing query", err.stack);
@@ -109,7 +108,27 @@ app.post("/api-create", async (req, res) => {
   }
 });
 
-async function insertIntoVerify(user_id, token) {
+app.get("/api-wine-list", (req, res) => {
+  let queryVal = `
+    SELECT *
+    FROM wine
+    WHERE rating IS NOT NULL
+    ORDER BY rating DESC
+    LIMIT 10;
+  `;
+
+  pool.query(queryVal)
+    .then(result => {
+      res.status(200).json({ wines: result.rows });
+    })
+    .catch(err => {
+      console.error("Error executing query", err.stack);
+      res.status(500).json({ error: "Internal server error" });
+    });
+});
+
+
+/*async function insertIntoVerify(user_id, token) {
   const verifyText = 'INSERT INTO verifications (user_id, verification_token) VALUES ($1, $2)';
   const parameters = [user_id, token];
   try {
@@ -143,13 +162,10 @@ async function sendUserVerificationEmail(email, link) {
     console.error("Error sending verification email:", err);
     throw new Error('Failed to send verification email.');
   }
-}
+}*/
 
-app.post("/api-set-up-profile", (req, res) => {
 
-});
-
-app.get("/verify", async (req, res) => {
+/*app.get("/verify", async (req, res) => {
   const token = req.query.token;
   const text = "SELECT * FROM verifications WHERE verification_token = $1";
 
@@ -190,7 +206,7 @@ async function userVerified(token, userID) {
 
   await pool.query(deleteQuery, [token]);
   await pool.query(updateQuery, [userID]);
-}
+}*/
 
 
 

@@ -8,24 +8,22 @@ const createAPI = "http://localhost:8080/api-create";
 
 type AccountProps = {
   setStatus: (val: boolean) => void;
-  setCreate: (val: boolean) => void;
   setUsernameMain: (val: string) => void;
 };
 
 
-function Account({setStatus, setCreate, setUsernameMain}: AccountProps) {
+function Account({setStatus, setUsernameMain}: AccountProps) {
   const [email, setEmail] = useState("");
   const [username, setUsernameLocal] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmed, setPasswordConfirmed] = useState("");
-  const [hashedPass, setHashedPassword] = useState(""); 
   
   const messageRef = useRef<HTMLInputElement>(null);
   
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [showButtons, setShowButtons] = useState(true);
-  const [titleOfPage, setTitle] = useState("Welcome to GameLog");
+  const [titleOfPage, setTitle] = useState("Welcome to WineDB");
 
   function validatePassword(comfirmedPass : string) {
       return password === comfirmedPass;
@@ -39,17 +37,12 @@ function Account({setStatus, setCreate, setUsernameMain}: AccountProps) {
                   messageRef.current.innerText = "Password must be at least 8 characters long!";
               }
           } else {
-            hashPassword(password).then((hashedPass) => {
-              setHashedPassword(hashedPass);
-              console.log(hashedPass);
-            });
             if (messageRef.current) {
-                messageRef.current.innerText = "Password is valid! Please check your email and verify your account";
+                messageRef.current.innerText = "Password is valid! Your account has been created!";
                 
                 createAccount().then(()=>{
-                  setStatus (true);
-                  setCreate(true);
                   setUsernameMain(username);
+                  setStatus(true);
                 });
             }
           }
@@ -64,7 +57,6 @@ function Account({setStatus, setCreate, setUsernameMain}: AccountProps) {
     setShowCreateForm(true);
     setShowButtons(false);
     setTitle("Create Account");
-
   }
 
   function logInHandler(){
@@ -76,8 +68,6 @@ function Account({setStatus, setCreate, setUsernameMain}: AccountProps) {
   function loginSubmissionHandler(){
     console.log("User Logging in");
     sendLogInData().then(()=>{
-      setStatus(true);
-      setCreate(false);
       setUsernameMain(username);
     });
     
@@ -85,18 +75,19 @@ function Account({setStatus, setCreate, setUsernameMain}: AccountProps) {
 
   async function sendLogInData(){
     try{
-
-      let hashedPass = await hashPassword(password);  
-      setHashedPassword(hashedPass);
-    
       const userData = {
         username,
-        hashedPass
+        password
       };
       console.log("sending userData: ", username);
-      
       const response = await axios.post(loginApi, userData);
       console.log(response.data);
+      if(response.status === 200){
+        setStatus(true);
+        console.log("status updated: ")
+      }else{
+        setStatus(false); 
+      }
       
     }catch(error){
       console.log("send error");
@@ -108,11 +99,10 @@ function Account({setStatus, setCreate, setUsernameMain}: AccountProps) {
       const newUser = {
         'email': email,
         'username': username,
-        'password': hashedPass
+        'password': password
       };
       console.log("creating new account for user: ", newUser);
       const response = await axios.post(createAPI, newUser);
-      console.log("Account created, please verify yout account");
       console.log(response.data);
       
     }catch(error){
@@ -121,7 +111,7 @@ function Account({setStatus, setCreate, setUsernameMain}: AccountProps) {
   }
 
   function setMain(login: boolean){
-    setTitle("Welcome to GameLog");
+    setTitle("Welcome to WineDB");
     setShowButtons(true);
     if(login){
       setShowLoginForm(false);
@@ -139,19 +129,6 @@ function Account({setStatus, setCreate, setUsernameMain}: AccountProps) {
     }
   }, [showLoginForm, showCreateForm]);
 
-
-  async function hashPassword(password : string){
-    const encoder = new TextEncoder();
-    let data = encoder.encode(password);
-
-    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-
-    console.log("hashed: ",hashHex);
-
-    return hashHex; 
-  }
   
   
 return (

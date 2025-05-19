@@ -1,26 +1,48 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Home.css";
+import axios from 'axios';
+
+const wineListApi = "http://localhost:8080/api-wine-list";
+
 
 type Wine = {
-  id: number;
+  wine_id: number;
   name: string;
+  classification: string;
   grape: string;
-  region: string;
-  reviews: string[];
+  year: number;
+  price: number;
+  rating: number;
+  region?: string; 
+  reviews: string[]; 
 };
-
-const initialWines: Wine[] = [
-  { id: 1, name: "Barolo Riserva", grape: "Nebbiolo", region: "Piedmont", reviews: [] },
-  { id: 2, name: "Rioja Gran Reserva", grape: "Tempranillo", region: "Spain", reviews: [] },
-  { id: 3, name: "Châteauneuf-du-Pape", grape: "Grenache Blend", region: "Rhone Valley", reviews: [] },
-];
 
 function Home() {
   const [query, setQuery] = useState("");
-  const [wines, setWines] = useState(initialWines);
+  const [wines, setWines] = useState<Wine[]>([]);
   const [expandedWineId, setExpandedWineId] = useState<number | null>(null);
   const [showReviewForm, setShowReviewForm] = useState(false);
   const [reviewText, setReviewText] = useState("");
+
+  useEffect(() => {
+  const getWines = async () => {
+    try {
+      const wineResponse = await axios.get(wineListApi);
+      if (wineResponse.status === 200) {
+        const wineList = wineResponse.data.wines.map((wine: any) => ({
+          ...wine,
+          reviews: [] 
+        }));
+        setWines(wineList);
+      }
+    } catch (error) {
+      console.error("Error communicating with backend", error);
+    }
+  };
+
+  getWines();
+}, []);
+
 
   const filteredWines = wines.filter(w =>
     w.name.toLowerCase().includes(query.toLowerCase())
@@ -30,7 +52,7 @@ function Home() {
     if (reviewText.trim()) {
       setWines(prev =>
         prev.map(w =>
-          w.id === wineId ? { ...w, reviews: [...w.reviews, reviewText] } : w
+          w.wine_id === wineId ? { ...w, reviews: [...w.reviews, reviewText] } : w
         )
       );
       setReviewText("");
@@ -53,17 +75,20 @@ function Home() {
 
       <ul className="wine-list">
         {filteredWines.map(wine => (
-          <li key={wine.id}>
+          <li key={wine.wine_id}>
             <div onClick={() =>
-              setExpandedWineId(prev => prev === wine.id ? null : wine.id)
+              setExpandedWineId(prev => prev === wine.wine_id ? null : wine.wine_id)
+
             }>
               <strong>{wine.name}</strong>
             </div>
 
-            {expandedWineId === wine.id && (
+            {expandedWineId === wine.wine_id && (
               <div className="wine-info">
                 <p><strong>Grape:</strong> {wine.grape}</p>
-                <p><strong>Region:</strong> {wine.region}</p>
+                <p><strong>Year:</strong> {wine.year}</p>
+                <p><strong>Users Rating:</strong> {wine.rating}</p>
+                <p><strong>Price:</strong> {wine.price}</p>
                 <h4>Reviews:</h4>
                 <ul>
                   {wine.reviews.length === 0 && <li>No reviews yet.</li>}
@@ -74,12 +99,14 @@ function Home() {
                   <button onClick={() => setShowReviewForm(true)}>Add Review</button>
                 ) : (
                   <div className="review-form">
+
                     <textarea
                       placeholder="Write your review..."
                       value={reviewText}
                       onChange={(e) => setReviewText(e.target.value)}
                     />
-                    <button onClick={() => handleAddReview(wine.id)}>Submit</button>
+                    <button onClick={() => handleAddReview(wine.wine_id)}>Submit</button>
+
                   </div>
                 )}
               </div>

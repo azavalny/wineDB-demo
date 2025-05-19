@@ -186,9 +186,41 @@ app.post("/api-remove", (req, res) => {
       console.error("Error executing query", err.stack);
       res.status(500).json({ error: "Internal server error" });
     });
-  
+  });
 });
 
+//update wine rating
+app.post("/api-update-rating", async (req, res) => {
+  const { username, wine_id, rating, text } = req.body;
+
+  try {
+    const user_id = await getUserId(username);
+    if (!user_id) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    const rating_id = await getRatingId(user_id, wine_id);
+    if (!rating_id) {
+      return res.status(404).json({ error: "Wine not in cellar" });
+    }
+
+    const updateQuery = `
+      UPDATE rating 
+      SET value = $1, description = $2 
+      WHERE rating_id = $3
+    `;
+    await pool.query(updateQuery, [rating, text, rating_id]);
+
+    return res.status(200).json({ message: "Rating updated successfully." });
+
+  } catch (err) {
+    console.error("Error updating rating:", err);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
+//I should update the cellar function to include this abstraction
 async function getUserId(username) {
   const userQuery = `
     SELECT user_id 
@@ -205,90 +237,16 @@ async function getUserId(username) {
   }
 }
 
-
-
-
-/*async function insertIntoVerify(user_id, token) {
-  const verifyText = 'INSERT INTO verifications (user_id, verification_token) VALUES ($1, $2)';
-  const parameters = [user_id, token];
-  try {
-    await pool.query(verifyText, parameters);
-    console.log("insertion into verify made");
-
-    return true;
-  } catch (err) {
-    console.error("Error inserting verification token", err.stack);
-    return false;
+async function getRatingId(user_id, wine_id){
+  const ratingQuery = `SELECT rating_id FROM cellar WHERE user_id = $1 AND wine_id =$2`;
+  try{
+    const result = await pool.query(ratingQuery, [user_id, wine_id]);
+    return result.rows.length > 0 ? result.rows[0].rating_id : null;
+  }catch (err) {
+    console.error("Error fetching user_id:", err);
+    throw err; // optional: rethrow or handle as needed
   }
 }
-
-async function sendUserVerificationEmail(email, link) {
-  const resend = new Resend('your_resend_api_key');
-  try {
-    let response = await resend.emails.send({
-      from: 'GameLogger <gameloggerverify@gmail.com>',
-      to: email,
-      subject: 'Verify Your Email',
-      html: `<p>Click <a href="${link}">here</a> to verify your account!</p>`,
-    });
-
-    console.log(response); 
-
-    if(response.data === null){
-      throw new Error("API key error");
-    }
-    console.log("email sent"); 
-  } catch (err) {
-    console.error("Error sending verification email:", err);
-    throw new Error('Failed to send verification email.');
-  }
-}*/
-
-
-/*app.get("/verify", async (req, res) => {
-  const token = req.query.token;
-  const text = "SELECT * FROM verifications WHERE verification_token = $1";
-
-  try {
-    const result = await pool.query(text, [token]);
-
-    if (result.rowCount === 0) {
-      return res.send(`
-        <div>
-          <h1>User already verified or user does not exist</h1>
-        </div>
-      `);
-    }
-
-    const userID = result.rows[0].user_id;
-
-    await userVerified(token, userID);
-
-    return res.send(`
-      <div>
-        <h1>Email verified successfully!</h1>
-      </div>
-    `);
-
-  } catch (err) {
-    console.error("Verification error:", err);
-    return res.status(500).send(`
-      <div>
-        <h1>Internal server error during verification.</h1>
-      </div>
-    `);
-  }
-});
-
-async function userVerified(token, userID) {
-  const deleteQuery = "DELETE FROM verifications WHERE verification_token = $1";
-  const updateQuery = "UPDATE users SET verified = TRUE WHERE user_id = $1";
-
-  await pool.query(deleteQuery, [token]);
-  await pool.query(updateQuery, [userID]);
-}*/
-
-
 
 
 app.listen(port, () =>{

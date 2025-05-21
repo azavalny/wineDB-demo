@@ -39,7 +39,8 @@ CREATE TABLE wine(
     classification VARCHAR(20),
     grape VARCHAR(20),
     year SMALLINT,
-    price INT
+    price INT,
+    rating NUMERIC(2,1) CHECK (rating >= 0 AND rating <= 5)
 );
 
 CREATE TABLE food_pairing(
@@ -57,12 +58,20 @@ CREATE TABLE verifications (
     verification_hash VARCHAR(50)
 );
 
-CREATE TABLE rating(
-    wine_id INT,
-    user_id INT,
-    value INT,
-    description VARCHAR(255),
-    FOREIGN KEY (wine_id) REFERENCES wine(wine_id) ON DELETE CASCADE,
-    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
-    PRIMARY KEY (wine_id, user_id)
+CREATE TABLE rating (
+    rating_id SERIAL PRIMARY KEY,
+    value INT CHECK (value >= 1 AND value <= 5),
+    description VARCHAR(255)
 );
+
+CREATE TABLE cellar (
+    user_id INT,
+    wine_id INT,
+    rating_id INT UNIQUE, 
+    date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (wine_id) REFERENCES wine(wine_id) ON DELETE CASCADE,
+    FOREIGN KEY (rating_id) REFERENCES rating(rating_id) ON DELETE CASCADE,
+    PRIMARY KEY (user_id, wine_id)
+);
+

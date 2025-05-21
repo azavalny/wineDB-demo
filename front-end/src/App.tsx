@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Account from "./Account";
 /*
@@ -50,26 +50,26 @@ const sampleWines: userWine[] = [
 
 function App() {
   const [status, setStatus] = useState(false);
-  const [create, setCreate] = useState(false);
+  const [cellar, setCellar] = useState(false);
   const [username, setUsernameMain] = useState("");
 
-  let currentHTML;
+  return (
+  <>
+    {status ? (
+      cellar ? (
+        <Cellar wineList={sampleWines}/>
+      ) : (
+        <Home setCellar={setCellar} />
+      )
+    ) : (
+      <Account 
+        setStatus={setStatus} 
+        setUsernameMain={setUsernameMain}
+      />
+    )}
+  </>
+);
 
-  
-  currentHTML = (
-    /*<Account 
-      setStatus={setStatus} 
-      setCreate={setCreate} 
-      setUsernameMain={setUsernameMain}
-    />*/
-    <Cellar wineList={sampleWines} />);
-   /*else if (create) {
-    currentHTML = <CreateProfile />;
-  } else {
-    currentHTML = <Profile />;
-  } */
-
-  return currentHTML;
 }
 
 export default App;

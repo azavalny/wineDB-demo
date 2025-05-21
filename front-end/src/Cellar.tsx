@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Cellar.css";
 
 type userWine = {
@@ -113,6 +114,7 @@ function WineDropdown({
 function Cellar({ wineList }: WineProps) {
   const [userWines, setUserWines] = useState<userWine[]>(wineList);
   const [showForm, setShowForm] = useState(false);
+  const navigate = useNavigate();
 
   const addWine = (wine: userWine) => {
     setUserWines([...userWines, wine]);
@@ -126,6 +128,12 @@ function Cellar({ wineList }: WineProps) {
 
       <button className="add-wine-button" onClick={() => setShowForm(!showForm)}>
         {showForm ? "Cancel" : "Add Wine"}
+      </button>
+            <button
+        style={{ marginBottom: "1rem" }}
+        onClick={() => navigate("/")}
+      >
+        Back to Home
       </button>
 
       {showForm && (

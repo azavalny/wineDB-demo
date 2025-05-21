@@ -7,6 +7,7 @@ import AddForm from "./AddForm";
 import CreateProfile from "./CreateProfile";
 import axios from "axios"; */ 
 
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./Home";
 import Cellar from "./Cellar";
 
@@ -52,24 +53,38 @@ function App() {
   const [status, setStatus] = useState(false);
   const [cellar, setCellar] = useState(false);
   const [username, setUsernameMain] = useState("");
+  const navigate = useNavigate();
 
   return (
-  <>
-    {status ? (
-      cellar ? (
-        <Cellar wineList={sampleWines}/>
-      ) : (
-        <Home setCellar={setCellar} />
-      )
-    ) : (
-      <Account 
-        setStatus={setStatus} 
-        setUsernameMain={setUsernameMain}
-      />
-    )}
-  </>
-);
-
+    <Routes>
+      <Route path="/" element={
+        status ? (
+          <Home setCellar={setCellar} />
+        ) : (
+          <Account 
+            setStatus={setStatus} 
+            setUsernameMain={setUsernameMain}
+          />
+        )
+      } />
+      <Route path="/cellar" element={
+        status ? (
+          <Cellar wineList={sampleWines} />
+        ) : (
+          <Account 
+            setStatus={setStatus} 
+            setUsernameMain={setUsernameMain}
+          />
+        )
+      } />
+      <Route path="/personal-cellar" element={
+        <button onClick={() => {
+          setCellar(true);
+          navigate("/cellar");
+        }}>Personal Cellar</button>
+      } />
+    </Routes>
+  );
 }
 
 export default App;

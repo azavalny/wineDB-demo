@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 const wineListApi = "http://localhost:8080/api-wine-list";
 
@@ -13,20 +14,25 @@ type Wine = {
   year: number;
   price: number;
   rating: number;
-  region?: string; 
-  reviews: string[]; 
+  region?: string;
+  reviews: string[];
+  foodPairings?: string[]; // add this
+  vineyard?: any;          // add this
+  vineyard_id?: number;    // add this if not present
 };
 
 interface HomeProps{
   setCellar: (val: boolean) => void;
 }
 
-function Home({setCellar}: HomeProps) {
+function Home({ setCellar }: HomeProps) {
   const [query, setQuery] = useState("");
   const [wines, setWines] = useState<Wine[]>([]);
   const [expandedWineId, setExpandedWineId] = useState<number | null>(null);
   const [showReviewForm, setShowReviewForm] = useState(false);
   const [reviewText, setReviewText] = useState("");
+  const [filter, setFilter] = useState<"name" | "price" | "year" | "food" | "vineyard">("name");
+  const navigate = useNavigate();
 
   useEffect(() => {
   const getWines = async () => {
@@ -35,9 +41,41 @@ function Home({setCellar}: HomeProps) {
       if (wineResponse.status === 200) {
         const wineList = wineResponse.data.wines.map((wine: any) => ({
           ...wine,
-          reviews: [] 
+          reviews: []
         }));
-        setWines(wineList);
+
+        // Fetch foodPairings and vineyard for each wine
+        const winesWithDetails = await Promise.all(
+          wineList.map(async (wine: any) => {
+            // Fetch food pairings
+            let foodPairings: string[] = [];
+            try {
+              const foodRes = await axios.get(`http://localhost:8080/api/food-pairings/${wine.wine_id}`);
+              foodPairings = foodRes.data.pairings;
+            } catch {
+              foodPairings = [];
+            }
+
+            // Fetch vineyard info
+            let vineyard = null;
+            if (wine.vineyard_id) {
+              try {
+                const vineyardRes = await axios.get(`http://localhost:8080/api/vineyard/${wine.vineyard_id}`);
+                vineyard = vineyardRes.data; // <-- store the whole object
+              } catch {
+                vineyard = null;
+              }
+            }
+
+            return {
+              ...wine,
+              foodPairings,
+              vineyard,
+            };
+          })
+        );
+
+        setWines(winesWithDetails);
       }
     } catch (error) {
       console.error("Error communicating with backend", error);
@@ -48,9 +86,26 @@ function Home({setCellar}: HomeProps) {
 }, []);
 
 
-  const filteredWines = wines.filter(w =>
-    w.name.toLowerCase().includes(query.toLowerCase())
-  );
+  // Update filter logic
+  const filteredWines = wines.filter(w => {
+    console.log(w);
+    const q = query.toLowerCase();
+    switch (filter) {
+      case "price":
+        return w.price?.toString().includes(q);
+      case "year":
+        return w.year?.toString().includes(q);
+      case "food":
+        // Assuming you have a foodPairings property (array of strings)
+        return w.foodPairings?.some((food: string) => food.toLowerCase().includes(q));
+      case "vineyard":
+        return (
+          (w.vineyard?.name?.toLowerCase().includes(q) ?? false)
+        );
+      default:
+        return w.name.toLowerCase().includes(q);
+    }
+  });
 
   const handleAddReview = (wineId: number) => {
     if (reviewText.trim()) {
@@ -68,13 +123,28 @@ function Home({setCellar}: HomeProps) {
     <div className="home">
       <h1>Welcome to the Wine Database</h1>
       <p>Explore our collection of wines and find your perfect match!</p>
-      <button onClick={ () =>{
-        setCellar(true);
-      }}>Personal Cellar</button>
-
+      <div style={{ display: "flex", gap: "10px", alignItems: "center", marginBottom: "1rem" }}>
+        <button onClick={() => {
+          setCellar(true);
+          navigate("/cellar");
+        }}>Personal Cellar</button>
+        <div>
+          <select
+            value={filter}
+            onChange={e => setFilter(e.target.value as any)}
+            style={{ padding: "6px", borderRadius: "4px" }}
+          >
+            <option value="name">Name</option>
+            <option value="price">Price</option>
+            <option value="year">Year</option>
+            <option value="food">Food Pairings</option>
+            <option value="vineyard">Vineyard</option>
+          </select>
+        </div>
+      </div>
       <input
         className="search"
-        placeholder="Search for wines..."
+        placeholder={`Search for wines by ${filter}...`}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />

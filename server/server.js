@@ -219,6 +219,45 @@ app.post("/api-update-rating", async (req, res) => {
   }
 });
 
+// Get food pairings for a wine
+app.get("/api/food-pairings/:wine_id", async (req, res) => {
+  const { wine_id } = req.params;
+  try {
+    const query = `
+      SELECT *
+      FROM food_pairing
+      WHERE wine_id = $1
+    `;
+    const result = await pool.query(query, [wine_id]);
+    // Return as array of strings
+    const pairings = result.rows.map(row => row.name);
+    res.status(200).json({ pairings });
+  } catch (err) {
+    console.error("Error fetching food pairings:", err);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// Get vineyard info by vineyard_id
+app.get("/api/vineyard/:vineyard_id", async (req, res) => {
+  const { vineyard_id } = req.params;
+  console.log("vineyard_id", vineyard_id);
+  try {
+    const query = `
+      SELECT *
+      FROM vineyard
+      WHERE vineyard_id = $1
+    `;
+    const result = await pool.query(query, [vineyard_id]);
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: "Vineyard not found" });
+    }
+    res.status(200).json(result.rows[0]);
+  } catch (err) {
+    console.error("Error fetching vineyard info:", err);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 
 //I should update the cellar function to include this abstraction
 async function getUserId(username) {

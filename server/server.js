@@ -224,13 +224,13 @@ app.get("/api/food-pairings/:wine_id", async (req, res) => {
   const { wine_id } = req.params;
   try {
     const query = `
-      SELECT food
+      SELECT *
       FROM food_pairing
       WHERE wine_id = $1
     `;
     const result = await pool.query(query, [wine_id]);
     // Return as array of strings
-    const pairings = result.rows.map(row => row.food);
+    const pairings = result.rows.map(row => row.name);
     res.status(200).json({ pairings });
   } catch (err) {
     console.error("Error fetching food pairings:", err);

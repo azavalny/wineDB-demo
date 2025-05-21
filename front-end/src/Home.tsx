@@ -50,8 +50,8 @@ function Home({ setCellar }: HomeProps) {
             // Fetch food pairings
             let foodPairings: string[] = [];
             try {
-              const foodRes = await axios.get(`/api/food-pairings/${wine.wine_id}`);
-              foodPairings = foodRes.data.pairings || [];
+              const foodRes = await axios.get(`http://localhost:8080/api/food-pairings/${wine.wine_id}`);
+              foodPairings = foodRes.data.pairings;
             } catch {
               foodPairings = [];
             }

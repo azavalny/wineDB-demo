@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 const wineListApi = "http://localhost:8080/api-wine-list";
 
@@ -27,6 +28,7 @@ function Home({setCellar}: HomeProps) {
   const [expandedWineId, setExpandedWineId] = useState<number | null>(null);
   const [showReviewForm, setShowReviewForm] = useState(false);
   const [reviewText, setReviewText] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
   const getWines = async () => {
@@ -68,8 +70,9 @@ function Home({setCellar}: HomeProps) {
     <div className="home">
       <h1>Welcome to the Wine Database</h1>
       <p>Explore our collection of wines and find your perfect match!</p>
-      <button onClick={ () =>{
+      <button onClick={() => {
         setCellar(true);
+        navigate("/cellar");
       }}>Personal Cellar</button>
 
       <input

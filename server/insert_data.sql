@@ -43,79 +43,68 @@ VALUES
 
 
 -- Insert vineyards
-COPY vineyard(vineyard_id, name, owner, appelation, country, region)
-FROM 'D:\wineDB\data\vineyard.csv'
-DELIMITER ',' CSV HEADER;
+-- COPY vineyard(vineyard_id, name, owner, appelation, country, region)
+-- FROM 'D:\wineDB\data\vineyard.csv'
+-- DELIMITER ',' CSV HEADER;
+INSERT INTO vineyard (name, owner, appelation, country, region) VALUES
+('Black Ridge Estate', 'Margaret Lang', 'Napa Valley', 'USA', 'California'),
+('Domaine de Lumiere', 'Etienne Moreau', 'Loire Valley', 'France', 'Loire'),
+('Villa Rosso', 'Giovanni Bianchi', 'Tuscany', 'Italy', 'Tuscany'),
+('Sunset Hills Vineyard', 'Amelia Carter', 'Barossa Valley', 'Australia', 'South Australia'),
+('Andes Crest', 'Luis Mendoza', 'Mendoza', 'Argentina', 'Cuyo');
 
 -- Insert wines
-INSERT INTO wine (vineyard_id, name, classification, grape, year, price, rating)
-VALUES
-(1, 'Vulkà Bianco', 'DOC', 'Carricante', 2021, 22, 4),
-(2, 'Reserve Late Harvest', 'Special Reserve', 'Riesling', 2020, 18, 5),
-(3, 'Wild Child Block', 'Estate', 'Pinot Noir', 2022, 24, 4),
-(4, 'Ars In Vitro', 'Vino de Autor', 'Tempranillo', 2019, 30, 3),
-(5, 'Belsito', 'DOCG', 'Frappato', 2021, 19, 4),
-(6, 'Les Natures', 'Organic', 'Pinot Blanc', 2020, 28, 5),
-(7, 'Mountain Cuvée', 'Proprietary Blend', 'Cabernet Sauvignon', 2021, 25, 4),
-(8, 'Rosso', 'IGT', 'Nero dAvola', 2020, 17, 3),
-(9, 'Felix', 'Reserva', 'Malbec', 2021, 20, 4),
-(10, 'Winemaker Selection', 'Estate', 'Malbec', 2020, 22, 5),
-(11, 'Valdelayegua Crianza', 'Crianza', 'Tempranillo', 2018, 27, 4),
-(12, 'Vin de Maison', 'Table Wine', 'Cabernet Franc', 2022, 16, 2),
-(13, 'Ficiligno', 'DOC', 'Grillo', 2020, 21, 3),
-(14, 'Signature Selection', 'Reserve', 'Zinfandel', 2021, 29, 5),
-(15, 'Aynat', 'DOC', 'Inzolia', 2021, 19, 4),
-(16, 'King Ridge Vineyard', 'Estate', 'Chardonnay', 2022, 34, 5),
-(17, 'Dalila', 'Blend', 'Grillo', 2020, 22, 3),
-(18, 'Mascaria Barricato', 'Barricato', 'Nero dAvola', 2021, 24, 4),
-(19, 'Nouveau', 'AOC', 'Gamay', 2022, 14, 3),
-(20, 'Hyland', 'Single Vineyard', 'Pinot Gris', 2021, 20, 4),
-(21, 'Nouveau', 'AOC', 'Gamay', 2022, 15, 2),
-(22, 'Eté Indien', 'Cru', 'Gamay', 2021, 18, 4),
-(23, 'La Fleur Amélie', 'AOC', 'Sauvignon Blanc', 2021, 23, 5),
-(24, 'Estate', 'Proprietary', 'Cabernet Sauvignon', 2021, 35, 5),
-(25, 'Prugneto', 'DOC', 'Sangiovese', 2020, 21, 4),
-(26, 'Alder Ridge Vineyard', 'Single Vineyard', 'Syrah', 2021, 26, 5),
-(27, 'Brut Rosé', 'Champagne', 'Pinot Meunier', 2019, 40, 5),
-(28, 'Golden Horn', 'Reserve', 'Syrah', 2020, 25, 4),
-(29, 'Inspired', 'Estate', 'Cabernet Franc', 2021, 24, 4),
-(30, 'Brut Rosé', 'Champagne', 'Chardonnay', 2020, 42, 5),
-(31, 'Old Vine', 'Old Vine', 'Zinfandel', 2019, 30, 4);
+INSERT INTO wine (vineyard_id, name, classification, grape, year, price, rating) VALUES
+(1, 'Black Ridge Cabernet', 'Red', 'Cabernet Sauvignon', 2018, 45, 4.5),
+(2, 'Lumiere Chardonnay', 'White', 'Chardonnay', 2020, 35, 4.2),
+(1, 'Sunset Rosé', 'Rosé', 'Grenache', 2021, 25, 3.8),
+(3, 'Villa Merlot Reserve', 'Red', 'Merlot', 2015, 60, 4.8),
+(2, 'Loire Sauvignon Blanc', 'White', 'Sauvignon Blanc', 2019, 28, 4.0),
+(3, 'Golden Riesling', 'Dessert', 'Riesling', 2017, 50, 4.7),
+(1, 'Pinot Ember', 'Red', 'Pinot Noir', 2022, 40, 4.1),
+(4, 'Barossa Zinfandel', 'Red', 'Zinfandel', 2020, 38, 4.4),
+(5, 'Mendoza Whisper', 'White', 'Gewurztraminer', 2021, 30, 3.7),
+(4, 'Moscato Delight', 'Dessert', 'Moscato', 2016, 27, 4.3),
+(5, 'Andes Syrah', 'Red', 'Syrah', 2018, 55, 4.6),
+(3, 'Sparkle Chenin', 'Sparkling', 'Chenin Blanc', 2022, 33, 4.0),
+(2, 'Harvest Albariño', 'White', 'Albarino', 2019, 29, 3.9),
+(4, 'Tempranillo Blush', 'Rosé', 'Tempranillo', 2020, 26, 3.6),
+(5, 'Malbec Bloom', 'Red', 'Malbec', 2017, 42, 4.5);
 
 
 
 -- Insert food pairings
 INSERT INTO food_pairing (wine_id, name)
 VALUES
-(63, 'Duck confit'),
-(64, 'Tapas and cured meats'),
-(65, 'Eggplant Parmigiana'),
-(66, 'Roasted turkey breast'),
-(67, 'Beef brisket sliders'),
-(68, 'Sicilian meatballs'),
-(69, 'Argentinian grilled steak'),
-(70, 'Lamb empanadas'),
-(71, 'Chorizo and Manchego crostini'),
-(72, 'Herbed goat cheese crostini'),
-(73, 'Grilled calamari'),
-(74, 'BBQ pork ribs'),
-(75, 'Seafood risotto'),
-(76, 'Lemon chicken with herbs'),
-(77, 'Caprese salad with fresh basil'),
-(78, 'Mushroom risotto'),
-(79, 'Roasted duck with cherry glaze'),
-(80, 'Spicy Pad Thai'),
-(81, 'Beef bourguignon'),
-(82, 'Braised short ribs'),
-(83, 'Pan-seared scallops'),
-(84, 'Prime rib with horseradish cream'),
-(85, 'Pasta Bolognese'),
-(86, 'Grilled lamb chops'),
-(87, 'Smoked salmon tartare'),
-(88, 'Lamb shawarma wrap'),
-(89, 'Portobello mushroom burger'),
-(90, 'Tuna tartare with avocado'),
-(91, 'BBQ brisket with cornbread');
+(1, 'Duck confit'),
+(2, 'Tapas and cured meats'),
+(3, 'Eggplant Parmigiana'),
+(4, 'Roasted turkey breast'),
+(5, 'Beef brisket sliders'),
+(6, 'Sicilian meatballs'),
+(7, 'Argentinian grilled steak'),
+(8, 'Lamb empanadas'),
+(9, 'Chorizo and Manchego crostini'),
+(10, 'Herbed goat cheese crostini'),
+(11, 'Grilled calamari'),
+(12, 'BBQ pork ribs'),
+(13, 'Seafood risotto'),
+(14, 'Lemon chicken with herbs'),
+(15, 'Caprese salad with fresh basil'),
+(1, 'Mushroom risotto'),
+(2, 'Roasted duck with cherry glaze'),
+(3, 'Spicy Pad Thai'),
+(4, 'Beef bourguignon'),
+(5, 'Braised short ribs'),
+(6, 'Pan-seared scallops'),
+(7, 'Prime rib with horseradish cream'),
+(8, 'Pasta Bolognese'),
+(9, 'Grilled lamb chops'),
+(10, 'Smoked salmon tartare'),
+(11, 'Lamb shawarma wrap'),
+(12, 'Portobello mushroom burger'),
+(13, 'Tuna tartare with avocado'),
+(14, 'BBQ brisket with cornbread');
 
 
 

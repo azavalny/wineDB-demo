@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS users;
 
 -- Create users table
 CREATE TABLE users (
-    user_id SERIAL PRIMARY KEY,,
+    user_id SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     email VARCHAR(75) NOT NULL,
     password_hash TEXT NOT NULL,
@@ -76,7 +76,5 @@ CREATE TABLE cellar (
     date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (wine_id) REFERENCES wine(wine_id) ON DELETE CASCADE,
-    FOREIGN KEY (rating_id) REFERENCES rating(rating_id) ON DELETE CASCADE,
     PRIMARY KEY (user_id, wine_id)
 );
-

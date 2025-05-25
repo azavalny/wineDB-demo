@@ -1,17 +1,17 @@
 -- Insert sample users
-INSERT INTO users (user_id, username, email, password_hash, user_role)
+INSERT INTO users (username, email, password_hash, user_role)
 VALUES
-(1, 'Test', 'test@gmail.com', 'test1234', 'user'),
-(2, 'JoeSmith', 'joesmith@gmail.com', 'hashed_joesmith', 'user'),
-(3, 'JaneDoe', 'janedoe@gmail.com', 'hashed_janedoe', 'user'),
-(4, 'AliceW', 'alice@gmail.com', 'hashed_alice', 'user'),
-(5, 'BobVine', 'bob@vineyard.com', 'hashed_bob', 'user'),
-(6, 'WineLover', 'winelover@tasting.com', 'hashed_winelover', 'user'),
-(7, 'RedFan', 'redfan@vino.com', 'hashed_red', 'user'),
-(8, 'WhiteFan', 'whitefan@vino.com', 'hashed_white', 'user'),
-(9, 'SommelierSam', 'sam@tasting.com', 'hashed_sam', 'user'),
-(10, 'TasterTina', 'tina@wine.com', 'hashed_tina', 'user'),
-(11, 'AdminUser', 'admin@gmail.com', 'hashed_admin', 'admin');
+('Test', 'test@gmail.com', 'test1234', 'user'),
+('JoeSmith', 'joesmith@gmail.com', 'hashed_joesmith', 'user'),
+('JaneDoe', 'janedoe@gmail.com', 'hashed_janedoe', 'user'),
+('AliceW', 'alice@gmail.com', 'hashed_alice', 'user'),
+('BobVine', 'bob@vineyard.com', 'hashed_bob', 'user'),
+('WineLover', 'winelover@tasting.com', 'hashed_winelover', 'user'),
+('RedFan', 'redfan@vino.com', 'hashed_red', 'user'),
+('WhiteFan', 'whitefan@vino.com', 'hashed_white', 'user'),
+('SommelierSam', 'sam@tasting.com', 'hashed_sam', 'user'),
+('TasterTina', 'tina@wine.com', 'hashed_tina', 'user'),
+('AdminUser', 'admin@gmail.com', 'hashed_admin', 'admin');
 
 
 -- Insert sample profiles
@@ -48,76 +48,80 @@ VALUES
 -- COPY vineyard(vineyard_id, name, owner, appelation, country, region)
 -- FROM 'D:\wineDB\data\vineyard.csv'
 -- DELIMITER ',' CSV HEADER;
+-- Insert vineyards (IDs will be 1 to 5)
 INSERT INTO vineyard (name, owner, appelation, country, region) VALUES
-('Black Ridge Estate', 'Margaret Lang', 'Napa Valley', 'USA', 'California'),
-('Domaine de Lumiere', 'Etienne Moreau', 'Loire Valley', 'France', 'Loire'),
-('Villa Rosso', 'Giovanni Bianchi', 'Tuscany', 'Italy', 'Tuscany'),
-('Sunset Hills Vineyard', 'Amelia Carter', 'Barossa Valley', 'Australia', 'South Australia'),
-('Andes Crest', 'Luis Mendoza', 'Mendoza', 'Argentina', 'Cuyo');
+( 'Black Ridge Estate', 'Margaret Lang', 'Napa Valley', 'USA', 'California'),         -- id = 1
+( 'Domaine de Lumiere', 'Etienne Moreau', 'Loire Valley', 'France', 'Loire'),         -- id = 2
+( 'Villa Rosso', 'Giovanni Bianchi', 'Tuscany', 'Italy', 'Tuscany'),                  -- id = 3
+( 'Sunset Hills Vineyard', 'Amelia Carter', 'Barossa Valley', 'Australia', 'South Australia'), -- id = 4
+( 'Andes Crest', 'Luis Mendoza', 'Mendoza', 'Argentina', 'Cuyo');                     -- id = 5
 
+-- Fix wine insertions to reference correct vineyard_id
 INSERT INTO wine (vineyard_id, name, classification, grape, year, price, rating) VALUES
-(6, 'Black Ridge Cabernet', 'Red', 'Cabernet Sauvignon', 2018, 45, 4.5),
-(7, 'Lumiere Chardonnay', 'White', 'Chardonnay', 2020, 35, 4.2),
-(7, 'Sunset Rosé', 'Rosé', 'Grenache', 2021, 25, 3.8),
-(8, 'Villa Merlot Reserve', 'Red', 'Merlot', 2015, 60, 4.8),
-(7, 'Loire Sauvignon Blanc', 'White', 'Sauvignon Blanc', 2019, 28, 4.0),
-(10, 'Golden Riesling', 'Dessert', 'Riesling', 2017, 50, 4.7),
-(8, 'Pinot Ember', 'Red', 'Pinot Noir', 2022, 40, 4.1),
-(6, 'Barossa Zinfandel', 'Red', 'Zinfandel', 2020, 38, 4.4),
-(9, 'Mendoza Whisper', 'White', 'Gewurztraminer', 2021, 30, 3.7),
-(7, 'Moscato Delight', 'Dessert', 'Moscato', 2016, 27, 4.3),
-(10, 'Andes Syrah', 'Red', 'Syrah', 2018, 55, 4.6),
-(9, 'Sparkle Chenin', 'Sparkling', 'Chenin Blanc', 2022, 33, 4.0),
-(10, 'Harvest Albariño', 'White', 'Albarino', 2019, 29, 3.9),
-(9, 'Tempranillo Blush', 'Rosé', 'Tempranillo', 2020, 26, 3.6),
-(7, 'Malbec Bloom', 'Red', 'Malbec', 2017, 42, 4.5);
+(1, 'Black Ridge Cabernet', 'Red', 'Cabernet Sauvignon', 2018, 45, 4.5),
+(2, 'Lumiere Chardonnay', 'White', 'Chardonnay', 2020, 35, 4.2),
+(2, 'Sunset Rosé', 'Rosé', 'Grenache', 2021, 25, 3.8),            -- assumed under Domaine de Lumiere
+(3, 'Villa Merlot Reserve', 'Red', 'Merlot', 2015, 60, 4.8),
+(2, 'Loire Sauvignon Blanc', 'White', 'Sauvignon Blanc', 2019, 28, 4.0),
+(2, 'Golden Riesling', 'Dessert', 'Riesling', 2017, 50, 4.7),     -- adjusted vineyard
+(3, 'Pinot Ember', 'Red', 'Pinot Noir', 2022, 40, 4.1),
+(4, 'Barossa Zinfandel', 'Red', 'Zinfandel', 2020, 38, 4.4),
+(5, 'Mendoza Whisper', 'White', 'Gewurztraminer', 2021, 30, 3.7),
+(2, 'Moscato Delight', 'Dessert', 'Moscato', 2016, 27, 4.3),
+(5, 'Andes Syrah', 'Red', 'Syrah', 2018, 55, 4.6),
+(5, 'Sparkle Chenin', 'Sparkling', 'Chenin Blanc', 2022, 33, 4.0),
+(5, 'Harvest Albariño', 'White', 'Albarino', 2019, 29, 3.9),
+(5, 'Tempranillo Blush', 'Rosé', 'Tempranillo', 2020, 26, 3.6),
+(5, 'Malbec Bloom', 'Red', 'Malbec', 2017, 42, 4.5);
+
 
 -- Insert food pairings
 -- Insert food pairings
+-- Insert food pairings (corrected wine_id range: 1–15)
 INSERT INTO food_pairing (wine_id, name)
 VALUES
-(46, 'Duck confit'),
-(47, 'Tapas and cured meats'),
-(48, 'Eggplant Parmigiana'),
-(49, 'Roasted turkey breast'),
-(50, 'Beef brisket sliders'),
-(51, 'Sicilian meatballs'),
-(52, 'Argentinian grilled steak'),
-(53, 'Lamb empanadas'),
-(54, 'Chorizo and Manchego crostini'),
-(55, 'Herbed goat cheese crostini'),
-(56, 'Grilled calamari'),
-(57, 'BBQ pork ribs'),
-(58, 'Seafood risotto'),
-(59, 'Lemon chicken with herbs'),
-(60, 'Caprese salad with fresh basil'),
-(46, 'Mushroom risotto'),
-(47, 'Roasted duck with cherry glaze'),
-(48, 'Spicy Pad Thai'),
-(49, 'Beef bourguignon'),
-(50, 'Braised short ribs'),
-(51, 'Pan-seared scallops'),
-(52, 'Prime rib with horseradish cream'),
-(53, 'Pasta Bolognese'),
-(54, 'Grilled lamb chops'),
-(55, 'Smoked salmon tartare'),
-(56, 'Lamb shawarma wrap'),
-(57, 'Portobello mushroom burger'),
-(58, 'Tuna tartare with avocado'),
-(59, 'BBQ brisket with cornbread');
+(1, 'Duck confit'),
+(2, 'Tapas and cured meats'),
+(3, 'Eggplant Parmigiana'),
+(4, 'Roasted turkey breast'),
+(5, 'Beef brisket sliders'),
+(6, 'Sicilian meatballs'),
+(7, 'Argentinian grilled steak'),
+(8, 'Lamb empanadas'),
+(9, 'Chorizo and Manchego crostini'),
+(10, 'Herbed goat cheese crostini'),
+(11, 'Grilled calamari'),
+(12, 'BBQ pork ribs'),
+(13, 'Seafood risotto'),
+(14, 'Lemon chicken with herbs'),
+(15, 'Caprese salad with fresh basil'),
+(1, 'Mushroom risotto'),
+(2, 'Roasted duck with cherry glaze'),
+(3, 'Spicy Pad Thai'),
+(4, 'Beef bourguignon'),
+(5, 'Braised short ribs'),
+(6, 'Pan-seared scallops'),
+(7, 'Prime rib with horseradish cream'),
+(8, 'Pasta Bolognese'),
+(9, 'Grilled lamb chops'),
+(10, 'Smoked salmon tartare'),
+(11, 'Lamb shawarma wrap'),
+(12, 'Portobello mushroom burger'),
+(13, 'Tuna tartare with avocado'),
+(14, 'BBQ brisket with cornbread');
 
 
 
 -- Insert ratings
 INSERT INTO rating (wine_id, user_id, value, description)
 VALUES
-(63, 1, 8, 'Crisp and mineral-driven with a clean finish.'),
-(64, 2, 9, 'Delightfully sweet and perfect for dessert.'),
-(65, 3, 7, 'Fruity and earthy with balanced acidity.'),
-(66, 4, 6, 'Interesting blend, but a bit too tannic.'),
-(67, 5, 9, 'Aromatic and smooth—loved it with dinner.'),
-(68, 6, 8, 'Elegant and clean, with floral notes.'),
-(69, 7, 9, 'Rich and bold, perfect with red meat.'),
-(70, 8, 7, 'Nice body but slightly too dry for my taste.'),
-(71, 9, 10, 'Incredible Malbec—full of spice and depth.'),
-(72, 10, 8, 'Juicy and layered, very enjoyable.');
+(1, 1, 8, 'Crisp and mineral-driven with a clean finish.'),
+(2, 2, 9, 'Delightfully sweet and perfect for dessert.'),
+(3, 3, 7, 'Fruity and earthy with balanced acidity.'),
+(4, 4, 6, 'Interesting blend, but a bit too tannic.'),
+(5, 5, 9, 'Aromatic and smooth—loved it with dinner.'),
+(6, 6, 8, 'Elegant and clean, with floral notes.'),
+(7, 7, 9, 'Rich and bold, perfect with red meat.'),
+(8, 8, 7, 'Nice body but slightly too dry for my taste.'),
+(9, 9, 10, 'Incredible Malbec—full of spice and depth.'),
+(10, 10, 8, 'Juicy and layered, very enjoyable.');

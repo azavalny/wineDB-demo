@@ -1,20 +1,21 @@
 -- Insert sample users
-INSERT INTO users (user_id, username, email, password_hash) 
-VALUES 
-(1, 'Test', 'test@gmail.com', 'test1234'),
-(2, 'JoeSmith', 'joesmith@gmail.com', 'hashed_joesmith'),
-(3, 'JaneDoe', 'janedoe@gmail.com', 'hashed_janedoe'),
-(4, 'AliceW', 'alice@gmail.com', 'hashed_alice'),
-(5, 'BobVine', 'bob@vineyard.com', 'hashed_bob'),
-(6, 'WineLover', 'winelover@tasting.com', 'hashed_winelover'),
-(7, 'RedFan', 'redfan@vino.com', 'hashed_red'),
-(8, 'WhiteFan', 'whitefan@vino.com', 'hashed_white'),
-(9, 'SommelierSam', 'sam@tasting.com', 'hashed_sam'),
-(10, 'TasterTina', 'tina@wine.com', 'hashed_tina');
+INSERT INTO users (user_id, username, email, password_hash, user_role)
+VALUES
+(1, 'Test', 'test@gmail.com', 'test1234', 'user'),
+(2, 'JoeSmith', 'joesmith@gmail.com', 'hashed_joesmith', 'user'),
+(3, 'JaneDoe', 'janedoe@gmail.com', 'hashed_janedoe', 'user'),
+(4, 'AliceW', 'alice@gmail.com', 'hashed_alice', 'user'),
+(5, 'BobVine', 'bob@vineyard.com', 'hashed_bob', 'user'),
+(6, 'WineLover', 'winelover@tasting.com', 'hashed_winelover', 'user'),
+(7, 'RedFan', 'redfan@vino.com', 'hashed_red', 'user'),
+(8, 'WhiteFan', 'whitefan@vino.com', 'hashed_white', 'user'),
+(9, 'SommelierSam', 'sam@tasting.com', 'hashed_sam', 'user'),
+(10, 'TasterTina', 'tina@wine.com', 'hashed_tina', 'user'),
+(11, 'AdminUser', 'admin@gmail.com', 'hashed_admin', 'admin');
 
 
 -- Insert sample profiles
-INSERT INTO profile (user_id, bio, profile_pic, backg_pic) 
+INSERT INTO profile (user_id, bio, profile_pic, backg_pic)
 VALUES
 (1, 'Loves red wines and coding.', 'pic1.jpg', 'bg1.jpg'),
 (2, 'Just a guy who likes Merlot.', 'pic2.jpg', 'bg2.jpg'),
@@ -39,7 +40,8 @@ VALUES
 (7, 'verif_hash_7'),
 (8, 'verif_hash_8'),
 (9, 'verif_hash_9'),
-(10, 'verif_hash_10');
+(10, 'verif_hash_10'),
+(11, 'verif_hash_11');
 
 
 -- Insert vineyards
@@ -53,58 +55,56 @@ INSERT INTO vineyard (name, owner, appelation, country, region) VALUES
 ('Sunset Hills Vineyard', 'Amelia Carter', 'Barossa Valley', 'Australia', 'South Australia'),
 ('Andes Crest', 'Luis Mendoza', 'Mendoza', 'Argentina', 'Cuyo');
 
--- Insert wines
 INSERT INTO wine (vineyard_id, name, classification, grape, year, price, rating) VALUES
-(1, 'Black Ridge Cabernet', 'Red', 'Cabernet Sauvignon', 2018, 45, 4.5),
-(2, 'Lumiere Chardonnay', 'White', 'Chardonnay', 2020, 35, 4.2),
-(1, 'Sunset Rosé', 'Rosé', 'Grenache', 2021, 25, 3.8),
-(3, 'Villa Merlot Reserve', 'Red', 'Merlot', 2015, 60, 4.8),
-(2, 'Loire Sauvignon Blanc', 'White', 'Sauvignon Blanc', 2019, 28, 4.0),
-(3, 'Golden Riesling', 'Dessert', 'Riesling', 2017, 50, 4.7),
-(1, 'Pinot Ember', 'Red', 'Pinot Noir', 2022, 40, 4.1),
-(4, 'Barossa Zinfandel', 'Red', 'Zinfandel', 2020, 38, 4.4),
-(5, 'Mendoza Whisper', 'White', 'Gewurztraminer', 2021, 30, 3.7),
-(4, 'Moscato Delight', 'Dessert', 'Moscato', 2016, 27, 4.3),
-(5, 'Andes Syrah', 'Red', 'Syrah', 2018, 55, 4.6),
-(3, 'Sparkle Chenin', 'Sparkling', 'Chenin Blanc', 2022, 33, 4.0),
-(2, 'Harvest Albariño', 'White', 'Albarino', 2019, 29, 3.9),
-(4, 'Tempranillo Blush', 'Rosé', 'Tempranillo', 2020, 26, 3.6),
-(5, 'Malbec Bloom', 'Red', 'Malbec', 2017, 42, 4.5);
+(6, 'Black Ridge Cabernet', 'Red', 'Cabernet Sauvignon', 2018, 45, 4.5),
+(7, 'Lumiere Chardonnay', 'White', 'Chardonnay', 2020, 35, 4.2),
+(7, 'Sunset Rosé', 'Rosé', 'Grenache', 2021, 25, 3.8),
+(8, 'Villa Merlot Reserve', 'Red', 'Merlot', 2015, 60, 4.8),
+(7, 'Loire Sauvignon Blanc', 'White', 'Sauvignon Blanc', 2019, 28, 4.0),
+(10, 'Golden Riesling', 'Dessert', 'Riesling', 2017, 50, 4.7),
+(8, 'Pinot Ember', 'Red', 'Pinot Noir', 2022, 40, 4.1),
+(6, 'Barossa Zinfandel', 'Red', 'Zinfandel', 2020, 38, 4.4),
+(9, 'Mendoza Whisper', 'White', 'Gewurztraminer', 2021, 30, 3.7),
+(7, 'Moscato Delight', 'Dessert', 'Moscato', 2016, 27, 4.3),
+(10, 'Andes Syrah', 'Red', 'Syrah', 2018, 55, 4.6),
+(9, 'Sparkle Chenin', 'Sparkling', 'Chenin Blanc', 2022, 33, 4.0),
+(10, 'Harvest Albariño', 'White', 'Albarino', 2019, 29, 3.9),
+(9, 'Tempranillo Blush', 'Rosé', 'Tempranillo', 2020, 26, 3.6),
+(7, 'Malbec Bloom', 'Red', 'Malbec', 2017, 42, 4.5);
 
-
-
+-- Insert food pairings
 -- Insert food pairings
 INSERT INTO food_pairing (wine_id, name)
 VALUES
-(1, 'Duck confit'),
-(2, 'Tapas and cured meats'),
-(3, 'Eggplant Parmigiana'),
-(4, 'Roasted turkey breast'),
-(5, 'Beef brisket sliders'),
-(6, 'Sicilian meatballs'),
-(7, 'Argentinian grilled steak'),
-(8, 'Lamb empanadas'),
-(9, 'Chorizo and Manchego crostini'),
-(10, 'Herbed goat cheese crostini'),
-(11, 'Grilled calamari'),
-(12, 'BBQ pork ribs'),
-(13, 'Seafood risotto'),
-(14, 'Lemon chicken with herbs'),
-(15, 'Caprese salad with fresh basil'),
-(1, 'Mushroom risotto'),
-(2, 'Roasted duck with cherry glaze'),
-(3, 'Spicy Pad Thai'),
-(4, 'Beef bourguignon'),
-(5, 'Braised short ribs'),
-(6, 'Pan-seared scallops'),
-(7, 'Prime rib with horseradish cream'),
-(8, 'Pasta Bolognese'),
-(9, 'Grilled lamb chops'),
-(10, 'Smoked salmon tartare'),
-(11, 'Lamb shawarma wrap'),
-(12, 'Portobello mushroom burger'),
-(13, 'Tuna tartare with avocado'),
-(14, 'BBQ brisket with cornbread');
+(46, 'Duck confit'),
+(47, 'Tapas and cured meats'),
+(48, 'Eggplant Parmigiana'),
+(49, 'Roasted turkey breast'),
+(50, 'Beef brisket sliders'),
+(51, 'Sicilian meatballs'),
+(52, 'Argentinian grilled steak'),
+(53, 'Lamb empanadas'),
+(54, 'Chorizo and Manchego crostini'),
+(55, 'Herbed goat cheese crostini'),
+(56, 'Grilled calamari'),
+(57, 'BBQ pork ribs'),
+(58, 'Seafood risotto'),
+(59, 'Lemon chicken with herbs'),
+(60, 'Caprese salad with fresh basil'),
+(46, 'Mushroom risotto'),
+(47, 'Roasted duck with cherry glaze'),
+(48, 'Spicy Pad Thai'),
+(49, 'Beef bourguignon'),
+(50, 'Braised short ribs'),
+(51, 'Pan-seared scallops'),
+(52, 'Prime rib with horseradish cream'),
+(53, 'Pasta Bolognese'),
+(54, 'Grilled lamb chops'),
+(55, 'Smoked salmon tartare'),
+(56, 'Lamb shawarma wrap'),
+(57, 'Portobello mushroom burger'),
+(58, 'Tuna tartare with avocado'),
+(59, 'BBQ brisket with cornbread');
 
 
 

@@ -7,16 +7,17 @@ DROP TABLE IF EXISTS users;
 
 -- Create users table
 CREATE TABLE users (
-    user_id SERIAL PRIMARY KEY,
+    user_id SERIAL PRIMARY KEY,,
     username VARCHAR(50) NOT NULL,
     email VARCHAR(75) NOT NULL,
-    password_hash TEXT NOT NULL
+    password_hash TEXT NOT NULL,
+    user_role VARCHAR(10) NOT NULL --user, admin, owner
 );
 
 -- Create profile table
 CREATE TABLE profile (
     user_id INT PRIMARY KEY,
-    bio VARCHAR(255), 
+    bio VARCHAR(255),
     profile_pic VARCHAR(128),
     backg_pic VARCHAR(128),
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
@@ -58,16 +59,20 @@ CREATE TABLE verifications (
     verification_hash VARCHAR(50)
 );
 
-CREATE TABLE rating (
-    rating_id SERIAL PRIMARY KEY,
-    value INT CHECK (value >= 1 AND value <= 5),
-    description VARCHAR(255)
+CREATE TABLE rating(
+    wine_id INT,
+    user_id INT,
+    value INT,
+    description VARCHAR(255),
+    FOREIGN KEY (wine_id) REFERENCES wine(wine_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    PRIMARY KEY (wine_id, user_id)
 );
 
 CREATE TABLE cellar (
     user_id INT,
     wine_id INT,
-    rating_id INT UNIQUE, 
+    rating_id INT UNIQUE,
     date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (wine_id) REFERENCES wine(wine_id) ON DELETE CASCADE,

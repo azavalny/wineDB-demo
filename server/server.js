@@ -8,6 +8,7 @@ const env = require("./env.json");
 const crypto = require('crypto');
 
 const cors = require('cors');
+const { get } = require('http');
 const corsOptions = {
   origin: ["http://localhost:5173"],
 };
@@ -317,6 +318,44 @@ app.get("/api/vineyard/:vineyard_id", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
+app.post("/api-add-to-cellar", async (req, res) => {
+  const { username, wine_id, rating, review } = req.body;
+  if (!username || !wine_id) {
+    return res.status(400).json({ error: "Missing fields" });
+  }
+  try {
+    // Get user_id
+    const user_id = await getUserId(username);
+    if (!user_id) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    // Insert into rating table
+    const ratingInsert = `
+      INSERT INTO rating (user_id, wine_id, value, description)
+      VALUES ($1, $2, $3, $4)
+      RETURNING user_id, wine_id
+    `;
+    await pool.query(ratingInsert, [user_id, wine_id, rating, review]);
+
+    rating_id = await getRatingId(user_id, wine_id);
+
+    // Insert into cellar table
+    await pool.query(
+      `INSERT INTO cellar (user_id, wine_id, rating_id, date_added)
+       VALUES ($1, $2, $3, CURRENT_TIMESTAMP)
+       `,
+      [user_id, wine_id, rating_id]
+    );
+
+    res.status(200).json({ message: "Wine added to cellar" });
+  } catch (err) {
+    console.error("Error adding wine to cellar:", err);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 
 //I should update the cellar function to include this abstraction
 async function getUserId(username) {

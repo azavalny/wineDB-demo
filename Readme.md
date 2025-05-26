@@ -7,17 +7,6 @@
 2. Clone this repository and install necessary packages:
 * cd into `front-end` and run `npm i`
 * create a new terminal and cd into `server`. run `npm i` to install the packages for the back end
-* create a new file in the `server` directory called: `env.json` and copy paste the below info into your `env.json` file:
-```
-{
-	"Resend": "re_QQ7ZFmhS_EnFHjGYRfHdTUEU2FGYyiSdq",
-	"user": "postgres",
-	"host": "localhost",
-	"database": "wineDB",
-	"password": "password",
-	"port": 5432
-}
-```
 
 3. Setup the database
 * When setting up postgres on your machine as the **superuser** leave your host as **localhost**, set your password as **password**, and leave port as 5432 which should be default. If you already have postgres installed, then create a new server with these same properties, and update the password in `env.json` as necessary.

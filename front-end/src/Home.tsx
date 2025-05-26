@@ -23,9 +23,10 @@ type Wine = {
 
 interface HomeProps{
   setCellar: (val: boolean) => void;
+  setProfile: (val: boolean) => void;
 }
 
-function Home({ setCellar }: HomeProps) {
+function Home({ setCellar, setProfile }: HomeProps) {
   const [query, setQuery] = useState("");
   const [wines, setWines] = useState<Wine[]>([]);
   const [expandedWineId, setExpandedWineId] = useState<number | null>(null);
@@ -128,6 +129,10 @@ function Home({ setCellar }: HomeProps) {
           setCellar(true);
           navigate("/cellar");
         }}>Personal Cellar</button>
+        <button onClick={() => {
+          setProfile(true);
+          navigate("/profile");
+        }}>Profile</button>
         <div>
           <select
             value={filter}

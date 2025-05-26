@@ -1,35 +1,90 @@
-import React from "react";
-import { useState, useRef } from "react";
-import "./Profile.css";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './Profile.css';
+import EditProfileForm from './EditProfileForm';
 
 interface ProfileProps {
-    username: string;
-    profilePicture: string;
-    bio: string;
+  username: string;
+}
+
+interface ProfileData {
+  profile_pic: string;
+  backg_pic: string;
+  bio: string;
 }
 
 
-function Profile(ProfileProps: ProfileProps) {
-    const [username, setUsername] = useState(ProfileProps.username);
-    const [profilePicture, setProfilePicture] = useState(ProfileProps.profilePicture);
-    const [bio, setBio] = useState(ProfileProps.bio);
+const Profile: React.FC<ProfileProps> = ({ username }) => {
+  const [profile, setProfile] = useState<ProfileData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
 
-    const messageRef = useRef<HTMLInputElement>(null);
+  const editFunction = () => {
+    setIsEditing(true);
+  };
+
+  const handleSave = () => {
+    setIsEditing(false);
+    fetchProfile();
+  };
+
+  const testProfile = "Test"; 
+
+async function fetchProfile() {
+  try {
+    const res = await axios.get(`http://localhost:8080/api/profile/${testProfile}`);
+    setProfile(res.data);
+    setLoading(false);
+  } catch (error) {
+    console.error("Failed to fetch profile:", error);
+    setLoading(false);
+  }
+}
 
 
-    return (
-        <div className="profile-container">
-          <div className="profile-header">
-            <img src={profilePicture} alt="Profile" className="profile-picture" />
-            <div className="profile-text">
-              <h1 className="profile-username">{username}</h1>
-              <p className="profile-bio">{bio}</p>
-            </div>
+  useEffect(() => {
+    fetchProfile();
+  }, [testProfile]);
+
+  if (loading) return <p>Loading profile...</p>;
+  if (!profile) return <p>Profile not found.</p>;
+
+  return (
+    <div className="profile-container">
+      {isEditing ? (
+        <EditProfileForm
+          username={username}
+          currentBio={profile.bio}
+          currentProfilePic={profile.profile_pic}
+          currentBackgroundPic={profile.backg_pic}
+          onSave={handleSave}
+        />
+      ) : (
+        <>
+          <div
+            className="profile-banner"
+            style={{
+              backgroundImage: `url(/background-pics/${profile.backg_pic})`,
+            }}
+          >
+            <img
+              src={`/profile-pics/${profile.profile_pic}`}
+              alt="Profile"
+              className="profile-pic"
+            />
           </div>
-        </div>
-      );
-      
-      
-}
+
+          <div className="profile-content">
+            <h2>{username}</h2>
+            <p>{profile.bio}</p>
+            <button className="edit-profile-btn" onClick={editFunction}>
+              Edit Profile
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
 
 export default Profile;

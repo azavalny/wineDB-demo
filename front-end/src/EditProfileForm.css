@@ -1,0 +1,33 @@
+.edit-profile-form {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.edit-profile-form textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 16px;
+}
+
+.image-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.image-selector img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  object-fit: cover;
+  transition: 0.2s;
+}
+
+.image-selector img.selected {
+  border-color: #007bff;
+  transform: scale(1.05);
+}

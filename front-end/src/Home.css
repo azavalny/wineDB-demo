@@ -103,4 +103,8 @@ body {
   button:hover {
     background-color: #c45768;
   }
+
+  label{
+    color: #a03e4e;
+  }
   

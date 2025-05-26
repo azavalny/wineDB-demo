@@ -72,7 +72,6 @@ CREATE TABLE rating(
 CREATE TABLE cellar (
     user_id INT,
     wine_id INT,
-    rating_id INT UNIQUE,
     date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (wine_id) REFERENCES wine(wine_id) ON DELETE CASCADE,

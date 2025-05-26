@@ -150,9 +150,10 @@ app.get("/api-user-cellar", (req, res) => {
         SELECT wine.*, rating.value AS user_rating, rating.description
         FROM cellar
         JOIN wine ON wine.wine_id = cellar.wine_id
-        LEFT JOIN rating ON rating.rating_id = cellar.rating_id
+        LEFT JOIN rating ON rating.user_id = cellar.user_id AND rating.wine_id = cellar.wine_id
         WHERE cellar.user_id = $1
       `;
+
 
       return pool.query(cellarQuery, [user_id]);
     })
@@ -166,7 +167,7 @@ app.get("/api-user-cellar", (req, res) => {
 });
 
 //removing wine from cellar
-app.post("/api-remove", (req, res) => {
+app.post("/api/remove", (req, res) => {
   const { username, wine_id } = req.body;
   getUserId(username)
     .then(user_id => {
@@ -216,6 +217,64 @@ app.post("/api-update-rating", async (req, res) => {
   } catch (err) {
     console.error("Error updating rating:", err);
     return res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+app.get('/api/profile/:username', async (req, res) => {
+  const username = req.params.username;
+  console.log("Requested profile for:", username);
+
+  try {
+    const user_id = await getUserId(username);
+
+    if (!user_id) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    const result = await pool.query(
+      `SELECT bio, profile_pic, backg_pic FROM profile WHERE user_id = $1`,
+      [user_id]
+    );
+
+    const profile = result.rows[0];
+
+    if (!profile) {
+      // Return empty/default profile if entry doesn't exist
+      return res.json({ bio: "", profile_pic: "", backg_pic: "" });
+    }
+
+    res.json(profile);
+  } catch (err) {
+    console.error("Error fetching profile:", err);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
+app.put("/api/profile/:username", async (req, res) => {
+  const username = req.params.username;
+  const { bio, profile_pic, backg_pic } = req.body;
+
+  try {
+    const user_id = await getUserId(username);
+
+    if (!user_id) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    await pool.query(
+      `
+      UPDATE profile
+      SET bio = $1, profile_pic = $2, backg_pic = $3
+      WHERE user_id = $4
+    `,
+      [bio, profile_pic, backg_pic, user_id]
+    );
+
+    res.json({ message: "Profile updated successfully" });
+  } catch (err) {
+    console.error("Error updating profile:", err);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
@@ -276,6 +335,8 @@ async function getUserId(username) {
   }
 }
 
+
+//this shouldnt work
 async function getRatingId(user_id, wine_id) {
   const ratingQuery = `SELECT rating_id FROM cellar WHERE user_id = $1 AND wine_id =$2`;
   try {

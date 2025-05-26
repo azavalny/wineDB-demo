@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Account from "./Account";
-/*
+
 import Profile from "./Profile";
+/*
 import AddForm from "./AddForm";
 import CreateProfile from "./CreateProfile";
 import axios from "axios"; */ 
@@ -49,17 +50,23 @@ const sampleWines: userWine[] = [
   },
 ];
 
+
 function App() {
   const [status, setStatus] = useState(false);
   const [cellar, setCellar] = useState(false);
+  const [profile, setProfile] = useState(false);
   const [username, setUsernameMain] = useState("");
   const navigate = useNavigate();
 
   return (
-    <Routes>
+
+    //<Profile username={username} />
+
+     <Routes>
       <Route path="/" element={
         status ? (
-          <Home setCellar={setCellar} />
+          <Home setCellar={setCellar}
+                setProfile={setProfile} />
         ) : (
           <Account 
             setStatus={setStatus} 
@@ -69,7 +76,7 @@ function App() {
       } />
       <Route path="/cellar" element={
         status ? (
-          <Cellar wineList={sampleWines} />
+          <Cellar wineList={sampleWines}/>
         ) : (
           <Account 
             setStatus={setStatus} 
@@ -83,7 +90,25 @@ function App() {
           navigate("/cellar");
         }}>Personal Cellar</button>
       } />
+       <Route path="/profile" element={
+        status ? (
+          <Profile username="Test" />
+        ) : (
+          <Account 
+            setStatus={setStatus} 
+            setUsernameMain={setUsernameMain}
+          />
+        )
+      } />
+
+      <Route path="/personal-profile" element={
+        <button onClick={() => {
+          setProfile(true);
+          navigate("/profile");
+        }}>Profile</button>
+      } />
     </Routes>
+
   );
 }
 

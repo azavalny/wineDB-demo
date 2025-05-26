@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Profile.css';
 import EditProfileForm from './EditProfileForm';
+import { useNavigate } from 'react-router-dom'; // Add this import
 
 interface ProfileProps {
   username: string;
@@ -13,11 +14,11 @@ interface ProfileData {
   bio: string;
 }
 
-
 const Profile: React.FC<ProfileProps> = ({ username }) => {
   const [profile, setProfile] = useState<ProfileData | null>(null);
   const [loading, setLoading] = useState(true);
   const [isEditing, setIsEditing] = useState(false);
+  const navigate = useNavigate(); // Add this
 
   const editFunction = () => {
     setIsEditing(true);
@@ -28,7 +29,7 @@ const Profile: React.FC<ProfileProps> = ({ username }) => {
     fetchProfile();
   };
 
-  const testProfile = "Test"; 
+  const testProfile = "Test";
 
 async function fetchProfile() {
   try {
@@ -81,6 +82,13 @@ async function fetchProfile() {
               Edit Profile
             </button>
           </div>
+
+                <button
+        onClick={() => navigate('/')}
+        style={{ marginBottom: '1rem' }}
+      >
+        Back to Home
+      </button>
         </>
       )}
     </div>

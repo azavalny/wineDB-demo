@@ -125,3 +125,18 @@ VALUES
 (8, 8, 7, 'Nice body but slightly too dry for my taste.'),
 (9, 9, 10, 'Incredible Malbec—full of spice and depth.'),
 (10, 10, 8, 'Juicy and layered, very enjoyable.');
+
+
+
+WITH profile_images AS (
+  SELECT user_id,
+         bio,
+         ARRAY['grapes.jpg', 'grapes2.jpg', 'vineyard.jpg', 'wine1.jpg', 'wine2.jpg', 'wine3.jpg'] AS profile_pics,
+         ARRAY['bg1.jpg', 'bg2.jpg', 'bg3.jpg'] AS background_pics
+  FROM profile
+)
+UPDATE profile
+SET profile_pic = profile_images.profile_pics[(profile.user_id % 6) + 1],
+    backg_pic = profile_images.background_pics[(profile.user_id % 3) + 1]
+FROM profile_images
+WHERE profile.user_id = profile_images.user_id;

@@ -24,15 +24,17 @@ type Wine = {
 interface HomeProps{
   setCellar: (val: boolean) => void;
   setProfile: (val: boolean) => void;
+  username: string;
 }
 
-function Home({ setCellar, setProfile }: HomeProps) {
+function Home({ setCellar, setProfile, username }: HomeProps) {
   const [query, setQuery] = useState("");
   const [wines, setWines] = useState<Wine[]>([]);
   const [expandedWineId, setExpandedWineId] = useState<number | null>(null);
-  const [showReviewForm, setShowReviewForm] = useState(false);
-  const [reviewText, setReviewText] = useState("");
   const [filter, setFilter] = useState<"name" | "price" | "year" | "food" | "vineyard">("name");
+  const [newReviews, setNewReviews] = useState<{ [wineId: number]: string }>({});
+  const [newRatings, setNewRatings] = useState<{ [wineId: number]: number }>({});
+  const [toast, setToast] = useState<string | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -89,7 +91,7 @@ function Home({ setCellar, setProfile }: HomeProps) {
 
   // Update filter logic
   const filteredWines = wines.filter(w => {
-    console.log(w);
+    //console.log(w);
     const q = query.toLowerCase();
     switch (filter) {
       case "price":
@@ -108,15 +110,22 @@ function Home({ setCellar, setProfile }: HomeProps) {
     }
   });
 
-  const handleAddReview = (wineId: number) => {
-    if (reviewText.trim()) {
-      setWines(prev =>
-        prev.map(w =>
-          w.wine_id === wineId ? { ...w, reviews: [...w.reviews, reviewText] } : w
-        )
-      );
-      setReviewText("");
-      setShowReviewForm(false);
+  const handleAddToCellar = async (wineId: number) => {
+    const rating = newRatings[wineId];
+    const review = newReviews[wineId] ?? "";
+    try {
+      await axios.post("http://localhost:8080/api-add-to-cellar", {
+        username,
+        wine_id: wineId,
+        rating,
+        review,
+      });
+      setToast("Wine added to your cellar!");
+      setTimeout(() => setToast(null), 2000); // Reset toast after 2 seconds
+    } catch (err) {
+      setToast("Failed to add wine to cellar.");
+      setTimeout(() => setToast(null), 2000); // Reset toast after 2 seconds
+      console.error(err);
     }
   };
 
@@ -177,25 +186,68 @@ function Home({ setCellar, setProfile }: HomeProps) {
                   {wine.reviews.map((r, i) => <li key={i}>{r}</li>)}
                 </ul>
 
-                {!showReviewForm ? (
-                  <button onClick={() => setShowReviewForm(true)}>Add Review</button>
-                ) : (
-                  <div className="review-form">
+                <h3>Add To My Cellar</h3>
 
-                    <textarea
+                <p>Leave a Rating:</p>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <button
+                    onClick={() =>
+                      setNewRatings(ratings => ({
+                        ...ratings,
+                        [wine.wine_id]: Math.max(
+                          Math.floor(ratings[wine.wine_id] ?? Math.round(wine.rating) ?? 5) - 1,
+                          1
+                        )
+                      }))
+                    }
+                  >
+                    -
+                  </button>
+                  <span>
+                    {newRatings[wine.wine_id] ??
+                      (Number.isInteger(wine.rating) && wine.rating >= 1 && wine.rating <= 5
+                        ? wine.rating
+                        : 5)}
+                  </span>
+                  <button
+                    onClick={() =>
+                      setNewRatings(ratings => ({
+                        ...ratings,
+                        [wine.wine_id]: Math.min(
+                          Math.floor(ratings[wine.wine_id] ?? Math.round(wine.rating) ?? 5) + 1,
+                          5
+                        )
+                      }))
+                    }
+                  >
+                    +
+                  </button>
+                </div>
+                <br></br>
+                <p>Leave a Review:</p>
+                 <textarea
                       placeholder="Write your review..."
-                      value={reviewText}
-                      onChange={(e) => setReviewText(e.target.value)}
+                      value={newReviews[wine.wine_id] ?? ""}
+                      onChange={e =>
+                        setNewReviews(reviews => ({
+                          ...reviews,
+                          [wine.wine_id]: e.target.value
+                        }))
+                      }
+                      style={{ width: "75%", height: "60px" }}
                     />
-                    <button onClick={() => handleAddReview(wine.wine_id)}>Submit</button>
 
-                  </div>
-                )}
+              <br />
+              <br></br>
+              <button onClick={() => handleAddToCellar(wine.wine_id)}>
+                Add to My Cellar
+              </button>
               </div>
             )}
           </li>
         ))}
       </ul>
+      {toast && <div className="toast">{toast}</div>}
     </div>
   );
 }

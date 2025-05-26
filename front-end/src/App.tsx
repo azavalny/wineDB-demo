@@ -6,7 +6,7 @@ import Profile from "./Profile";
 /*
 import AddForm from "./AddForm";
 import CreateProfile from "./CreateProfile";
-import axios from "axios"; */ 
+import axios from "axios"; */
 
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./Home";
@@ -66,10 +66,11 @@ function App() {
       <Route path="/" element={
         status ? (
           <Home setCellar={setCellar}
-                setProfile={setProfile} />
+                setProfile={setProfile}
+                username={username}/>
         ) : (
-          <Account 
-            setStatus={setStatus} 
+          <Account
+            setStatus={setStatus}
             setUsernameMain={setUsernameMain}
           />
         )
@@ -78,8 +79,8 @@ function App() {
         status ? (
           <Cellar wineList={sampleWines}/>
         ) : (
-          <Account 
-            setStatus={setStatus} 
+          <Account
+            setStatus={setStatus}
             setUsernameMain={setUsernameMain}
           />
         )
@@ -94,8 +95,8 @@ function App() {
         status ? (
           <Profile username="Test" />
         ) : (
-          <Account 
-            setStatus={setStatus} 
+          <Account
+            setStatus={setStatus}
             setUsernameMain={setUsernameMain}
           />
         )

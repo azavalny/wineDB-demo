@@ -3,19 +3,20 @@ import axios from 'axios';
 import './EditProfileForm.css';
 
 const profilePicOptions = [
-  "/profile-pics/grapes.jpg",
-  "/profile-pics/grapes2.jpg",
-  "/profile-pics/vineyard.jpg",
-  "/profile-pics/wine1.jpg",
-  "/profile-pics/wine2.jpg",
-  "/profile-pics/wine3.jpg"
+  "grapes.jpg",
+  "grapes2.jpg",
+  "vineyard.jpg",
+  "wine1.jpg",
+  "wine2.jpg",
+  "wine3.jpg"
 ];
 
 const backgroundPicOptions = [
-  "/background-pics/bg1.jpg",
-  "/background-pics/bg2.jpg",
-  "/background-pics/bg3.jpg"
+  "bg1.jpg",
+  "bg2.jpg",
+  "bg3.jpg"
 ];
+
 
 
 interface EditProfileFormProps {
@@ -67,11 +68,12 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({
         {profilePicOptions.map((img) => (
           <img
             key={img}
-            src={img}
+            src={`/profile-pics/${img}`} // dynamically construct the path
             alt="profile option"
             className={profilePic === img ? "selected" : ""}
-            onClick={() => setProfilePic(img)}
+            onClick={() => setProfilePic(img)} // stores only the filename
           />
+
         ))}
       </div>
 
@@ -80,11 +82,12 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({
         {backgroundPicOptions.map((img) => (
           <img
             key={img}
-            src={img}
+            src={`/background-pics/${img}`}
             alt="background option"
             className={backgroundPic === img ? "selected" : ""}
             onClick={() => setBackgroundPic(img)}
           />
+
         ))}
       </div>
 

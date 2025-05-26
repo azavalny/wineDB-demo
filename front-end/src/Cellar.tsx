@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Cellar.css";
+
+const backend = "http://localhost:8080/api";
 
 type userWine = {
   name: string;
@@ -12,7 +14,7 @@ type userWine = {
 };
 
 interface WineProps {
-  wineList: userWine[];
+  username: string;
 }
 
 function WineDropdown({
@@ -111,10 +113,46 @@ function WineDropdown({
   }
   
 
-function Cellar({ wineList }: WineProps) {
-  const [userWines, setUserWines] = useState<userWine[]>(wineList);
+function Cellar({ username }: WineProps) {
+  const [userWines, setUserWines] = useState<userWine[]>([]);
   const [showForm, setShowForm] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+  const fetchUserCellar = async () => {
+    try {
+      const response = await fetch(`http://localhost:8080/api/cellar/${username}`);
+      if (response.status === 200) {
+        const data = await response.json();
+
+        if (data.message === "Cellar is empty") {
+          console.log("Cellar is empty");
+          setUserWines([]);
+          return;
+        }
+
+        console.log("Fetched user cellar:", data);
+
+        const transformed: userWine[] = data.cellar.map((wine: any) => ({
+          name: wine.name,
+          grape: wine.grape,
+          region: wine.region,
+          review: wine.review || "",
+          rating: wine.rating,
+          year: wine.year,
+        }));
+
+        setUserWines(transformed);
+      } else {
+        console.error("Failed to fetch user cellar");
+      }
+    } catch (error) {
+      console.error("Error fetching user cellar:", error);
+    }
+  };
+
+  fetchUserCellar();
+}, [username]); 
 
   const addWine = (wine: userWine) => {
     setUserWines([...userWines, wine]);

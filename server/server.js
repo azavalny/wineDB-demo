@@ -130,41 +130,43 @@ app.get("/api-wine-list", (req, res) => {
 
 
 //get user cellar
-app.get("/api-user-cellar", (req, res) => {
-  const username = req.query.username;
-  const params = [username];
+app.get("/api/cellar/:username", async (req, res) => {
+  const username = req.params.username;
 
-  const userQuery = `
-    SELECT user_id
-    FROM users
-    WHERE username = $1
+   try {
+    const user_id = await getUserId(username);
+    if (!user_id) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    const cellarQuery = `
+    SELECT 
+      wine.name, 
+      wine.grape, 
+      vineyard.region, 
+      rating.description AS review, 
+      COALESCE(rating.value, 0) AS rating, 
+      wine.year
+    FROM cellar
+    JOIN wine ON wine.wine_id = cellar.wine_id
+    JOIN vineyard ON wine.vineyard_id = vineyard.vineyard_id
+    LEFT JOIN rating ON rating.user_id = cellar.user_id AND rating.wine_id = cellar.wine_id
+    WHERE cellar.user_id = $1
   `;
 
-  pool.query(userQuery, params)
-    .then(result => {
-      if (result.rows.length === 0) {
-        return res.status(404).json({ error: "User not found" });
-      }
 
-      const user_id = result.rows[0].user_id;
-      const cellarQuery = `
-        SELECT wine.*, rating.value AS user_rating, rating.description
-        FROM cellar
-        JOIN wine ON wine.wine_id = cellar.wine_id
-        LEFT JOIN rating ON rating.user_id = cellar.user_id AND rating.wine_id = cellar.wine_id
-        WHERE cellar.user_id = $1
-      `;
+    const response = await pool.query(cellarQuery, [user_id]);
+    if (response.rows.length === 0) {
+      return res.status(200).json({ message: "Cellar is empty", cellar: [] });
+    }
+    res.status(200).json({ cellar: response.rows });
 
 
-      return pool.query(cellarQuery, [user_id]);
-    })
-    .then(cellarResult => {
-      res.status(200).json({ cellar: cellarResult.rows });
-    })
-    .catch(err => {
-      console.error("Error executing query", err.stack);
-      res.status(500).json({ error: "Internal server error" });
-    });
+  } catch (err) {
+    console.error("Error fetching user_id:", err);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 });
 
 //removing wine from cellar
@@ -321,6 +323,9 @@ app.get("/api/vineyard/:vineyard_id", async (req, res) => {
 
 app.post("/api-add-to-cellar", async (req, res) => {
   const { username, wine_id, rating, review } = req.body;
+  console.log("request body:", req.body);
+
+  console.log("Adding wine to cellar:", { username, wine_id, rating, review });
   if (!username || !wine_id) {
     return res.status(400).json({ error: "Missing fields" });
   }
@@ -331,6 +336,7 @@ app.post("/api-add-to-cellar", async (req, res) => {
       return res.status(404).json({ error: "User not found" });
     }
 
+
     // Insert into rating table
     const ratingInsert = `
       INSERT INTO rating (user_id, wine_id, value, description)
@@ -339,14 +345,12 @@ app.post("/api-add-to-cellar", async (req, res) => {
     `;
     await pool.query(ratingInsert, [user_id, wine_id, rating, review]);
 
-    rating_id = await getRatingId(user_id, wine_id);
-
     // Insert into cellar table
     await pool.query(
-      `INSERT INTO cellar (user_id, wine_id, rating_id, date_added)
-       VALUES ($1, $2, $3, CURRENT_TIMESTAMP)
+      `INSERT INTO cellar (user_id, wine_id, date_added)
+       VALUES ($1, $2, CURRENT_TIMESTAMP)
        `,
-      [user_id, wine_id, rating_id]
+      [user_id, wine_id]
     );
 
     res.status(200).json({ message: "Wine added to cellar" });

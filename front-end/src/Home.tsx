@@ -114,10 +114,11 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
     const rating = newRatings[wineId];
     const review = newReviews[wineId] ?? "";
     try {
+      console.log(rating);
       await axios.post("http://localhost:8080/api-add-to-cellar", {
         username,
         wine_id: wineId,
-        rating,
+        rating, 
         review,
       });
       setToast("Wine added to your cellar!");
@@ -192,13 +193,17 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <button
                     onClick={() =>
-                      setNewRatings(ratings => ({
-                        ...ratings,
-                        [wine.wine_id]: Math.max(
-                          Math.floor(ratings[wine.wine_id] ?? Math.round(wine.rating) ?? 5) - 1,
-                          1
-                        )
-                      }))
+                      setNewRatings(ratings => {
+                        const base =
+                          ratings[wine.wine_id] ??
+                          (Number.isFinite(wine.rating) ? Math.round(wine.rating) : 5);
+                        return {
+                          ...ratings,
+                          [wine.wine_id]: Math.max(base - 1, 1),
+                        };
+                      })
+
+                      
                     }
                   >
                     -

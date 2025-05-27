@@ -46,7 +46,12 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
           ...wine,
           reviews: []
         }));
-
+        // Initialize default ratings for all wines
+        const initialRatings: { [key: number]: number } = {};
+        wineList.forEach((wine: any) => {
+          initialRatings[wine.wine_id] = 5; // Default rating of 5
+        });
+        setNewRatings(initialRatings);
         // Fetch foodPairings and vineyard for each wine
         const winesWithDetails = await Promise.all(
           wineList.map(async (wine: any) => {

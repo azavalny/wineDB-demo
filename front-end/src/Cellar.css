@@ -75,14 +75,17 @@
     background-color: #2c2c2c;
     border: 1px solid #444;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 20px;
   }
   
   .wine-item h2 {
     color: #ffd4b2;
     margin-bottom: 10px;
+    margin-top: 0;
+    padding-right: 40px; /* makes room for the icons */
   }
+
   
   .wine-item p {
     margin: 4px 0;
@@ -105,5 +108,40 @@
   .cancel-wine-button:hover {
     background-color: #666;
   }
+
+  .wine-item {
+  position: relative; /* So the top-right buttons can be absolutely positioned */
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.wine-item .button-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.wine-item .icon-btn {
+  background: none;
+  border: none;
+  color: #ff8f8f;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  margin-top: 15%;
+}
+
+.wine-item .icon-btn:hover {
+  background-color: #444;
+  color: #ffb3b3;
+}
+
   
   

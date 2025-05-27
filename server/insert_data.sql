@@ -115,16 +115,30 @@ VALUES
 -- Insert ratings
 INSERT INTO rating (wine_id, user_id, value, description)
 VALUES
-(1, 1, 8, 'Crisp and mineral-driven with a clean finish.'),
-(2, 2, 9, 'Delightfully sweet and perfect for dessert.'),
-(3, 3, 7, 'Fruity and earthy with balanced acidity.'),
-(4, 4, 6, 'Interesting blend, but a bit too tannic.'),
-(5, 5, 9, 'Aromatic and smooth—loved it with dinner.'),
-(6, 6, 8, 'Elegant and clean, with floral notes.'),
-(7, 7, 9, 'Rich and bold, perfect with red meat.'),
-(8, 8, 7, 'Nice body but slightly too dry for my taste.'),
-(9, 9, 10, 'Incredible Malbec—full of spice and depth.'),
-(10, 10, 8, 'Juicy and layered, very enjoyable.');
+(1, 1, 4, 'Crisp and mineral-driven with a clean finish.'),
+(2, 2, 4, 'Delightfully sweet and perfect for dessert.'),
+(3, 3, 3, 'Fruity and earthy with balanced acidity.'),
+(4, 4, 3, 'Interesting blend, but a bit too tannic.'),
+(5, 5, 4, 'Aromatic and smooth—loved it with dinner.'),
+(6, 6, 4, 'Elegant and clean, with floral notes.'),
+(7, 7, 5, 'Rich and bold, perfect with red meat.'),
+(8, 8, 3, 'Nice body but slightly too dry for my taste.'),
+(9, 9, 5, 'Incredible Malbec—full of spice and depth.'),
+(10, 10, 4, 'Juicy and layered, very enjoyable.');
+
+INSERT INTO cellar (user_id, wine_id)
+VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
+
 
 
 

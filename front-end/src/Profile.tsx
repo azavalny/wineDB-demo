@@ -33,7 +33,7 @@ const Profile: React.FC<ProfileProps> = ({ username }) => {
 
 async function fetchProfile() {
   try {
-    const res = await axios.get(`http://localhost:8080/api/profile/${testProfile}`);
+    const res = await axios.get(`http://localhost:8080/api/profile/${username}`);
     setProfile(res.data);
     setLoading(false);
   } catch (error) {
@@ -81,14 +81,15 @@ async function fetchProfile() {
             <button className="edit-profile-btn" onClick={editFunction}>
               Edit Profile
             </button>
-          </div>
-
-                <button
+            <button
         onClick={() => navigate('/')}
         style={{ marginBottom: '1rem' }}
       >
         Back to Home
       </button>
+          </div>
+
+                
         </>
       )}
     </div>

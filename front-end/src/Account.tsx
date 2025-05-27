@@ -148,22 +148,22 @@ return (
       showCreateForm && 
       <div>
         <form className="form">
-          <label>
+          <label style={{color: "white"}}>
             Email:
             <input type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-          </label>
+          </label >
           <br />
-          <label>
+          <label style={{color: "white"}}>
             Username:
             <input type="text" name="username" value={username} onChange={(e) => setUsernameLocal(e.target.value)}/>
           </label>
           <br />
-          <label>
+          <label style={{color: "white"}}>
             Password:
             <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
           </label>
           <br />
-          <label>
+          <label style={{color: "white"}}>
             Confirm Password:
             <input type="password" name="passwordConfirmed" value={passwordConfirmed} onChange={(e) =>setPasswordConfirmed(e.target.value)} />
           </label>
@@ -177,13 +177,13 @@ return (
     } 
     {showLoginForm && 
     <div>
-      <form className="form">
-        <label>
+      <form className="form" >
+        <label style={{color: "white"}}>
           Username:
           <input type="text" name="username" value={username} onChange={(e) => setUsernameLocal(e.target.value)}/>
         </label>
         <br />
-        <label>
+        <label style={{color: "white"}}>
           Password:
           <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
         </label>

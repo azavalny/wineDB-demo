@@ -88,20 +88,21 @@ app.post("/api-create", async (req, res) => {
     const result = await pool.query(text, params);
 
     const user_id = result.rows[0].user_id;
-    const verificationToken = crypto.randomBytes(32).toString('hex');
+    const sampleBio = "This is a sample bio. Please update your profile with your own information.";
+    const sampleProfilePic = "wine1.jpg"; // Replace with a real URL
+    const sampleBackgPic = "bg3.jpg"; // Replace with a real URL
+    
+    const insertProfile = `INSERT INTO profile (user_id, bio, profile_pic, backg_pic) VALUES ($1, $2, $3, $4)`;
+    const profileParams = [user_id, sampleBio, sampleProfilePic, sampleBackgPic];
 
-    /*const status = await insertIntoVerify(user_id, verificationToken);
-
-    if (status) {
-      let verify = `http://localhost:8080/verify?token=${verificationToken}`;
-      await sendUserVerificationEmail(email, verify);
-
-      res.status(200).json({
-        response: ["ok"],
-      });
-    } else {
-      res.status(500).json({ error: "Verification DB error" });
-    } */
+    const profileResult = await pool.query(insertProfile, profileParams);
+    if (profileResult.rowCount === 0) {
+      console.log("Profile creation failed");
+      return res.status(500).json({ error: "Profile creation failed" });
+    }
+    console.log("Profile created successfully for user_id:", user_id);
+    console.log("User created successfully:", result.rows[0]);
+    res.status(200).json({ response: ["ok"] });
 
   } catch (err) {
     console.error("Error executing query", err.stack);
@@ -170,58 +171,79 @@ app.get("/api/cellar/:username", async (req, res) => {
 });
 
 //removing wine from cellar
-app.post("/api/remove", (req, res) => {
-  const { username, wine_id } = req.body;
-  getUserId(username)
-    .then(user_id => {
-      if (!user_id) {
-        return res.status(404).json({ error: "User not found" });
-      }
-      const call = `DELETE FROM cellar WHERE user_id = $1 AND wine_id = $2`;
-      const params = [user_id, wine_id];
-      pool.query(call, params)
-        .then(result => {
-          if (result.rowCount === 0) {
-            res.status(404).json({ error: "No matching entry found." });
-          } else {
-            res.status(200).json({ message: "Wine removed from cellar." });
-          }
-        }).catch(err => {
-          console.error("Error executing query", err.stack);
-          res.status(500).json({ error: "Internal server error" });
-        });
-    });
-});
+app.delete("/api/cellar/remove/:username/:winename", async (req, res) => {
+  const { username, winename } = req.params;
+  console.log("Removing wine from cellar:", { username, winename });
 
-//update wine rating
-app.post("/api-update-rating", async (req, res) => {
-  const { username, wine_id, rating, text } = req.body;
+  
 
   try {
     const user_id = await getUserId(username);
     if (!user_id) {
+      console.log("User not found:", username);
       return res.status(404).json({ error: "User not found" });
     }
 
-    const rating_id = await getRatingId(user_id, wine_id);
-    if (!rating_id) {
-      return res.status(404).json({ error: "Wine not in cellar" });
+    const wine_id = await getWineId(winename);
+    if (!wine_id) {
+      console.log("Wine not found:", winename);
+      return res.status(404).json({ error: "Wine not found" });
     }
 
-    const updateQuery = `
-      UPDATE rating
-      SET value = $1, description = $2
-      WHERE rating_id = $3
+    const query = `DELETE FROM cellar WHERE user_id = $1 AND wine_id = $2`;
+    const response = await pool.query(query, [user_id, wine_id]);
+    console.log("Delete response:", response);
+
+    if (response.rowCount === 0) {
+      return res.status(404).json({ error: "No matching entry found." });
+    }
+
+    const deleteRatingQuery = `
+      DELETE FROM rating
+      WHERE user_id = $1 AND wine_id = $2
     `;
-    await pool.query(updateQuery, [rating, text, rating_id]);
+    const ratingResponse = await pool.query(deleteRatingQuery, [user_id, wine_id]);
+    console.log("Wine removed from cellar:", { username, winename });
 
-    return res.status(200).json({ message: "Rating updated successfully." });
+     if (ratingResponse.rowCount === 0) {
+      return res.status(404).json({ error: "No matching entry found." });
+    }
 
+    return res.status(200).json({ message: "Wine removed from cellar." });
   } catch (err) {
-    console.error("Error updating rating:", err);
+    console.error("Error removing wine from cellar:", err);
     return res.status(500).json({ error: "Internal server error" });
   }
 });
+
+
+//update wine rating
+app.put("/api/cellar/update", async (req, res) => {
+  const { username, wineName, newReview, newRating } = req.body;
+
+  try {
+    const user_id = await getUserId(username);
+    const wine_id = await getWineId(wineName);
+
+    if (!user_id || !wine_id) {
+      return res.status(404).json({ error: "User or wine not found" });
+    }
+
+    const query = `
+      UPDATE rating
+      SET description = $1, value = $2
+      WHERE user_id = $3 AND wine_id = $4
+    `;
+
+    await pool.query(query, [newReview, newRating, user_id, wine_id]);
+
+    res.status(200).json({ message: "Wine updated successfully" });
+  } catch (err) {
+    console.error("Error updating wine:", err);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 
 app.get('/api/profile/:username', async (req, res) => {
   const username = req.params.username;
@@ -361,7 +383,6 @@ app.post("/api-add-to-cellar", async (req, res) => {
 });
 
 
-//I should update the cellar function to include this abstraction
 async function getUserId(username) {
   const userQuery = `
     SELECT user_id
@@ -375,6 +396,22 @@ async function getUserId(username) {
   } catch (err) {
     console.error("Error fetching user_id:", err);
     throw err; // optional: rethrow or handle as needed
+  }
+}
+
+async function getWineId(wineName) {
+   const userQuery = `
+    SELECT wine_id
+    FROM wine
+    WHERE name = $1
+  `;
+
+  try {
+    const result = await pool.query(userQuery, [wineName]);
+    return result.rows.length > 0 ? result.rows[0].wine_id : null;
+  } catch (err) {
+    console.error("Error fetching user_id:", err);
+    throw err; 
   }
 }
 

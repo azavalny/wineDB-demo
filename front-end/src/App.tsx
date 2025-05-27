@@ -61,7 +61,7 @@ function App() {
       } />
        <Route path="/profile" element={
         status ? (
-          <Profile username="Test" />
+          <Profile username={username} />
         ) : (
           <Account
             setStatus={setStatus}

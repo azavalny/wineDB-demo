@@ -161,8 +161,8 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
       <div className="p-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold text-[#ffccbb] mb-4">Welcome to WineDB</h1>
-            <p className="text-xl text-[#ccc]">Explore our collection of wines and find your perfect match!</p>
+            <h1 className="text-5xl font-bold text-[#ffccbb] mb-4">WineDB</h1>
+            <p className="text-xl text-[#ccc]">Explore our collection of wines and find your perfect match</p>
           </div>
 
           <div className="flex flex-wrap gap-4 items-center justify-center mb-6">
@@ -173,9 +173,9 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
               }}
               className="px-6 py-3 bg-[#a03e4e] text-white font-bold rounded-lg hover:bg-[#c45768] transition-colors duration-200"
             >
-              Personal Cellar
+              My Cellar
             </button>
-            <button 
+            {/* <button 
               onClick={() => {
                 setProfile(true);
                 router.push("/profile");
@@ -183,7 +183,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
               className="px-6 py-3 bg-[#a03e4e] text-white font-bold rounded-lg hover:bg-[#c45768] transition-colors duration-200"
             >
               Profile
-            </button>
+            </button> */}
             
             <select
               value={filter}
@@ -355,7 +355,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             )}
 
             <div className="mt-8 pt-6 border-t border-[#444] text-[#aaa] text-sm">
-              <p>&copy; 2025 WineDB. Quit whining, start drinking.</p>
+              <p>&copy; 2025 WineDB. Quit whining, start tasting.</p>
             </div>
           </div>
         </div>

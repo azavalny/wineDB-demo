@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WineDB - Wine Database",
+  title: "WineDB",
   description: "Explore and manage your wine collection with our comprehensive wine database",
 };
 

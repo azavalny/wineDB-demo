@@ -1,0 +1,1775 @@
+wine_id,vineyard_id,name,classification,year,rating,location,appelation
+1,0,Cantine Nicosia Etna Vulka Bianco,White,2014,4.5,Etna DOC,Vulkà Bianco
+2,0,Cantine Nicosia Etna Vulka Bianco,White,2023,,Etna DOC,Vulkà Bianco
+3,0,Cantine Nicosia Etna Vulka Bianco,White,2022,4.5,Etna DOC,Vulkà Bianco
+4,0,Cantine Nicosia Etna Vulka Bianco,White,2021,4.3,Etna DOC,Vulkà Bianco
+5,0,Cantine Nicosia Etna Vulka Bianco,White,2020,,Etna DOC,Vulkà Bianco
+6,0,Cantine Nicosia Etna Vulka Bianco,White,2019,,Etna DOC,Vulkà Bianco
+7,0,Cantine Nicosia Etna Vulka Bianco,White,2018,4,Etna DOC,Vulkà Bianco
+8,0,Cantine Nicosia Etna Vulka Bianco,White,2017,4.35,Etna DOC,Vulkà Bianco
+9,0,Cantine Nicosia Etna Vulka Bianco,White,2016,4.5,Etna DOC,Vulkà Bianco
+10,0,Cantine Nicosia Etna Vulka Bianco,White,2015,4.35,Etna DOC,Vulkà Bianco
+11,0,Cantine Nicosia Etna Vulka Bianco,White,2014,4.5,Etna DOC,Vulkà Bianco
+12,48406,St. Julian Winery Chardonnay Reserve Late Harvest Tierra Alto Vineyard,White,2018,4.2,Lake Michigan Shore,Reserve Late Harvest
+13,48406,St. Julian Winery Riesling Reserve Late Harvest,White,2023,4.55,Lake Michigan Shore,Reserve Late Harvest
+14,48406,St. Julian Winery Riesling Reserve Late Harvest,White,2022,,Lake Michigan Shore,Reserve Late Harvest
+15,48406,St. Julian Winery Riesling Reserve Late Harvest,White,2021,,Lake Michigan Shore,Reserve Late Harvest
+16,48406,St. Julian Winery Riesling Reserve Late Harvest,White,2020,4.4,Lake Michigan Shore,Reserve Late Harvest
+17,48406,St. Julian Winery Riesling Reserve Late Harvest,White,2019,4.35,Lake Michigan Shore,Reserve Late Harvest
+18,48406,St. Julian Winery Riesling Reserve Late Harvest,White,2018,,Lake Michigan Shore,Reserve Late Harvest
+19,48406,St. Julian Winery Riesling Reserve Late Harvest,White,2016,,Lake Michigan Shore,Reserve Late Harvest
+20,48406,St. Julian Winery Vidal Blanc Braganini Reserve Late Harvest,White,2023,4.35,Lake Michigan Shore,Reserve Late Harvest
+21,48406,St. Julian Winery Vidal Blanc Braganini Reserve Late Harvest,White,2021,4.2,Lake Michigan Shore,Reserve Late Harvest
+22,48406,St. Julian Winery Vidal Blanc Braganini Reserve Late Harvest,White,2020,4.25,Lake Michigan Shore,Reserve Late Harvest
+23,48406,St. Julian Winery Vidal Blanc Braganini Reserve Late Harvest,White,2019,4,Lake Michigan Shore,Reserve Late Harvest
+24,48406,St. Julian Winery Vidal Blanc Braganini Reserve Late Harvest,White,2018,,Lake Michigan Shore,Reserve Late Harvest
+25,48406,St. Julian Winery Vidal Blanc Braganini Reserve Late Harvest,White,2017,,Lake Michigan Shore,Reserve Late Harvest
+26,48406,St. Julian Winery Vidal Blanc Braganini Reserve Late Harvest,White,2016,,Lake Michigan Shore,Reserve Late Harvest
+27,48406,St. Julian Winery Vidal Blanc Braganini Reserve Late Harvest,White,2015,,Lake Michigan Shore,Reserve Late Harvest
+28,48406,St. Julian Winery Vidal Blanc Braganini Reserve Late Harvest,White,2013,,Lake Michigan Shore,Reserve Late Harvest
+29,48406,St. Julian Winery Vidal Blanc Braganini Reserve Late Harvest,White,2011,,Lake Michigan Shore,Reserve Late Harvest
+30,48406,St. Julian Winery Vidal Braganini Reserve Late Harvest,White - Sweet/Dessert,2011,4.3,Lake Michigan Shore,Reserve Late Harvest
+31,48406,St. Julian Winery Vidal Braganini Reserve Late Harvest Arrowhead Vineyard,White - Sweet/Dessert,2012,,Lake Michigan Shore,Reserve Late Harvest
+32,48406,St. Julian Winery Vidal Braganini Reserve Late Harvest Arrowhead Vineyard,White - Sweet/Dessert,2011,,Lake Michigan Shore,Reserve Late Harvest
+33,48406,St. Julian Winery Vidal Braganini Reserve Late Harvest Tierra Alto Vineyard,White - Sweet/Dessert,2013,,Lake Michigan Shore,Reserve Late Harvest
+34,48406,St. Julian Winery Vidal Braganini Reserve Late Harvest Tierra Alto Vineyard,White - Sweet/Dessert,2012,,Lake Michigan Shore,Reserve Late Harvest
+35,48406,St. Julian Winery Vidal Braganini Reserve Late Harvest VanVleck Vineyards,White - Sweet/Dessert,2010,,Lake Michigan Shore,Reserve Late Harvest
+36,48406,St. Julian Winery Vignoles Braganini Reserve Late Harvest,White - Sweet/Dessert,2022,,Lake Michigan Shore,Reserve Late Harvest
+37,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2023,,Vittoria DOC,Belsito
+38,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2022,,Vittoria DOC,Belsito
+39,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2021,,Vittoria DOC,Belsito
+40,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2020,,Vittoria DOC,Belsito
+41,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2019,,Vittoria DOC,Belsito
+42,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2018,4.55,Vittoria DOC,Belsito
+43,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2017,,Vittoria DOC,Belsito
+44,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2016,4.35,Vittoria DOC,Belsito
+45,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2013,,Vittoria DOC,Belsito
+46,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2012,4.05,Vittoria DOC,Belsito
+47,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2011,4.25,Vittoria DOC,Belsito
+48,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2010,4.25,Vittoria DOC,Belsito
+49,42150,Terre di Giurfo Frappato Vittoria Belsito,Red,2009,0.05,Vittoria DOC,Belsito
+50,57108,Masseria Setteporte Etna Rosso,Red,2022,,Etna DOC,Rosso
+51,57108,Masseria Setteporte Etna Rosso,Red,2021,4.5,Etna DOC,Rosso
+52,57108,Masseria Setteporte Etna Rosso,Red,2020,4.2,Etna DOC,Rosso
+53,57108,Masseria Setteporte Etna Rosso,Red,2019,4.5,Etna DOC,Rosso
+54,57108,Masseria Setteporte Etna Rosso,Red,2017,4.35,Etna DOC,Rosso
+55,57108,Masseria Setteporte Etna Rosso,Red,2016,4.5,Etna DOC,Rosso
+56,57108,Masseria Setteporte Etna Rosso,Red,2015,4.45,Etna DOC,Rosso
+57,57108,Masseria Setteporte Etna Rosso,Red,2014,4.4,Etna DOC,Rosso
+58,57108,Masseria Setteporte Etna Rosso,Red,2013,4.4,Etna DOC,Rosso
+59,57108,Masseria Setteporte Etna Rosso,Red,2012,4.4,Etna DOC,Rosso
+60,57108,Masseria Setteporte Etna Rosso,Red,2011,4.6,Etna DOC,Rosso
+61,57108,Masseria Setteporte Etna Rosso,Red,2010,4.45,Etna DOC,Rosso
+62,57108,Masseria Setteporte Etna Rosso,Red,2009,,Etna DOC,Rosso
+63,57108,Masseria Setteporte Etna Rosso WS,Red,2021,,Etna DOC,Rosso
+64,57108,Masseria Setteporte Etna Rosso WS,Red,2020,,Etna DOC,Rosso
+65,57108,Masseria Setteporte Etna Rosso WS,Red,2019,,Etna DOC,Rosso
+66,57108,Masseria Setteporte Etna Rosso WS,Red,2013,4.55,Etna DOC,Rosso
+67,57108,Masseria Setteporte Nerello Mascalese Etna,Red,2021,,Etna DOC,Rosso
+68,57108,Masseria Setteporte Nerello Mascalese Etna,Red,2020,,Etna DOC,Rosso
+69,45534,Bodega Felix Lavaque,Red,2006,,Cafayate,Felix
+70,45534,Bodega Felix Lavaque,Red,2005,,Cafayate,Felix
+71,45534,Bodega Felix Lavaque,Red,2003,,Cafayate,Felix
+72,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,2020,,Cafayate,Felix
+73,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,2019,,Cafayate,Felix
+74,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,2017,,Cafayate,Felix
+75,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,2015,4.4,Cafayate,Felix
+76,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,2013,,Cafayate,Felix
+77,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,2008,4.6,Cafayate,Felix
+78,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,2007,4.55,Cafayate,Felix
+79,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,2006,,Cafayate,Felix
+80,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,2005,4.2,Cafayate,Felix
+81,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,2004,4.25,Cafayate,Felix
+82,45534,Bodega Felix Lavaque Cabernet Sauvignon Quara,Red,1994,,Cafayate,Felix
+83,45533,Bianchi Cabernet Franc Signature Selection,Red,2019,,Paso Robles,Signature Selection
+84,45533,Bianchi Cabernet Franc Signature Selection,Red,2018,0.05,Paso Robles,Signature Selection
+85,45533,Bianchi Cabernet Franc Signature Selection,Red,2015,,Paso Robles,Signature Selection
+86,45533,Bianchi Cabernet Franc Signature Selection,Red,2011,,Paso Robles,Signature Selection
+87,45533,Bianchi Cabernet Franc Signature Selection,Red,2010,,Paso Robles,Signature Selection
+88,45533,Bianchi Cabernet Franc Signature Selection,Red,2008,4.6,Paso Robles,Signature Selection
+89,45533,Bianchi Cabernet Franc Signature Selection,Red,2006,4.35,Paso Robles,Signature Selection
+90,45533,Bianchi Cabernet Franc Signature Selection,Red,2005,,Paso Robles,Signature Selection
+91,45533,Bianchi Cabernet Franc Signature Selection,Red,2004,4.45,Paso Robles,Signature Selection
+92,45533,Bianchi Cabernet Franc Signature Selection Plummer Vineyard,Red,2015,,Paso Robles,Signature Selection
+93,45533,Bianchi Cabernet Franc Signature Selection Plummer Vineyard,Red,2013,4.4,Paso Robles,Signature Selection
+94,45533,Bianchi Cabernet Franc Signature Selection Plummer Vineyard,Red,2012,,Paso Robles,Signature Selection
+95,45533,Bianchi Cabernet Franc Signature Selection Plummer Vineyard,Red,2010,4.35,Paso Robles,Signature Selection
+96,45533,Bianchi Cabernet Franc Signature Selection Smoot Vineyards,Red,2006,,Paso Robles,Signature Selection
+97,45533,Bianchi Cabernet Franc Signature Selection Smoot Vineyards,Red,2005,4.4,Paso Robles,Signature Selection
+98,45533,Bianchi Cabernet Franc Signature Selection Smoot Vineyards,Red,2004,,Paso Robles,Signature Selection
+99,45533,Bianchi Cabernet Sauvignon Signature Selection,Red,2021,,Paso Robles,Signature Selection
+100,45533,Bianchi Cabernet Sauvignon Signature Selection,Red,2019,4.6,Paso Robles,Signature Selection
+101,45533,Bianchi Cabernet Sauvignon Signature Selection,Red,2018,4.55,Paso Robles,Signature Selection
+102,45533,Bianchi Cabernet Sauvignon Signature Selection,Red,2017,4.35,Paso Robles,Signature Selection
+103,45533,Bianchi Cabernet Sauvignon Signature Selection,Red,2016,,Paso Robles,Signature Selection
+104,45533,Bianchi Cabernet Sauvignon Signature Selection,Red,2015,4.5,Paso Robles,Signature Selection
+105,45533,Bianchi Cabernet Sauvignon Signature Selection,Red,2014,4.4,Paso Robles,Signature Selection
+106,45533,Bianchi Cabernet Sauvignon Signature Selection,Red,2013,4.5,Paso Robles,Signature Selection
+107,45533,Bianchi Cabernet Sauvignon Signature Selection,Red,2012,4.35,Paso Robles,Signature Selection
+108,45633,Erath Pinot Noir Hyland Vineyard,Red,2019,,McMinnville,Hyland
+109,45633,Erath Pinot Noir Hyland Vineyard,Red,2018,,McMinnville,Hyland
+110,45633,Erath Pinot Noir Hyland Vineyard,Red,2017,4.45,McMinnville,Hyland
+111,45633,Erath Pinot Noir Hyland Vineyard,Red,2016,4.55,McMinnville,Hyland
+112,45633,Erath Pinot Noir Hyland Vineyard,Red,2015,,McMinnville,Hyland
+113,45633,Erath Pinot Noir Hyland Vineyard,Red,2014,,McMinnville,Hyland
+114,45633,Erath Pinot Noir Hyland Vineyard,Red,2012,4.5,McMinnville,Hyland
+115,45633,Erath Pinot Noir Hyland Vineyard,Red,2011,4.4,McMinnville,Hyland
+116,45633,Erath Pinot Noir Hyland Vineyard,Red,2010,4.45,McMinnville,Hyland
+117,45633,Erath Pinot Noir Hyland Vineyard,Red,2009,4.5,McMinnville,Hyland
+118,45633,Erath Pinot Noir Hyland Vineyard,Red,2006,4.55,McMinnville,Hyland
+119,53948,RAM Cellars Cabernet Franc Alder Ridge Vineyard,Red,2021,4.55,Columbia Valley,Alder Ridge Vineyard
+120,53948,RAM Cellars Cabernet Franc Alder Ridge Vineyard,Red,2016,4.6,Columbia Valley,Alder Ridge Vineyard
+121,53948,RAM Cellars Cabernet Franc Alder Ridge Vineyard,Red,2015,,Columbia Valley,Alder Ridge Vineyard
+122,53948,RAM Cellars Malbec Alder Ridge Vineyard,Red,2022,,Columbia Valley,Alder Ridge Vineyard
+123,53948,RAM Cellars Malbec Alder Ridge Vineyard,Red,2021,,Columbia Valley,Alder Ridge Vineyard
+124,53948,RAM Cellars Malbec Alder Ridge Vineyard,Red,2016,,Columbia Valley,Alder Ridge Vineyard
+125,53948,RAM Cellars Malbec Alder Ridge Vineyard,Red,2015,,Columbia Valley,Alder Ridge Vineyard
+126,53948,RAM Cellars Malbec Alder Ridge Vineyard,Red,2014,,Columbia Valley,Alder Ridge Vineyard
+127,53948,RAM Cellars Petit Verdot Alder Ridge Vineyard,Red,2018,,Columbia Valley,Alder Ridge Vineyard
+128,27,Sevtap Winery Sauvignon Blanc Golden Horn,White,2015,,Santa Ynez Valley,Golden Horn
+129,28,Basel Cellars Inspired,Red,2017,4.6,Columbia Valley,Inspired
+130,28,Basel Cellars Inspired,Red,2016,4.5,Columbia Valley,Inspired
+131,28,Basel Cellars Inspired,Red,2015,4.5,Columbia Valley,Inspired
+132,28,Basel Cellars Inspired,Red,2014,4.5,Columbia Valley,Inspired
+133,28,Basel Cellars Inspired,Red,2013,4.45,Columbia Valley,Inspired
+134,28,Basel Cellars Inspired,Red,2012,0.05,Columbia Valley,Inspired
+135,28,Basel Cellars Inspired,Red,2010,3.95,Columbia Valley,Inspired
+136,28,Basel Cellars Inspired,Red,2009,4.5,Columbia Valley,Inspired
+137,28,Basel Cellars Inspired,Red,2008,4.3,Columbia Valley,Inspired
+138,28,Basel Cellars Inspired,Red,2007,4.5,Columbia Valley,Inspired
+139,28,Basel Cellars Inspired,Red,2006,4.5,Columbia Valley,Inspired
+140,28,Basel Cellars Inspired,Red,2005,4.45,Columbia Valley,Inspired
+141,34,Mulvane Wine Company The Cypher,Red,2013,4.35,Napa Valley,The Cypher
+142,57236,Clos Joliette J de Joliette,White,2014,,Southwest France,La Réserve
+143,57236,Clos Joliette J de Joliette,White,2010,,Southwest France,La Réserve
+144,57236,Clos Joliette J de Joliette,White,2001,,Southwest France,La Réserve
+145,57236,Clos Joliette J de Joliette,White,1995,,Southwest France,La Réserve
+146,57236,os Joliette J de Joliette,White,2013,,Southwest France,La Réserve
+147,38,Mitolo Sangiovese Jester,Red,2008,,McLaren Vale,Jester Sangiovese
+148,38,Mitolo Sangiovese Jester Rosé,Rosé,2024,,McLaren Vale,Jester Sangiovese
+149,38,Mitolo Sangiovese Jester Rosé,Rosé,2023,,McLaren Vale,Jester Sangiovese
+150,38,Mitolo Sangiovese Jester Rosé,Rosé,2022,,McLaren Vale,Jester Sangiovese
+151,38,Mitolo Sangiovese Jester Rosé,Rosé,2021,,McLaren Vale,Jester Sangiovese
+152,38,Mitolo Sangiovese Jester Rosé,Rosé,2020,,McLaren Vale,Jester Sangiovese
+153,38,Mitolo Sangiovese Jester Rosé,Rosé,2019,,McLaren Vale,Jester Sangiovese
+154,38,Mitolo Sangiovese Jester Rosé,Rosé,2018,,McLaren Vale,Jester Sangiovese
+155,38,Mitolo Sangiovese Jester Rosé,Rosé,2017,,McLaren Vale,Jester Sangiovese
+156,38,Mitolo Sangiovese Jester Rosé,Rosé,2016,,McLaren Vale,Jester Sangiovese
+157,38,Mitolo Sangiovese Jester Rosé,Rosé,2015,,McLaren Vale,Jester Sangiovese
+158,38,Mitolo Sangiovese Jester Rosé,Rosé,2014,,McLaren Vale,Jester Sangiovese
+159,38,Mitolo Sangiovese Jester Rosé,Rosé,2013,,McLaren Vale,Jester Sangiovese
+160,38,Mitolo Sangiovese Jester Rosé,Rosé,2012,4.5,McLaren Vale,Jester Sangiovese
+161,38,Mitolo Sangiovese Jester Rosé,Rosé,2011,4.5,McLaren Vale,Jester Sangiovese
+162,38,Mitolo Sangiovese Jester Rosé,Rosé,2010,,McLaren Vale,Jester Sangiovese
+163,38,Mitolo Sangiovese Jester Rosé,Rosé,2009,4.4,McLaren Vale,Jester Sangiovese
+164,38,Mitolo Sangiovese Jester Rosé,Rosé,2008,4.25,McLaren Vale,Jester Sangiovese
+165,38,Mitolo Sangiovese Jester Rosé,Rosé,2007,4.35,McLaren Vale,Jester Sangiovese
+166,38,Mitolo Sangiovese Jester Rosé,Rosé,2006,4.3,McLaren Vale,Jester Sangiovese
+167,38,Mitolo Sangiovese Jester Rosé,Rosé,2005,,McLaren Vale,Jester Sangiovese
+168,40,Passaggio Merlot Blau Vineyards,Red,2014,4.35,Knights Valley,Blau Vineyards
+169,13511,Ferrari-Carano Siena,Red,2022,4.35,Sonoma County,Siena
+170,13511,Ferrari-Carano Siena,Red,2021,4.15,Sonoma County,Siena
+171,13511,Ferrari-Carano Siena,Red,2019,4.55,Sonoma County,Siena
+172,13511,Ferrari-Carano Siena,Red,2018,4.4,Sonoma County,Siena
+173,13511,Ferrari-Carano Siena,Red,2017,4.4,Sonoma County,Siena
+174,13511,Ferrari-Carano Siena,Red,2016,4.4,Sonoma County,Siena
+175,13511,Ferrari-Carano Siena,Red,2015,4.4,Sonoma County,Siena
+176,13511,Ferrari-Carano Siena,Red,2014,4.4,Sonoma County,Siena
+177,13511,Ferrari-Carano Siena,Red,2013,4.45,Sonoma County,Siena
+178,13511,Ferrari-Carano Siena,Red,2012,4.35,Sonoma County,Siena
+179,13511,Ferrari-Carano Siena,Red,2011,4.4,Sonoma County,Siena
+180,13511,Ferrari-Carano Siena,Red,2010,4.35,Sonoma County,Siena
+181,13511,Ferrari-Carano Siena,Red,2009,4.4,Sonoma County,Siena
+182,13511,Ferrari-Carano Siena,Red,2008,4.3,Sonoma County,Siena
+183,13511,Ferrari-Carano Siena,Red,2007,4.35,Sonoma County,Siena
+184,13511,Ferrari-Carano Siena,Red,2006,4.35,Sonoma County,Siena
+185,13511,Ferrari-Carano Siena,Red,2005,4.3,Sonoma County,Siena
+186,13511,Ferrari-Carano Siena,Red,2004,4.35,Sonoma County,Siena
+187,13511,Ferrari-Carano Siena,Red,2003,4.35,Sonoma County,Siena
+188,13511,Ferrari-Carano Siena,Red,2002,4.35,Sonoma County,Siena
+189,13511,Ferrari-Carano Siena,Red,2001,4.35,Sonoma County,Siena
+190,13511,Ferrari-Carano Siena,Red,2000,4.25,Sonoma County,Siena
+191,13511,Ferrari-Carano Siena,Red,1999,4.4,Sonoma County,Siena
+192,13511,Ferrari-Carano Siena,Red,1998,4.4,Sonoma County,Siena
+193,13511,Ferrari-Carano Siena,Red,1997,4.35,Sonoma County,Siena
+194,38093,Franciscan Estate Cabernet Franc (Magnificat Blending Seminar),Red,2006,4.55,Napa Valley,Magnificat
+195,38093,Franciscan Estate Cabernet Franc (Magnificat Blending Seminar),Red,2004,4.55,Napa Valley,Magnificat
+196,38093,Franciscan Estate Cabernet Franc (Magnificat Blending Seminar),Red,2000,,Napa Valley,Magnificat
+197,38093,Franciscan Estate Cabernet Franc (Magnificat Blending Seminar),Red,1995,,Napa Valley,Magnificat
+198,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2015,,Napa Valley,Magnificat
+199,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2014,,Napa Valley,Magnificat
+200,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2013,4.45,Napa Valley,Magnificat
+201,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2012,4.4,Napa Valley,Magnificat
+202,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2011,,Napa Valley,Magnificat
+203,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2010,4.4,Napa Valley,Magnificat
+204,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2009,4.25,Napa Valley,Magnificat
+205,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2008,,Napa Valley,Magnificat
+206,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2007,4.45,Napa Valley,Magnificat
+207,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2006,4.5,Napa Valley,Magnificat
+208,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2005,4.6,Napa Valley,Magnificat
+209,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2003,4.35,Napa Valley,Magnificat
+210,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2002,4.55,Napa Valley,Magnificat
+211,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2001,4.4,Napa Valley,Magnificat
+212,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,2000,4.3,Napa Valley,Magnificat
+213,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,1999,,Napa Valley,Magnificat
+214,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,1998,,Napa Valley,Magnificat
+215,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,1997,,Napa Valley,Magnificat
+216,38093,Franciscan Estate Cabernet Sauvignon (Magnificat Blending Seminar),Red,1994,,Napa Valley,Magnificat
+217,38093,Franciscan Estate Magnificat,Red,2018,4.55,Napa Valley,Magnificat
+218,38093,Franciscan Estate Magnificat,Red,2017,4.55,Napa Valley,Magnificat
+219,57327,Heron Hill Vineyards Blaufränkisch Ingle Vineyard,Red,2023,,Finger Lakes,Ingle Vineyard
+220,57327,Heron Hill Vineyards Blaufränkisch Ingle Vineyard,Red,2020,,Finger Lakes,Ingle Vineyard
+221,57327,Heron Hill Vineyards Blaufränkisch Ingle Vineyard,Red,2019,,Finger Lakes,Ingle Vineyard
+222,57327,Heron Hill Vineyards Blaufränkisch Ingle Vineyard,Red,2018,,Finger Lakes,Ingle Vineyard
+223,57327,Heron Hill Vineyards Blaufränkisch Ingle Vineyard,Red,2017,,Finger Lakes,Ingle Vineyard
+224,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2022,4.45,Finger Lakes,Ingle Vineyard
+225,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2020,4.2,Finger Lakes,Ingle Vineyard
+226,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2019,4.35,Finger Lakes,Ingle Vineyard
+227,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2017,4.3,Finger Lakes,Ingle Vineyard
+228,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2016,4.35,Finger Lakes,Ingle Vineyard
+229,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2015,4.25,Finger Lakes,Ingle Vineyard
+230,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2014,4.25,Finger Lakes,Ingle Vineyard
+231,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2013,4.25,Finger Lakes,Ingle Vineyard
+232,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2012,4.7,Finger Lakes,Ingle Vineyard
+233,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2011,4.35,Finger Lakes,Ingle Vineyard
+234,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2010,4.2,Finger Lakes,Ingle Vineyard
+235,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2009,4.4,Finger Lakes,Ingle Vineyard
+236,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2008,4.3,Finger Lakes,Ingle Vineyard
+237,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2007,4.4,Finger Lakes,Ingle Vineyard
+238,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2005,4.45,Finger Lakes,Ingle Vineyard
+239,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2004,4.25,Finger Lakes,Ingle Vineyard
+240,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyard,Red,2002,4.3,Finger Lakes,Ingle Vineyard
+241,57327,Heron Hill Vineyards Cabernet Franc Ingle Vineyards Heron Hill,Red,2006,,Keuka Lake,Ingle Vineyard
+242,57327,Heron Hill Vineyards Cabernet Franc Rosé Ingle Vineyard,Rosé,2006,4.45,Finger Lakes,Ingle Vineyard
+243,57327,Heron Hill Vineyards Chardonnay Ingle Vineyard,White,2019,,Finger Lakes,Ingle Vineyard
+244,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2023,,Seneca Lake,Red Oak Vineyard
+245,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2021,4.4,Seneca Lake,Red Oak Vineyard
+246,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2020,4.45,Seneca Lake,Red Oak Vineyard
+247,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2019,4.4,Seneca Lake,Red Oak Vineyard
+248,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2018,4.4,Seneca Lake,Red Oak Vineyard
+249,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2017,4.5,Seneca Lake,Red Oak Vineyard
+250,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2016,4.5,Seneca Lake,Red Oak Vineyard
+251,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2015,,Seneca Lake,Red Oak Vineyard
+252,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2014,4.45,Seneca Lake,Red Oak Vineyard
+253,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2013,4.45,Seneca Lake,Red Oak Vineyard
+254,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2012,4.4,Seneca Lake,Red Oak Vineyard
+255,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2011,4.5,Seneca Lake,Red Oak Vineyard
+256,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2010,4.5,Seneca Lake,Red Oak Vineyard
+257,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2009,0.05,Seneca Lake,Red Oak Vineyard
+258,42627,Lamoreaux Landing Riesling Red Oak Vineyard,White,2008,4.35,Seneca Lake,Red Oak Vineyard
+259,51,Antinori Pinot Bianco Villa Antinori,White,2023,,Toscana IGT,Villa Antinori
+260,54312,Martin Ranch Winery Carignane J.D. Hurley,Red,2014,,Santa Clara Valley,J.D. Hurley
+261,54312,Martin Ranch Winery Carignane J.D. Hurley,Red,2011,,Santa Clara Valley,J.D. Hurley
+262,54312,Martin Ranch Winery Carignane J.D. Hurley,Red,2010,,Santa Clara Valley,J.D. Hurley
+263,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2020,,Santa Clara Valley,J.D. Hurley
+264,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2019,,Santa Clara Valley,J.D. Hurley
+265,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2018,,Santa Clara Valley,J.D. Hurley
+266,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2017,,Santa Clara Valley,J.D. Hurley
+267,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2016,,Santa Clara Valley,J.D. Hurley
+268,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2015,,Santa Clara Valley,J.D. Hurley
+269,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2014,,Santa Clara Valley,J.D. Hurley
+270,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2013,4.5,Santa Clara Valley,J.D. Hurley
+271,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2012,,Santa Clara Valley,J.D. Hurley
+272,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2011,,Santa Clara Valley,J.D. Hurley
+273,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2009,4.5,Santa Clara Valley,J.D. Hurley
+274,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2008,4.35,Santa Clara Valley,J.D. Hurley
+275,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2007,4.25,Santa Clara Valley,J.D. Hurley
+276,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2006,4.15,Santa Clara Valley,J.D. Hurley
+277,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2005,4.4,Santa Clara Valley,J.D. Hurley
+278,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2004,4.5,Santa Clara Valley,J.D. Hurley
+279,54312,Martin Ranch Winery Merlot J.D. Hurley,Red,2003,,Santa Clara Valley,J.D. Hurley
+280,54312,Martin Ranch Winery Muscat J.D. Hurley,White - Sweet/Dessert,2012,,Santa Clara Valley,J.D. Hurley
+281,54312,Martin Ranch Winery Pinot Noir J.D. Hurley,Red,2018,4.45,Santa Clara Valley,J.D. Hurley
+282,54312,Martin Ranch Winery Pinot Noir J.D. Hurley,Red,2015,,Santa Clara Valley,J.D. Hurley
+283,54312,Martin Ranch Winery Pinot Noir J.D. Hurley,Red,2014,,Santa Clara Valley,J.D. Hurley
+284,54312,Martin Ranch Winery Pinot Noir J.D. Hurley,Red,2012,,Santa Clara Valley,J.D. Hurley
+285,54716,Broken Earth Winery PULL Bdx,Red,2018,,Paso Robles,BDX
+286,54716,Broken Earth Winery PULL Bdx,Red,2017,,Paso Robles,BDX
+287,54716,Broken Earth Winery PULL Bdx,Red,2016,4.45,Paso Robles,BDX
+288,54716,Broken Earth Winery PULL Bdx,Red,2012,,Paso Robles,BDX
+289,42575,Roessler Carignane Camp 4 Vineyard,Red,2016,,Santa Ynez Valley,Camp 4 Vineyard
+290,42575,Roessler Carignane Camp 4 Vineyard,Red,2013,4.35,Santa Ynez Valley,Camp 4 Vineyard
+291,42575,Roessler Carignane Camp 4 Vineyard,Red,2011,4.35,Santa Ynez Valley,Camp 4 Vineyard
+292,42575,Roessler Grenache Blanc Camp 4 Vineyard,White,2013,4.65,Santa Ynez Valley,Camp 4 Vineyard
+293,42575,Roessler Grenache Camp 4 Vineyard,Red,2016,4.65,Santa Ynez Valley,Camp 4 Vineyard
+294,42575,Roessler Grenache Camp 4 Vineyard,Red,2014,,Santa Ynez Valley,Camp 4 Vineyard
+295,42575,Roessler Grenache Camp 4 Vineyard,Red,2013,4.3,Santa Ynez Valley,Camp 4 Vineyard
+296,42575,Roessler Rhapsody Rhone Red Camp 4 Vineyard,Red,2013,,Santa Ynez Valley,Camp 4 Vineyard
+297,57540,Rideau Vineyard Estate Rosé,Rosé,2021,,Santa Ynez Valley,Estate
+298,57540,Rideau Vineyard Estate Rosé,Rosé,2018,,Santa Ynez Valley,Estate
+299,57540,Rideau Vineyard Estate Rosé,Rosé,2017,,Santa Ynez Valley,Estate
+300,57540,Rideau Vineyard Estate Rosé,Rosé,2016,,Santa Ynez Valley,Estate
+301,57540,Rideau Vineyard Estate Rosé,Rosé,2015,,Santa Ynez Valley,Estate
+302,57540,Rideau Vineyard Estate Rosé,Rosé,2014,,Santa Ynez Valley,Estate
+303,57540,Rideau Vineyard Estate Rosé,Rosé,2012,,Santa Ynez Valley,Estate
+304,65,Terra Valentine Cabernet Sauvignon K Block,Red,2018,4.65,Spring Mountain District,K Block
+305,65,Terra Valentine Cabernet Sauvignon K Block,Red,2017,4.55,Spring Mountain District,K Block
+306,65,Terra Valentine Cabernet Sauvignon K Block,Red,2016,4.6,Spring Mountain District,K Block
+307,65,Terra Valentine Cabernet Sauvignon K Block,Red,2015,4.55,Spring Mountain District,K Block
+308,65,Terra Valentine Cabernet Sauvignon K Block,Red,2014,4.55,Spring Mountain District,K Block
+309,65,Terra Valentine Cabernet Sauvignon K Block,Red,2013,4.55,Spring Mountain District,K Block
+310,65,Terra Valentine Cabernet Sauvignon K Block,Red,2010,4.5,Spring Mountain District,K Block
+311,65,Terra Valentine Cabernet Sauvignon K Block,Red,2007,4.55,Spring Mountain District,K Block
+312,65,Terra Valentine Cabernet Sauvignon K Block,Red,2006,,Spring Mountain District,K Block
+313,65,Terra Valentine Cabernet Sauvignon K Block,Red,2005,4.6,Spring Mountain District,K Block
+314,65,Terra Valentine Cabernet Sauvignon K Block,Red,2004,4.55,Spring Mountain District,K Block
+315,65,Terra Valentine Cabernet Sauvignon K Block,Red,2003,4.65,Spring Mountain District,K Block
+316,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2022,4.5,Santa Ynez Valley,Family Reserve
+317,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2021,4.65,Santa Ynez Valley,Family Reserve
+318,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2020,,Santa Ynez Valley,Family Reserve
+319,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2019,,Santa Ynez Valley,Family Reserve
+320,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2018,,Santa Ynez Valley,Family Reserve
+321,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2017,4.5,Santa Ynez Valley,Family Reserve
+322,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2016,,Santa Ynez Valley,Family Reserve
+323,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2012,4.55,Santa Ynez Valley,Family Reserve
+324,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2011,,Santa Ynez Valley,Family Reserve
+325,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2010,4.65,Santa Ynez Valley,Family Reserve
+326,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2022,4.5,Santa Ynez Valley,Family Reserve
+327,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2021,,Santa Ynez Valley,Family Reserve
+328,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2019,4.5,Santa Ynez Valley,Family Reserve
+329,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2018,4.45,Santa Ynez Valley,Family Reserve
+330,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2017,4.5,Santa Ynez Valley,Family Reserve
+331,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2016,,Santa Ynez Valley,Family Reserve
+332,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2015,,Santa Ynez Valley,Family Reserve
+333,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2014,,Santa Ynez Valley,Family Reserve
+334,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2013,,Santa Ynez Valley,Family Reserve
+335,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2012,4.45,Santa Ynez Valley,Family Reserve
+336,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2011,4.45,Santa Ynez Valley,Family Reserve
+337,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2010,4.45,Santa Ynez Valley,Family Reserve
+338,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2009,4.45,Santa Ynez Valley,Family Reserve
+339,57490,Vincent Vineyards Merlot Family Reserve,Red,2022,4.4,Santa Ynez Valley,Family Reserve
+340,57490,Vincent Vineyards Merlot Family Reserve,Red,2021,,Santa Ynez Valley,Family Reserve
+341,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2022,4.5,Santa Ynez Valley,Family Reserve
+342,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2021,4.65,Santa Ynez Valley,Family Reserve
+343,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2020,,Santa Ynez Valley,Family Reserve
+344,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2019,,Santa Ynez Valley,Family Reserve
+345,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2018,,Santa Ynez Valley,Family Reserve
+346,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2017,4.5,Santa Ynez Valley,Family Reserve
+347,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2016,,Santa Ynez Valley,Family Reserve
+348,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2012,4.55,Santa Ynez Valley,Family Reserve
+349,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2011,,Santa Ynez Valley,Family Reserve
+350,57490,Vincent Vineyards Cabernet Franc Family Reserve,Red,2010,4.65,Santa Ynez Valley,Family Reserve
+351,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2022,4.5,Santa Ynez Valley,Family Reserve
+352,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2021,,Santa Ynez Valley,Family Reserve
+353,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2019,4.5,Santa Ynez Valley,Family Reserve
+354,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2018,4.45,Santa Ynez Valley,Family Reserve
+355,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2017,4.5,Santa Ynez Valley,Family Reserve
+356,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2016,,Santa Ynez Valley,Family Reserve
+357,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2015,,Santa Ynez Valley,Family Reserve
+358,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2014,,Santa Ynez Valley,Family Reserve
+359,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2013,,Santa Ynez Valley,Family Reserve
+360,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2012,4.45,Santa Ynez Valley,Family Reserve
+361,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2011,4.45,Santa Ynez Valley,Family Reserve
+362,57490,Vincent Vineyards Cabernet Sauvignon Family Reserve,Red,2010,4.45,Santa Ynez Valley,Family Reserve
+363,57490,ncent Vineyards Cabernet Sauvignon Family Reserve,Red,2009,4.45,Santa Ynez Valley,Family Reserve
+364,57490,Vincent Vineyards Merlot Family Reserve,Red,2022,4.4,Santa Ynez Valley,Family Reserve
+365,57490,Vincent Vineyards Merlot Family Reserve,Red,2021,,Santa Ynez Valley,Family Reserve
+366,69,Wrath Destruction Level,Red,2021,,Monterey,Destruction Level
+367,69,Wrath Destruction Level,Red,2020,4.55,Monterey,Destruction Level
+368,69,Wrath Destruction Level,Red,2019,4.55,Monterey,Destruction Level
+369,69,Wrath Destruction Level,Red,2018,0.05,Monterey,Destruction Level
+370,69,Wrath Destruction Level,Red,2017,,Monterey,Destruction Level
+371,69,Wrath Destruction Level,Red,2016,,Monterey,Destruction Level
+372,69,Wrath Destruction Level,Red,2015,,Monterey,Destruction Level
+373,69,Wrath Destruction Level,Red,2014,,Monterey,Destruction Level
+374,69,Wrath Destruction Level,Red,2013,,Monterey,Destruction Level
+375,69,Wrath Sauvignon Blanc Destruction Level San Saba Vineyard,White,2009,4.1,Monterey,Destruction Level
+376,69,Wrath Sauvignon Blanc Destruction Level San Saba Vineyard,White,2008,4.4,Monterey,Destruction Level
+377,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2021,4.3,Napa Valley,Ruth's Reach
+378,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2019,,Napa Valley,Ruth's Reach
+379,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2018,4.4,Napa Valley,Ruth's Reach
+380,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2017,4.3,Napa Valley,Ruth's Reach
+381,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2016,4.55,Napa Valley,Ruth's Reach
+382,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2015,4.25,Napa Valley,Ruth's Reach
+383,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2014,4.4,Napa Valley,Ruth's Reach
+384,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2013,4.35,Napa Valley,Ruth's Reach
+385,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2012,4.45,Napa Valley,Ruth's Reach
+386,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2011,4.4,Napa Valley,Ruth's Reach
+387,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2010,4.45,Napa Valley,Ruth's Reach
+388,36884,Goldschmidt Vineyard Cabernet Sauvignon Yardstick Ruth's Reach,Red,2007,4.45,Napa Valley,Ruth's Reach
+389,57241,Albatross Ridge Pinot Noir Estate Reserve Bowlus Vineyard,Red,2018,,Carmel Valley,Estate Reserve
+390,57241,Albatross Ridge Pinot Noir Estate Reserve Bowlus Vineyard,Red,2016,,Carmel Valley,Estate Reserve
+391,57241,Albatross Ridge Pinot Noir Estate Reserve Bowlus Vineyard,Red,2015,,Carmel Valley,Estate Reserve
+392,57241,Albatross Ridge Pinot Noir Estate Reserve Bowlus Vineyard,Red,2014,,Carmel Valley,Estate Reserve
+393,57241,Albatross Ridge Pinot Noir Estate Reserve Bowlus Vineyard,Red,2013,,Carmel Valley,Estate Reserve
+394,57241,Albatross Ridge Pinot Noir Estate Reserve Bowlus Vineyard,Red,2012,4.65,Carmel Valley,Estate Reserve
+395,57241,Albatross Ridge Pinot Noir Estate Reserve Bowlus Vineyard,Red,2011,,Carmel Valley,Estate Reserve
+396,57241,Albatross Ridge Pinot Noir Estate Reserve Bowlus Vineyard,Red,2010,,Carmel Valley,Estate Reserve
+397,57241,Albatross Ridge Pinot Noir Estate Reserve Estate,Red,2021,,Carmel Valley,Estate Reserve
+398,57241,Albatross Ridge Pinot Noir Estate Reserve Estate,Red,2019,4.5,Carmel Valley,Estate Reserve
+399,57241,Albatross Ridge Pinot Noir Estate Reserve Estate,Red,2018,,Carmel Valley,Estate Reserve
+400,57241,Albatross Ridge Pinot Noir Estate Reserve Estate,Red,2017,0.05,Carmel Valley,Estate Reserve
+401,57241,Albatross Ridge Pinot Noir Estate Reserve Estate,Red,2016,0.05,Carmel Valley,Estate Reserve
+402,57241,Albatross Ridge Pinot Noir Estate Reserve Estate,Red,2015,4.45,Carmel Valley,Estate Reserve
+403,57241,Albatross Ridge Pinot Noir Estate Reserve Estate,Red,2014,4.45,Carmel Valley,Estate Reserve
+404,38725,Alta Colina Syrah Old 900,Red,2022,,Paso Robles Adelaida District,Old 900
+405,38725,Alta Colina Syrah Old 900,Red,2021,4.55,Paso Robles Adelaida District,Old 900
+406,38725,Alta Colina Syrah Old 900,Red,2020,4.5,Paso Robles Adelaida District,Old 900
+407,38725,Alta Colina Syrah Old 900,Red,2019,4.6,Paso Robles Adelaida District,Old 900
+408,38725,Alta Colina Syrah Old 900,Red,2018,4.55,Paso Robles Adelaida District,Old 900
+409,38725,Alta Colina Syrah Old 900,Red,2017,4.55,Paso Robles Adelaida District,Old 900
+410,38725,Alta Colina Syrah Old 900,Red,2016,4.5,Paso Robles Adelaida District,Old 900
+411,38725,Alta Colina Syrah Old 900,Red,2015,4.55,Paso Robles Adelaida District,Old 900
+412,38725,Alta Colina Syrah Old 900,Red,2014,4.55,Paso Robles Adelaida District,Old 900
+413,38725,Alta Colina Syrah Old 900,Red,2013,4.6,Paso Robles Adelaida District,Old 900
+414,38725,Alta Colina Syrah Old 900,Red,2012,4.45,Paso Robles,Old 900
+415,38725,Alta Colina Syrah Old 900,Red,2011,4.55,Paso Robles,Old 900
+416,38725,Alta Colina Syrah Old 900,Red,2010,4.55,Paso Robles,Old 900
+417,38725,Alta Colina Syrah Old 900,Red,2009,4.55,Paso Robles,Old 900
+418,38725,Alta Colina Syrah Old 900,Red,2008,4.5,Paso Robles,Old 900
+419,38725,Alta Colina Syrah Old 900,Red,2007,4.55,Paso Robles,Old 900
+420,54720,Castello di Gabbiano Chianti Classico Cavaliere d'Oro Gran Selezione Bellezza,Red,2021,,Chianti Classico DOCG,Bellezza Gran Selezione
+421,54720,Castello di Gabbiano Chianti Classico Cavaliere d'Oro Gran Selezione Bellezza,Red,2020,,Chianti Classico DOCG,Bellezza Gran Selezione
+422,54720,Castello di Gabbiano Chianti Classico Cavaliere d'Oro Gran Selezione Bellezza,Red,2019,,Chianti Classico DOCG,Bellezza Gran Selezione
+423,54720,Castello di Gabbiano Chianti Classico Cavaliere d'Oro Gran Selezione Bellezza,Red,2018,4.5,Chianti Classico DOCG,Bellezza Gran Selezione
+424,54720,Castello di Gabbiano Chianti Classico Cavaliere d'Oro Gran Selezione Bellezza,Red,2017,4.45,Chianti Classico DOCG,Bellezza Gran Selezione
+425,54720,Castello di Gabbiano Chianti Classico Cavaliere d'Oro Gran Selezione Bellezza,Red,2016,4.45,Chianti Classico DOCG,Bellezza Gran Selezione
+426,54720,Castello di Gabbiano Chianti Classico Cavaliere d'Oro Gran Selezione Bellezza,Red,2015,4.4,Chianti Classico DOCG,Bellezza Gran Selezione
+427,54720,Castello di Gabbiano Chianti Classico Cavaliere d'Oro Gran Selezione Bellezza,Red,2014,,Chianti Classico DOCG,Bellezza Gran Selezione
+428,54720,Castello di Gabbiano Chianti Classico Gran Selezione Bellezza,Red,2021,,Chianti Classico DOCG,Bellezza Gran Selezione
+429,54720,Castello di Gabbiano Chianti Classico Gran Selezione Bellezza,Red,2018,,Chianti Classico DOCG,Bellezza Gran Selezione
+430,54720,Castello di Gabbiano Chianti Classico Gran Selezione Bellezza,Red,2013,4.5,Chianti Classico DOCG,Bellezza Gran Selezione
+431,54720,Castello di Gabbiano Chianti Classico Gran Selezione Bellezza,Red,2012,4.45,Chianti Classico DOCG,Bellezza Gran Selezione
+432,54720,Castello di Gabbiano Chianti Classico Gran Selezione Bellezza,Red,2011,4.45,Chianti Classico DOCG,Bellezza Gran Selezione
+433,76,Chronic Cellars Mr. Nibbles,Red,2022,4.65,Paso Robles,Mr. Nibbles
+434,76,Chronic Cellars Mr. Nibbles,Red,2021,,Paso Robles,Mr. Nibbles
+435,76,Chronic Cellars Mr. Nibbles,Red,2020,,Paso Robles,Mr. Nibbles
+436,76,Chronic Cellars Mr. Nibbles,Red,2019,,Paso Robles,Mr. Nibbles
+437,76,Chronic Cellars Mr. Nibbles,Red,2018,4.5,Paso Robles,Mr. Nibbles
+438,76,Chronic Cellars Mr. Nibbles,Red,2017,,Paso Robles,Mr. Nibbles
+439,76,Chronic Cellars Mr. Nibbles,Red,2016,4.45,Paso Robles,Mr. Nibbles
+440,76,Chronic Cellars Mr. Nibbles,Red,2015,,Paso Robles,Mr. Nibbles
+441,76,Chronic Cellars Mr. Nibbles,Red,2014,,Paso Robles,Mr. Nibbles
+442,76,Chronic Cellars Mr. Nibbles,Red,2013,,Paso Robles,Mr. Nibbles
+443,76,Chronic Cellars Mr. Nibbles,Red,2012,,Paso Robles,Mr. Nibbles
+444,76,Chronic Cellars Mr. Nibbles,Red,2011,4.2,Paso Robles,Mr. Nibbles
+445,76,Chronic Cellars Mr. Nibbles,Red,2010,4.35,Paso Robles,Mr. Nibbles
+446,76,Chronic Cellars Mr. Nibbles,Red,2009,4.5,Paso Robles,Mr. Nibbles
+447,76,Chronic Cellars Petite Sirah Mr. Nibbles,Red,2014,,Paso Robles,Mr. Nibbles
+448,76,Chronic Cellars Petite Sirah Mr. Nibbles,Red,2009,4.4,Paso Robles,Mr. Nibbles
+449,77,Claiborne and Churchill 35th Anniversary Brut Cuvée,White - Sparkling,2020,,Edna Valley,Claiborne Vineyard
+450,77,Claiborne and Churchill 35th Anniversary Brut Cuvée,White - Sparkling,2016,,Edna Valley,Claiborne Vineyard
+451,77,Claiborne and Churchill Blanc de Blancs,White - Sparkling,2012,,California,Claiborne Vineyard
+452,77,Claiborne and Churchill Brandy - Eau de Vie de Fraise,Spirits,1999,,Central Coast,Claiborne Vineyard
+453,77,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2010,4.3,Central Coast,Claiborne Vineyard
+454,77,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2008,4.4,Central Coast,Claiborne Vineyard
+455,77,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2006,,Central Coast,Claiborne Vineyard
+456,77,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2004,,Central Coast,Claiborne Vineyard
+457,77,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2003,,Central Coast,Claiborne Vineyard
+458,77,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2000,,Central Coast,Claiborne Vineyard
+459,77,Claiborne and Churchill Cabernet Sauvignon,Red,2017,,San Luis Obispo County,Claiborne Vineyard
+460,77,Claiborne and Churchill Cabernet Sauvignon,Red,2012,,Central Coast,Claiborne Vineyard
+461,77,Claiborne and Churchill Cabernet Sauvignon,Red,2008,,San Luis Obispo County,Claiborne Vineyard
+462,77,Claiborne and Churchill Cabernet Sauvignon,Red,2006,4.25,San Luis Obispo County,Claiborne Vineyard
+463,77,Claiborne and Churchill Cabernet Sauvignon,Red,2005,,San Luis Obispo County,Claiborne Vineyard
+464,77,Claiborne and Churchill Cabernet Sauvignon,Red,2003,4.5,San Luis Obispo County,Claiborne Vineyard
+465,77,Claiborne and Churchill Cabernet Sauvignon,Red,2000,,San Luis Obispo County,Claiborne Vineyard
+466,77,Claiborne and Churchill Cabernet Sauvignon,Red,1999,,San Luis Obispo County,Claiborne Vineyard
+467,77,Claiborne and Churchill Cabernet Sauvignon,Red,1998,,San Luis Obispo County,Claiborne Vineyard
+468,77,Claiborne and Churchill Cabernet Sauvignon,Red,1997,,San Luis Obispo County,Claiborne Vineyard
+469,77,Claiborne and Churchill Chardonnay,White,2023,,Edna Valley,Claiborne Vineyard
+470,77,Claiborne and Churchill Chardonnay,White,2022,,Edna Valley,Claiborne Vineyard
+471,77,Claiborne and Churchill Chardonnay,White,2022,,San Luis Obispo County,Claiborne Vineyard
+472,77,Claiborne and Churchill Chardonnay,White,2021,,Edna Valley,Claiborne Vineyard
+473,77,Claiborne and Churchill Chardonnay,White,2020,,Edna Valley,Claiborne Vineyard
+474,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,2010,4.45,St. Helena,Rector Creek Vineyard
+475,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,2009,4.55,St. Helena,Rector Creek Vineyard
+476,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,2008,4.5,St. Helena,Rector Creek Vineyard
+477,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,2007,4.55,St. Helena,Rector Creek Vineyard
+478,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,2006,4.6,St. Helena,Rector Creek Vineyard
+479,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,2005,,St. Helena,Rector Creek Vineyard
+480,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,2004,4.55,St. Helena,Rector Creek Vineyard
+481,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,2003,4.6,St. Helena,Rector Creek Vineyard
+482,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,2002,,St. Helena,Rector Creek Vineyard
+483,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,2000,,St. Helena,Rector Creek Vineyard
+484,23692,Duckhorn Vineyards Cabernet Sauvignon Estate Grown Rector Creek Vineyard,Red,1998,,St. Helena,Rector Creek Vineyard
+485,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2021,,St. Helena,Rector Creek Vineyard
+486,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2020,4.55,St. Helena,Rector Creek Vineyard
+487,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2019,,St. Helena,Rector Creek Vineyard
+488,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2018,4.45,St. Helena,Rector Creek Vineyard
+489,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2017,4.6,St. Helena,Rector Creek Vineyard
+490,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2016,4.65,St. Helena,Rector Creek Vineyard
+491,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2015,4.7,St. Helena,Rector Creek Vineyard
+492,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2014,4.65,St. Helena,Rector Creek Vineyard
+493,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2013,4.6,St. Helena,Rector Creek Vineyard
+494,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2012,4.5,St. Helena,Rector Creek Vineyard
+495,23692,Duckhorn Vineyards Cabernet Sauvignon Rector Creek Vineyard,Red,2011,4.45,St. Helena,Rector Creek Vineyard
+496,23692,Duckhorn Vineyards Merlot Estate Grown Rector Creek Vineyard,Red,2011,4.5,Napa Valley,Rector Creek Vineyard
+497,23692,Duckhorn Vineyards Merlot Estate Grown Rector Creek Vineyard,Red,2010,4.5,Napa Valley,Rector Creek Vineyard
+498,23692,Duckhorn Vineyards Merlot Estate Grown Rector Creek Vineyard,Red,2007,4.55,Napa Valley,Rector Creek Vineyard
+499,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2023,,Russian River Valley,Dutton Ranch
+500,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2022,4.5,Russian River Valley,Dutton Ranch
+501,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2021,4.5,Russian River Valley,Dutton Ranch
+502,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2020,4.55,Russian River Valley,Dutton Ranch
+503,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2019,4.6,Russian River Valley,Dutton Ranch
+504,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2018,4.55,Russian River Valley,Dutton Ranch
+505,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2017,4.45,Russian River Valley,Dutton Ranch
+506,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2016,4.5,Russian River Valley,Dutton Ranch
+507,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2015,4.55,Russian River Valley,Dutton Ranch
+508,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2014,4.5,Russian River Valley,Dutton Ranch
+509,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2013,4.45,Russian River Valley,Dutton Ranch
+510,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2012,4.5,Russian River Valley,Dutton Ranch
+511,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2011,4.45,Russian River Valley,Dutton Ranch
+512,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2010,4.4,Russian River Valley,Dutton Ranch
+513,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2009,4.5,Russian River Valley,Dutton Ranch
+514,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2008,4.45,Russian River Valley,Dutton Ranch
+515,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2007,4.5,Russian River Valley,Dutton Ranch
+516,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2006,4.5,Russian River Valley,Dutton Ranch
+517,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2005,4.45,Russian River Valley,Dutton Ranch
+518,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2004,4.45,Russian River Valley,Dutton Ranch
+519,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2003,,Russian River Valley,Dutton Ranch
+520,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2002,0.05,Russian River Valley,Dutton Ranch
+521,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,2001,,Russian River Valley,Dutton Ranch
+522,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,1999,0.05,Russian River Valley,Dutton Ranch
+523,57703,Dutton-Goldfield Chardonnay Dutton Ranch,White,1998,,Russian River Valley,Dutton Ranch
+524,46295,J. Lohr Gesture GSM,Red,2023,,Paso Robles,Gesture
+525,46295,J. Lohr Gesture GSM,Red,2023,,Paso Robles Adelaida District,Gesture
+526,46295,J. Lohr Gesture GSM,Red,2022,,Paso Robles,Gesture
+527,46295,J. Lohr Gesture GSM,Red,2022,,Paso Robles Adelaida District,Gesture
+528,46295,J. Lohr Gesture GSM,Red,2021,,Paso Robles,Gesture
+529,46295,J. Lohr Gesture GSM,Red,2021,4.5,Paso Robles Adelaida District,Gesture
+530,46295,J. Lohr Gesture GSM,Red,2020,,Paso Robles Adelaida District,Gesture
+531,46295,J. Lohr Gesture GSM,Red,2019,4.45,Paso Robles Adelaida District,Gesture
+532,46295,J. Lohr Gesture GSM,Red,2018,4.35,Paso Robles,Gesture
+533,46295,J. Lohr Gesture GSM,Red,2017,4.5,Paso Robles,Gesture
+534,46295,J. Lohr Gesture GSM,Red,2016,4.45,Paso Robles,Gesture
+535,46295,J. Lohr Gesture GSM,Red,2015,4.45,Paso Robles,Gesture
+536,46295,J. Lohr Gesture GSM,Red,2014,4.2,Paso Robles,Gesture
+537,46295,J. Lohr Gesture GSM,Red,2013,4.4,Paso Robles,Gesture
+538,46295,J. Lohr Gesture GSM,Red,2012,4.4,Paso Robles,Gesture
+539,46295,J. Lohr Gesture GSM,Red,2011,4.45,Paso Robles,Gesture
+540,46295,J. Lohr Gesture GSM,Red,2010,4.4,Paso Robles,Gesture
+541,46295,J. Lohr Gesture GSM,Red,2009,4.5,Paso Robles,Gesture
+542,46295,J. Lohr Gesture GSM,Red,2008,4.35,Paso Robles,Gesture
+543,46295,J. Lohr Gesture GSM,Red,2007,4.4,Paso Robles,Gesture
+544,46295,J. Lohr Gesture GSM Limited Release,Red,2023,,Paso Robles Adelaida District,Gesture
+545,46295,J. Lohr Gesture GSM Limited Release,Red,2022,,Paso Robles Adelaida District,Gesture
+546,46295,"J. Lohr Gesture RVG Roussanne, Grenache Blanc, Viognier",White,2023,,Paso Robles,Gesture
+547,46295,"J. Lohr Gesture RVG Roussanne, Grenache Blanc, Viognier",White,2023,,Paso Robles Adelaida District,Gesture
+548,46295,"J. Lohr Gesture RVG Roussanne, Grenache Blanc, Viognier",White,2022,,Paso Robles Adelaida District,Gesture
+549,17865,J. Lohr Chardonnay October Night,White,2023,,Arroyo Seco,October Night
+550,17865,J. Lohr Chardonnay October Night,White,2022,4.55,Arroyo Seco,October Night
+551,17865,J. Lohr Chardonnay October Night,White,2021,,Arroyo Seco,October Night
+552,17865,J. Lohr Chardonnay October Night,White,2020,4.45,Arroyo Seco,October Night
+553,17865,J. Lohr Chardonnay October Night,White,2019,,Arroyo Seco,October Night
+554,17865,J. Lohr Chardonnay October Night,White,2018,4.5,Arroyo Seco,October Night
+555,17865,J. Lohr Chardonnay October Night,White,2017,4.45,Arroyo Seco,October Night
+556,17865,J. Lohr Chardonnay October Night,White,2016,4.55,Arroyo Seco,October Night
+557,17865,J. Lohr Chardonnay October Night,White,2015,4.5,Arroyo Seco,October Night
+558,17865,J. Lohr Chardonnay October Night,White,2014,,Arroyo Seco,October Night
+559,17865,J. Lohr Chardonnay October Night,White,2013,,Arroyo Seco,October Night
+560,17865,J. Lohr Chardonnay October Night,White,2012,,Arroyo Seco,October Night
+561,17865,J. Lohr Chardonnay October Night,White,2011,4.5,Arroyo Seco,October Night
+562,17865,J. Lohr Chardonnay October Night,White,2010,4.85,Arroyo Seco,October Night
+563,17865,J. Lohr Chardonnay October Night,White,2009,4.1,Arroyo Seco,October Night
+564,17865,J. Lohr Chardonnay October Night,White,2007,4.3,Arroyo Seco,October Night
+565,17865,J. Lohr Chardonnay October Night,White,2006,4.35,Arroyo Seco,October Night
+566,17865,J. Lohr Chardonnay October Night,White,2005,4.45,Arroyo Seco,October Night
+567,17865,J. Lohr Chardonnay October Night,White,2004,,Arroyo Seco,October Night
+568,53162,MCV 1105,Red,2022,,Paso Robles,1105
+569,53162,MCV 1105,Red,2021,4.7,Paso Robles,1105
+570,53162,MCV 1105,Red,2020,,Paso Robles,1105
+571,53162,MCV 1105,Red,2019,0.05,Paso Robles,1105
+572,53162,MCV 1105,Red,2018,4.55,Paso Robles,1105
+573,53162,MCV 1105,Red,2017,,Paso Robles,1105
+574,53162,MCV 1105,Red,2016,4.55,Paso Robles,1105
+575,53162,MCV 1105,Red,2015,4.55,Paso Robles,1105
+576,53162,MCV 1105,Red,2014,4.55,Paso Robles,1105
+577,53162,MCV 1105,Red,2013,4.6,Paso Robles,1105
+578,53162,MCV 1105,Red,2012,4.45,Paso Robles,1105
+579,53162,MCV 1105,Red,2011,4.55,Paso Robles,1105
+580,52656,Mounts Family Winery Clairette Blanche Verah,White,2019,,Dry Creek Valley,Verah
+581,52656,Mounts Family Winery Counoise Verah,Red,2022,,Dry Creek Valley,Verah
+582,52656,Mounts Family Winery Counoise Verah,Red,2021,,Dry Creek Valley,Verah
+583,52656,Mounts Family Winery Counoise Verah,Red,2018,,Dry Creek Valley,Verah
+584,52656,Mounts Family Winery Picpoul Blanc Verah,White,2018,,Dry Creek Valley,Verah
+585,52656,Mounts Family Winery Picpoul Blanc Verah,White,2017,,Dry Creek Valley,Verah
+586,52656,Mounts Family Winery Picpoul Blanc Verah,White,2016,,Dry Creek Valley,Verah
+587,52656,Mounts Family Winery Picpoul Blanc Verah,White,2015,,Dry Creek Valley,Verah
+588,52656,Mounts Family Winery Verah,Red,2022,,Dry Creek Valley,Verah
+589,52656,Mounts Family Winery Verah,Red,2021,,Dry Creek Valley,Verah
+590,52656,Mounts Family Winery Verah,Red,2019,4.4,Dry Creek Valley,Verah
+591,52656,Mounts Family Winery Verah,Red,2018,,Dry Creek Valley,Verah
+592,52656,Mounts Family Winery Verah,Red,2017,4.45,Dry Creek Valley,Verah
+593,52656,Mounts Family Winery Verah,Red,2016,,Dry Creek Valley,Verah
+594,52656,Mounts Family Winery Verah,Red,2015,,Dry Creek Valley,Verah
+595,52656,Mounts Family Winery Verah,Red,2014,,Dry Creek Valley,Verah
+596,52656,Mounts Family Winery Verah,Red,2013,4.45,Dry Creek Valley,Verah
+597,52656,Mounts Family Winery Verah,Red,2012,4.45,Dry Creek Valley,Verah
+598,52656,Mounts Family Winery Verah Pink Counoise,Rosé,2021,,Dry Creek Valley,Verah
+599,52656,Mounts Family Winery Verah Pink Counoise,Rosé,2017,,Dry Creek Valley,Verah
+600,52656,Mounts Family Winery Verah Pink Counoise,Rosé,2016,,Dry Creek Valley,Verah
+601,52656,Mounts Family Winery Verah Sparkling Svet,White - Sparkling,2014,,Dry Creek Valley,Verah
+602,52656,Mounts Family Winery Verah Sparkling Svet,White - Sparkling,2013,,Dry Creek Valley,Verah
+603,52656,Mounts Family Winery Verah White,White,2021,,Dry Creek Valley,Verah
+604,52656,Mounts Family Winery Verah White,White,2019,,Dry Creek Valley,Verah
+605,50721,St. Pauls Blauburgunder Riserva Passion,Red,2017,4.4,Alto Adige - Südtirol,Passion Riserva
+606,50721,St. Pauls Blauburgunder Riserva Passion,Red,2016,4.3,Alto Adige - Südtirol,Passion Riserva
+607,50721,St. Pauls Blauburgunder Riserva Passion,Red,2015,4.45,Alto Adige - Südtirol,Passion Riserva
+608,50721,St. Pauls Blauburgunder Riserva Passion,Red,2012,,Alto Adige - Südtirol,Passion Riserva
+609,50721,St. Pauls Lagrein Passion Riserva,Red,2017,,Alto Adige - Südtirol,Passion Riserva
+610,50721,St. Pauls Lagrein Passion Riserva,Red,2016,,Alto Adige - Südtirol,Passion Riserva
+611,50721,St. Pauls Lagrein Passion Riserva,Red,2013,,Alto Adige - Südtirol,Passion Riserva
+612,57733,Silvan Ridge Pinot Noir Reserve,Red,2023,,Willamette Valley,Reserve
+613,57733,Silvan Ridge Pinot Noir Reserve,Red,2022,,Willamette Valley,Reserve
+614,57733,Silvan Ridge Pinot Noir Reserve,Red,2022,,Yamhill-Carlton,Reserve
+615,57733,Silvan Ridge Pinot Noir Reserve,Red,2021,,Willamette Valley,Reserve
+616,57733,Silvan Ridge Pinot Noir Reserve,Red,2020,,Willamette Valley,Reserve
+617,57733,Silvan Ridge Pinot Noir Reserve,Red,2010,4.35,Willamette Valley,Reserve
+618,57733,Silvan Ridge Pinot Noir Reserve,Red,2010,4.55,Yamhill-Carlton,Reserve
+619,57733,Silvan Ridge Pinot Noir Reserve,Red,2009,4.4,Willamette Valley,Reserve
+620,57733,Silvan Ridge Pinot Noir Reserve,Red,2008,4.55,Willamette Valley,Reserve
+621,57733,Silvan Ridge Pinot Noir Reserve,Red,2007,3.95,Willamette Valley,Reserve
+622,57733,Silvan Ridge Pinot Noir Reserve,Red,2006,0.05,Willamette Valley,Reserve
+623,57733,Silvan Ridge Pinot Noir Reserve,Red,2005,4.2,Willamette Valley,Reserve
+624,57733,Silvan Ridge Pinot Noir Reserve,Red,2003,4.3,Willamette Valley,Reserve
+625,57733,Silvan Ridge Pinot Noir Reserve,Red,2002,,Willamette Valley,Reserve
+626,57733,Silvan Ridge Pinot Noir Reserve Bradshaw Vineyards,Red,2013,,Willamette Valley,Reserve
+627,57733,Silvan Ridge Pinot Noir Reserve Bradshaw Vineyards,Red,2007,,Willamette Valley,Reserve
+628,57733,Silvan Ridge Pinot Noir Reserve Falcon Glen,Red,2015,,Willamette Valley,Reserve
+629,57733,Silvan Ridge Pinot Noir Reserve Falcon Glen,Red,2014,,Willamette Valley,Reserve
+630,57733,Silvan Ridge Pinot Noir Reserve Falcon Glen,Red,2013,,Willamette Valley,Reserve
+631,57733,Silvan Ridge Pinot Noir Reserve Falcon Glen,Red,2007,,Willamette Valley,Reserve
+632,57733,Silvan Ridge Pinot Noir Reserve Freedom Hill Vineyard,Red,2010,,Willamette Valley,Reserve
+633,57733,Silvan Ridge Pinot Noir Reserve Lazy River Vineyard,Red,2009,4.4,Willamette Valley,Reserve
+634,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2020,,McLaren Vale,The Derelict Vineyard
+635,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2019,4.45,McLaren Vale,The Derelict Vineyard
+636,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2018,4.5,McLaren Vale,The Derelict Vineyard
+637,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2017,,McLaren Vale,The Derelict Vineyard
+638,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2016,4.25,McLaren Vale,The Derelict Vineyard
+639,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2015,4.5,McLaren Vale,The Derelict Vineyard
+640,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2014,4.25,McLaren Vale,The Derelict Vineyard
+641,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2013,4.4,McLaren Vale,The Derelict Vineyard
+642,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2012,4.4,McLaren Vale,The Derelict Vineyard
+643,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2011,4.35,McLaren Vale,The Derelict Vineyard
+644,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2010,4.45,McLaren Vale,The Derelict Vineyard
+645,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2009,4.45,McLaren Vale,The Derelict Vineyard
+646,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2008,4.5,McLaren Vale,The Derelict Vineyard
+647,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2007,4.35,McLaren Vale,The Derelict Vineyard
+648,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2006,4.4,McLaren Vale,The Derelict Vineyard
+649,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2005,4.35,McLaren Vale,The Derelict Vineyard
+650,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2004,4.5,McLaren Vale,The Derelict Vineyard
+651,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2003,4.45,McLaren Vale,The Derelict Vineyard
+652,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2002,4.45,McLaren Vale,The Derelict Vineyard
+653,49899,d'Arenberg Grenache The Derelict Vineyard,Red,2001,,McLaren Vale,The Derelict Vineyard
+654,49899,d'Arenberg Grenache The Derelict Vineyard,Red,1997,,McLaren Vale,The Derelict Vineyard
+655,100,"Chateau du ""B"" Red Wine",Red,2005,,New Jersey,Herederos de François Lurton Villaf
+656,57733,Finca Las Moras Chardonnay Reserve Organic,White,2022,,San Juan,Reserve
+657,57733,Finca Las Moras Chardonnay Reserve Organic,White,2019,,San Juan,Reserve
+658,57733,Finca Las Moras Chardonnay Reserve Organic,White,2018,,San Juan,Reserve
+659,57733,Finca Las Moras Chardonnay Reserve Organic,White,2016,4.1,San Juan,Reserve
+660,57733,Finca Las Moras Malbec Alma Mora Select Reserve,Red,2022,,San Juan,Reserve
+661,57733,Finca Las Moras Malbec Alma Mora Select Reserve,Red,2021,,San Juan,Reserve
+662,57733,Finca Las Moras Malbec Alma Mora Select Reserve,Red,2020,4.35,San Juan,Reserve
+663,57733,Finca Las Moras Malbec Alma Mora Select Reserve,Red,2019,4.35,San Juan,Reserve
+664,57733,Finca Las Moras Malbec Alma Mora Select Reserve,Red,2018,,San Juan,Reserve
+665,57733,Finca Las Moras Malbec Alma Mora Select Reserve,Red,2017,4.35,San Juan,Reserve
+666,57733,Finca Las Moras Shiraz Reserve,Red,2011,,San Juan,Reserve
+667,57733,Finca Las Moras Shiraz Reserve,Red,2010,4.25,San Juan,Reserve
+668,57733,Finca Las Moras Shiraz Reserve,Red,2009,,San Juan,Reserve
+669,57733,Finca Las Moras Shiraz Reserve,Red,2008,3.55,San Juan,Reserve
+670,57733,Finca Las Moras Shiraz Reserve,Red,2007,4.3,San Juan,Reserve
+671,57733,Finca Las Moras Shiraz Reserve,Red,2006,4.35,San Juan,Reserve
+672,57733,Finca Las Moras Tempranillo Reserve,Red,2013,,San Juan,Reserve
+673,57733,Finca Las Moras Tempranillo Reserve,Red,2012,,San Juan,Reserve
+674,57733,Finca Las Moras Tempranillo Reserve,Red,2011,,San Juan,Reserve
+675,57733,Finca Las Moras Tempranillo Reserve,Red,2010,4.4,San Juan,Reserve
+676,57733,Finca Las Moras Tempranillo Reserve,Red,2009,,San Juan,Reserve
+677,57733,Finca Las Moras Tempranillo Reserve,Red,2005,,San Juan,Reserve
+678,102,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2018,,Willamette Valley,Estate Single Vineyard
+679,102,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2016,,Willamette Valley,Estate Single Vineyard
+680,102,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2010,,Willamette Valley,Estate Single Vineyard
+681,102,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2009,4.4,Willamette Valley,Estate Single Vineyard
+682,102,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2008,4.45,Willamette Valley,Estate Single Vineyard
+683,102,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2006,4,Willamette Valley,Estate Single Vineyard
+684,102,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2003,,Willamette Valley,Estate Single Vineyard
+685,102,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2002,4.65,Willamette Valley,Estate Single Vineyard
+686,102,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,1999,,Willamette Valley,Estate Single Vineyard
+687,102,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,1991,,Willamette Valley,Estate Single Vineyard
+688,57647,Esterlina Pinot Noir Reserva,Red,2013,,Cole Ranch,Reserva
+689,57647,Esterlina Pinot Noir Reserva,Red,2012,4.35,Cole Ranch,Reserva
+690,57647,Esterlina Pinot Noir Reserva,Red,2010,4.35,Cole Ranch,Reserva
+691,57647,Esterlina Pinot Noir Reserva,Red,2009,4.45,Cole Ranch,Reserva
+692,57647,Esterlina Pinot Noir Reserva,Red,2008,4.4,Cole Ranch,Reserva
+693,57647,Esterlina Pinot Noir Reserva,Red,2007,4.55,Cole Ranch,Reserva
+694,57647,Esterlina Pinot Noir Reserva,Red,2006,4.3,Cole Ranch,Reserva
+695,57647,Esterlina Pinot Noir Reserva,Red,2005,,Cole Ranch,Reserva
+696,57647,Esterlina Pinot Noir Reserva,Red,2004,4.15,Cole Ranch,Reserva
+697,57540,Amity Vineyards Late Harvest Riesling Estate Vineyard,White - Sweet/Dessert,2007,4.4,Willamette Valley,Estate
+698,57540,Amity Vineyards Pinot Noir Estate,Red,2019,,Eola - Amity Hills,Estate
+699,57540,Amity Vineyards Pinot Noir Estate,Red,2018,,Eola - Amity Hills,Estate
+700,57540,Amity Vineyards Pinot Noir Estate,Red,2011,4.4,Willamette Valley,Estate
+701,57540,Amity Vineyards Pinot Noir Estate,Red,2010,,Willamette Valley,Estate
+702,57540,Amity Vineyards Pinot Noir Estate,Red,2009,,Willamette Valley,Estate
+703,57540,Amity Vineyards Pinot Noir Estate,Red,2008,,Willamette Valley,Estate
+704,57540,Amity Vineyards Pinot Noir Estate,Red,2006,,Willamette Valley,Estate
+705,57540,Amity Vineyards Pinot Noir Estate,Red,2003,,Willamette Valley,Estate
+706,57540,Amity Vineyards Pinot Noir Estate,Red,2002,4.55,Willamette Valley,Estate
+707,57540,Amity Vineyards Pinot Noir Estate,Red,1999,4.55,Willamette Valley,Estate
+708,57540,Amity Vineyards Pinot Noir Estate,Red,1985,,Willamette Valley,Estate
+709,57540,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2018,,Willamette Valley,Estate
+710,57540,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2016,,Willamette Valley,Estate
+711,57540,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2010,,Willamette Valley,Estate
+712,57540,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2009,4.4,Willamette Valley,Estate
+713,57540,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2008,4.45,Willamette Valley,Estate
+714,57540,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2006,4,Willamette Valley,Estate
+715,57540,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2003,,Willamette Valley,Estate
+716,57540,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,2002,4.65,Willamette Valley,Estate
+717,57540,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,1999,,Willamette Valley,Estate
+718,57540,Amity Vineyards Pinot Noir Estate Single Vineyard,Red,1991,,Willamette Valley,Estate
+719,57540,Amity Vineyards Riesling Estate,White,2021,,Willamette Valley,Estate
+720,57540,Amity Vineyards Riesling Estate,White,2010,,Willamette Valley,Estate
+721,57540,Amity Vineyards Riesling Estate,White,2008,,Willamette Valley,Estate
+722,9169,Beaver Creek Fairytale,Red,2019,4.45,Napa Valley,Fairytale
+723,9169,Beaver Creek Fairytale,Red,2015,,Napa Valley,Fairytale
+724,9169,Beaver Creek Fairytale,Red,2014,,Napa Valley,Fairytale
+725,9169,Beaver Creek Fairytale,Red,2013,4.55,Napa Valley,Fairytale
+726,9169,Beaver Creek Fairytale,Red,2011,,Napa Valley,Fairytale
+727,9169,Beaver Creek Fairytale,Red,2008,4.3,Napa Valley,Fairytale
+728,9169,Beaver Creek Fairytale,Red,2007,4.3,Napa Valley,Fairytale
+729,109,Kaiken Corte Malbec/Bonarda/Petit Verdot,Red,2018,,Lujan de Cuyo,Corte Malbec-Bonarda-Petit Verdot
+730,109,Kaiken Corte Malbec/Bonarda/Petit Verdot,Red,2016,,Lujan de Cuyo,Corte Malbec-Bonarda-Petit Verdot
+731,109,Kaiken Corte Malbec/Bonarda/Petit Verdot,Red,2015,,Lujan de Cuyo,Corte Malbec-Bonarda-Petit Verdot
+732,109,Kaiken Corte Malbec/Bonarda/Petit Verdot,Red,2014,4.4,Lujan de Cuyo,Corte Malbec-Bonarda-Petit Verdot
+733,109,Kaiken Corte Malbec/Bonarda/Petit Verdot,Red,2013,4.4,Lujan de Cuyo,Corte Malbec-Bonarda-Petit Verdot
+734,109,Kaiken Corte Malbec/Bonarda/Petit Verdot,Red,2012,,Lujan de Cuyo,Corte Malbec-Bonarda-Petit Verdot
+735,109,Kaiken Corte Malbec/Bonarda/Petit Verdot,Red,2010,4.35,Lujan de Cuyo,Corte Malbec-Bonarda-Petit Verdot
+736,109,Kaiken Corte Malbec/Bonarda/Petit Verdot,Red,2009,,Lujan de Cuyo,Corte Malbec-Bonarda-Petit Verdot
+737,109,Kaiken Corte Malbec/Bonarda/Petit Verdot,Red,2008,,Lujan de Cuyo,Corte Malbec-Bonarda-Petit Verdot
+738,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2022,,Mendoza,Reserva de Familia
+739,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2021,,Mendoza,Reserva de Familia
+740,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2020,,Mendoza,Reserva de Familia
+741,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2019,,Mendoza,Reserva de Familia
+742,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2018,,Mendoza,Reserva de Familia
+743,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2017,,Mendoza,Reserva de Familia
+744,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2016,,Mendoza,Reserva de Familia
+745,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2015,4.45,Mendoza,Reserva de Familia
+746,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2014,4.5,Mendoza,Reserva de Familia
+747,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2013,4.5,Mendoza,Reserva de Familia
+748,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2011,4.5,Mendoza,Reserva de Familia
+749,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2010,,Mendoza,Reserva de Familia
+750,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2009,,Mendoza,Reserva de Familia
+751,42552,Bodega Sottano Cabernet Sauvignon Reserva de Familia,Red,2008,,Mendoza,Reserva de Familia
+752,42552,Bodega Sottano Malbec Reserva de Familia,Red,2022,,Mendoza,Reserva de Familia
+753,42552,Bodega Sottano Malbec Reserva de Familia,Red,2021,,Mendoza,Reserva de Familia
+754,42552,Bodega Sottano Malbec Reserva de Familia,Red,2020,,Mendoza,Reserva de Familia
+755,42552,Bodega Sottano Malbec Reserva de Familia,Red,2019,4.5,Mendoza,Reserva de Familia
+756,42552,Bodega Sottano Malbec Reserva de Familia,Red,2018,,Mendoza,Reserva de Familia
+757,42552,Bodega Sottano Malbec Reserva de Familia,Red,2017,4.5,Mendoza,Reserva de Familia
+758,42552,Bodega Sottano Malbec Reserva de Familia,Red,2016,,Mendoza,Reserva de Familia
+759,42552,Bodega Sottano Malbec Reserva de Familia,Red,2015,4.55,Mendoza,Reserva de Familia
+760,42552,Bodega Sottano Malbec Reserva de Familia,Red,2014,4.45,Mendoza,Reserva de Familia
+761,42552,Bodega Sottano Malbec Reserva de Familia,Red,2013,,Mendoza,Reserva de Familia
+762,42552,Bodega Sottano Malbec Reserva de Familia,Red,2012,4.45,Mendoza,Reserva de Familia
+763,55138,Erath Pinot Noir Bishop Creek,Red,2019,,Yamhill-Carlton,Bishop Creek
+764,55138,Erath Pinot Noir Bishop Creek,Red,2018,,Yamhill-Carlton,Bishop Creek
+765,55138,Erath Pinot Noir Bishop Creek,Red,2017,4.5,Yamhill-Carlton,Bishop Creek
+766,55138,Erath Pinot Noir Bishop Creek,Red,2016,4.45,Yamhill-Carlton,Bishop Creek
+767,55138,Erath Pinot Noir Bishop Creek,Red,2015,,Yamhill-Carlton,Bishop Creek
+768,55138,Erath Pinot Noir Bishop Creek,Red,2014,4.5,Yamhill-Carlton,Bishop Creek
+769,55138,Erath Pinot Noir Bishop Creek,Red,2013,4.55,Yamhill-Carlton,Bishop Creek
+770,55138,Erath Pinot Noir Bishop Creek,Red,2012,4.45,Yamhill-Carlton,Bishop Creek
+771,55138,Erath Pinot Noir Bishop Creek,Red,2011,,Yamhill-Carlton,Bishop Creek
+772,55138,Erath Pinot Noir Bishop Creek,Red,2010,4.3,Yamhill-Carlton,Bishop Creek
+773,55138,Erath Pinot Noir Bishop Creek,Red,2009,4.65,Yamhill-Carlton,Bishop Creek
+774,55138,Erath Pinot Noir Bishop Creek,Red,2006,4.45,Yamhill-Carlton,Bishop Creek
+775,55138,Erath Pinot Noir Bishop Creek,Red,2003,,Yamhill-Carlton,Bishop Creek
+776,55138,Erath Pinot Noir Bishop Creek,Red,2000,,Yamhill-Carlton,Bishop Creek
+777,34427,J. Christopher Pinot Noir Bella Vida Vineyard,Red,2020,2.5,Dundee Hills,Bella Vida Vineyard Unfiltered
+778,34427,J. Christopher Pinot Noir Bella Vida Vineyard,Red,2019,,Dundee Hills,Bella Vida Vineyard Unfiltered
+779,34427,J. Christopher Pinot Noir Bella Vida Vineyard,Red,2018,4.55,Dundee Hills,Bella Vida Vineyard Unfiltered
+780,34427,J. Christopher Pinot Noir Bella Vida Vineyard,Red,2017,4.6,Dundee Hills,Bella Vida Vineyard Unfiltered
+781,34427,J. Christopher Pinot Noir Bella Vida Vineyard,Red,2016,4.55,Dundee Hills,Bella Vida Vineyard Unfiltered
+782,34427,J. Christopher Pinot Noir Bella Vida Vineyard,Red,2011,4.5,Dundee Hills,Bella Vida Vineyard Unfiltered
+783,34427,J. Christopher Pinot Noir Bella Vida Vineyard,Red,2010,,Dundee Hills,Bella Vida Vineyard Unfiltered
+784,34427,J. Christopher Pinot Noir Bella Vida Vineyard,Red,2007,,Dundee Hills,Bella Vida Vineyard Unfiltered
+785,34427,J. Christopher Pinot Noir Clonal Cuvée - Pommard & Wadenswil Bella Vida Vineyard,Red,2018,,Dundee Hills,Bella Vida Vineyard Unfiltered
+786,34427,J. Christopher Pinot Noir Clonal Selection - Wadenswil Unfiltered Bella Vida Vineyard,Red,2018,4.5,Dundee Hills,Bella Vida Vineyard Unfiltered
+787,34427,J. Christopher Pinot Noir Clonal Selection - Wadenswil Unfiltered Bella Vida Vineyard,Red,2017,,Dundee Hills,Bella Vida Vineyard Unfiltered
+788,34427,J. Christopher Pinot Noir Pommard Bella Vida Vineyard,Red,2018,,Dundee Hills,Bella Vida Vineyard Unfiltered
+789,34427,J. Christopher Pinot Noir Pommard Bella Vida Vineyard,Red,2017,4.75,Dundee Hills,Bella Vida Vineyard Unfiltered
+790,34427,J. Christopher Pinot Noir Single Barrel Selection Bella Vida Vineyard,Red,2016,,Dundee Hills,Bella Vida Vineyard Unfiltered
+791,52952,Kilikanoon Shiraz Green's Vineyard,Red,2015,4.1,Barossa Valley,Green's Vineyard
+792,52952,Kilikanoon Shiraz Green's Vineyard,Red,2014,4.6,Barossa Valley,Green's Vineyard
+793,52952,Kilikanoon Shiraz Green's Vineyard,Red,2013,4.5,Barossa Valley,Green's Vineyard
+794,52952,Kilikanoon Shiraz Green's Vineyard,Red,2012,4.65,Barossa Valley,Green's Vineyard
+795,52952,Kilikanoon Shiraz Green's Vineyard,Red,2010,4.45,Barossa Valley,Green's Vineyard
+796,52952,Kilikanoon Shiraz Green's Vineyard,Red,2009,4.55,Barossa Valley,Green's Vineyard
+797,52952,Kilikanoon Shiraz Green's Vineyard,Red,2008,0.15,Barossa Valley,Green's Vineyard
+798,52952,Kilikanoon Shiraz Green's Vineyard,Red,2007,4.55,Barossa Valley,Green's Vineyard
+799,52952,Kilikanoon Shiraz Green's Vineyard,Red,2006,4.6,Barossa Valley,Green's Vineyard
+800,52952,Kilikanoon Shiraz Green's Vineyard,Red,2005,4.55,Barossa Valley,Green's Vineyard
+801,52952,Kilikanoon Shiraz Green's Vineyard,Red,2004,4.7,Barossa Valley,Green's Vineyard
+802,52952,Kilikanoon Shiraz Green's Vineyard,Red,2003,4.6,Barossa Valley,Green's Vineyard
+803,52952,Kilikanoon Shiraz Green's Vineyard,Red,2002,4.65,Barossa Valley,Green's Vineyard
+804,52952,Kilikanoon Shiraz Green's Vineyard,Red,1999,,Barossa Valley,Green's Vineyard
+805,55577,Finca Sophenia Cabernet Sauvignon Synthesis,Red,2022,,Tupungato,Synthesis
+806,55577,Finca Sophenia Cabernet Sauvignon Synthesis,Red,2021,,Tupungato,Synthesis
+807,55577,Finca Sophenia Cabernet Sauvignon Synthesis,Red,2020,,Tupungato,Synthesis
+808,55577,Finca Sophenia Cabernet Sauvignon Synthesis,Red,2019,,Tupungato,Synthesis
+809,55577,Finca Sophenia Cabernet Sauvignon Synthesis,Red,2018,,Tupungato,Synthesis
+810,55577,Finca Sophenia Cabernet Sauvignon Synthesis,Red,2017,4.6,Tupungato,Synthesis
+811,55577,Finca Sophenia Cabernet Sauvignon Synthesis,Red,2016,,Tupungato,Synthesis
+812,55577,Finca Sophenia Cabernet Sauvignon Synthesis,Red,2014,,Tupungato,Synthesis
+813,55577,Finca Sophenia Cabernet Sauvignon Synthesis,Red,2011,4.5,Tupungato,Synthesis
+814,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2024,,Tupungato,Synthesis
+815,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2023,,Tupungato,Synthesis
+816,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2022,,Tupungato,Synthesis
+817,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2021,,Tupungato,Synthesis
+818,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2020,,Tupungato,Synthesis
+819,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2019,4.25,Tupungato,Synthesis
+820,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2018,,Tupungato,Synthesis
+821,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2017,4.75,Tupungato,Synthesis
+822,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2015,4.3,Tupungato,Synthesis
+823,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2012,,Tupungato,Synthesis
+824,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2011,,Tupungato,Synthesis
+825,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2010,,Tupungato,Synthesis
+826,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2009,,Tupungato,Synthesis
+827,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2008,,Tupungato,Synthesis
+828,55577,Finca Sophenia Sauvignon Blanc Synthesis,White,2007,,Tupungato,Synthesis
+829,126,Pezzi King Zinfandel Reserve - Bottle No 240 Serracino Vineyard,Red,2009,,Dry Creek Valley,Serracino Reserve
+830,126,Pezzi King Zinfandel Reserve - Bottle No 240 Serracino Vineyard,Red,2006,,Dry Creek Valley,Serracino Reserve
+831,126,Pezzi King Zinfandel Reserve - Bottle No 240 Serracino Vineyard,Red,2004,,Dry Creek Valley,Serracino Reserve
+832,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2021,,Dry Creek Valley,Serracino Reserve
+833,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2020,4.6,Dry Creek Valley,Serracino Reserve
+834,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2019,4.4,Dry Creek Valley,Serracino Reserve
+835,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2018,4.4,Dry Creek Valley,Serracino Reserve
+836,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2017,4.55,Dry Creek Valley,Serracino Reserve
+837,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2016,4.45,Dry Creek Valley,Serracino Reserve
+838,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2015,4.5,Dry Creek Valley,Serracino Reserve
+839,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2014,4.5,Dry Creek Valley,Serracino Reserve
+840,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2013,4.5,Dry Creek Valley,Serracino Reserve
+841,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2012,4.55,Dry Creek Valley,Serracino Reserve
+842,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2011,4.55,Dry Creek Valley,Serracino Reserve
+843,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2010,4.55,Dry Creek Valley,Serracino Reserve
+844,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2009,4.6,Dry Creek Valley,Serracino Reserve
+845,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2008,4.5,Dry Creek Valley,Serracino Reserve
+846,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2006,,Dry Creek Valley,Serracino Reserve
+847,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2002,,Dry Creek Valley,Serracino Reserve
+848,126,Pezzi King Zinfandel Reserve Serracino Vineyard,Red,2001,,Dry Creek Valley,Serracino Reserve
+849,34054,Torbreck RunRig,Red,2022,,Barossa Valley,RunRig
+850,34054,Torbreck RunRig,Red,2021,4.65,Barossa Valley,RunRig
+851,34054,Torbreck RunRig,Red,2020,4.55,Barossa Valley,RunRig
+852,34054,Torbreck RunRig,Red,2019,4.6,Barossa Valley,RunRig
+853,34054,Torbreck RunRig,Red,2018,4.7,Barossa Valley,RunRig
+854,34054,Torbreck RunRig,Red,2017,4.7,Barossa Valley,RunRig
+855,34054,Torbreck RunRig,Red,2016,4.7,Barossa Valley,RunRig
+856,34054,Torbreck RunRig,Red,2015,4.6,Barossa Valley,RunRig
+857,34054,Torbreck RunRig,Red,2014,4.7,Barossa Valley,RunRig
+858,34054,Torbreck RunRig,Red,2013,4.75,Barossa Valley,RunRig
+859,34054,Torbreck RunRig,Red,2012,4.7,Barossa Valley,RunRig
+860,34054,Torbreck RunRig,Red,2011,,Barossa Valley,RunRig
+861,34054,Torbreck RunRig,Red,2010,4.75,Barossa Valley,RunRig
+862,34054,Torbreck RunRig,Red,2009,4.7,Barossa Valley,RunRig
+863,34054,Torbreck RunRig,Red,2008,,Barossa Valley,RunRig
+864,34054,Torbreck RunRig,Red,2007,4.7,Barossa Valley,RunRig
+865,34054,Torbreck RunRig,Red,2006,4.65,Barossa Valley,RunRig
+866,34054,Torbreck RunRig,Red,2005,4.7,Barossa Valley,RunRig
+867,34054,Torbreck RunRig,Red,2004,4.65,Barossa Valley,RunRig
+868,34054,Torbreck RunRig,Red,2003,4.7,Barossa Valley,RunRig
+869,34054,Torbreck RunRig,Red,2002,4.7,Barossa Valley,RunRig
+870,34054,Torbreck RunRig,Red,2001,4.7,Barossa Valley,RunRig
+871,34054,Torbreck RunRig,Red,2000,,Barossa Valley,RunRig
+872,34054,Torbreck RunRig,Red,1999,4.65,Barossa Valley,RunRig
+873,34054,Torbreck RunRig,Red,1998,4.7,Barossa Valley,RunRig
+874,132,J. Rochioli Chardonnay South River Vineyard,White,2018,4.65,Russian River Valley,South River
+875,132,J. Rochioli Chardonnay South River Vineyard,White,2017,4.55,Russian River Valley,South River
+876,132,J. Rochioli Chardonnay South River Vineyard,White,2016,4.55,Russian River Valley,South River
+877,132,J. Rochioli Chardonnay South River Vineyard,White,2015,4.65,Russian River Valley,South River
+878,132,J. Rochioli Chardonnay South River Vineyard,White,2014,4.7,Russian River Valley,South River
+879,132,J. Rochioli Chardonnay South River Vineyard,White,2013,4.6,Russian River Valley,South River
+880,132,J. Rochioli Chardonnay South River Vineyard,White,2012,4.5,Russian River Valley,South River
+881,132,J. Rochioli Chardonnay South River Vineyard,White,2011,4.5,Russian River Valley,South River
+882,132,J. Rochioli Chardonnay South River Vineyard,White,2010,4.6,Russian River Valley,South River
+883,132,J. Rochioli Chardonnay South River Vineyard,White,2009,4.6,Russian River Valley,South River
+884,132,J. Rochioli Chardonnay South River Vineyard,White,2008,4.55,Russian River Valley,South River
+885,132,J. Rochioli Chardonnay South River Vineyard,White,2007,4.5,Russian River Valley,South River
+886,132,J. Rochioli Chardonnay South River Vineyard,White,2006,4.55,Russian River Valley,South River
+887,132,J. Rochioli Chardonnay South River Vineyard,White,2005,4.6,Russian River Valley,South River
+888,132,J. Rochioli Chardonnay South River Vineyard,White,2004,4.6,Russian River Valley,South River
+889,132,J. Rochioli Chardonnay South River Vineyard,White,2003,4.6,Russian River Valley,South River
+890,132,J. Rochioli Chardonnay South River Vineyard,White,2002,4.55,Russian River Valley,South River
+891,132,J. Rochioli Chardonnay South River Vineyard,White,2001,4.6,Russian River Valley,South River
+892,132,J. Rochioli Chardonnay South River Vineyard,White,2000,4.55,Russian River Valley,South River
+893,132,J. Rochioli Chardonnay South River Vineyard,White,1999,,Russian River Valley,South River
+894,132,J. Rochioli Chardonnay South River Vineyard,White,1998,,Russian River Valley,South River
+895,132,J. Rochioli Chardonnay South River Vineyard,White,1997,4.65,Russian River Valley,South River
+896,132,J. Rochioli Chardonnay South River Vineyard,White,1996,,Russian River Valley,South River
+897,132,J. Rochioli Chardonnay South River Vineyard,White,1995,,Russian River Valley,South River
+898,132,J. Rochioli Chardonnay South River Vineyard,White,1994,,Russian River Valley,South River
+899,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2023,4.65,Russian River Valley,Sweetwater
+900,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2022,4.65,Russian River Valley,Sweetwater
+901,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2021,4.55,Russian River Valley,Sweetwater
+902,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2020,4.55,Russian River Valley,Sweetwater
+903,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2019,4.6,Russian River Valley,Sweetwater
+904,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2018,4.6,Russian River Valley,Sweetwater
+905,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2017,4.55,Russian River Valley,Sweetwater
+906,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2016,4.65,Russian River Valley,Sweetwater
+907,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2015,4.7,Russian River Valley,Sweetwater
+908,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2014,4.65,Russian River Valley,Sweetwater
+909,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2013,4.6,Russian River Valley,Sweetwater
+910,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2012,4.6,Russian River Valley,Sweetwater
+911,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2011,4.6,Russian River Valley,Sweetwater
+912,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2010,4.6,Russian River Valley,Sweetwater
+913,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2009,4.6,Russian River Valley,Sweetwater
+914,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2008,4.6,Russian River Valley,Sweetwater
+915,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2007,4.5,Russian River Valley,Sweetwater
+916,17857,J. Rochioli Chardonnay Sweetwater Vineyard,White,2006,4.55,Russian River Valley,Sweetwater
+917,17857,J. Rochioli Pinot Noir Sweetwater Vineyard,Red,2023,,Russian River Valley,Sweetwater
+918,17857,J. Rochioli Pinot Noir Sweetwater Vineyard,Red,2022,4.65,Russian River Valley,Sweetwater
+919,17857,J. Rochioli Pinot Noir Sweetwater Vineyard,Red,2021,4.6,Russian River Valley,Sweetwater
+920,17857,J. Rochioli Pinot Noir Sweetwater Vineyard,Red,2020,,Russian River Valley,Sweetwater
+921,17857,J. Rochioli Pinot Noir Sweetwater Vineyard,Red,2019,4.6,Russian River Valley,Sweetwater
+922,17857,J. Rochioli Pinot Noir Sweetwater Vineyard,Red,2018,4.6,Russian River Valley,Sweetwater
+923,17857,J. Rochioli Pinot Noir Sweetwater Vineyard,Red,2017,4.6,Russian River Valley,Sweetwater
+924,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2023,,Heathcote,Georgia's Paddock
+925,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2022,,Heathcote,Georgia's Paddock
+926,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2019,,Heathcote,Georgia's Paddock
+927,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2018,,Heathcote,Georgia's Paddock
+928,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2017,,Heathcote,Georgia's Paddock
+929,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2016,,Heathcote,Georgia's Paddock
+930,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2015,4.65,Heathcote,Georgia's Paddock
+931,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2014,,Heathcote,Georgia's Paddock
+932,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2013,4.45,Heathcote,Georgia's Paddock
+933,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2012,0.05,Heathcote,Georgia's Paddock
+934,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2011,4.45,Heathcote,Georgia's Paddock
+935,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2010,4.65,Heathcote,Georgia's Paddock
+936,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2008,,Heathcote,Georgia's Paddock
+937,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2006,,Heathcote,Georgia's Paddock
+938,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2004,,Heathcote,Georgia's Paddock
+939,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2003,,Heathcote,Georgia's Paddock
+940,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2002,4.6,Heathcote,Georgia's Paddock
+941,33742,Jasper Hill Nebbiolo Georgia's Paddock,Red,2001,4.5,Heathcote,Georgia's Paddock
+942,33742,Jasper Hill Riesling Georgia's Paddock,White,2024,0.05,Heathcote,Georgia's Paddock
+943,33742,Jasper Hill Riesling Georgia's Paddock,White,2023,0.05,Heathcote,Georgia's Paddock
+944,33742,Jasper Hill Riesling Georgia's Paddock,White,2022,4.75,Heathcote,Georgia's Paddock
+945,33742,Jasper Hill Riesling Georgia's Paddock,White,2020,,Heathcote,Georgia's Paddock
+946,33742,Jasper Hill Riesling Georgia's Paddock,White,2019,,Heathcote,Georgia's Paddock
+947,33742,Jasper Hill Riesling Georgia's Paddock,White,2018,0.25,Heathcote,Georgia's Paddock
+948,33742,Jasper Hill Riesling Georgia's Paddock,White,2017,0.05,Heathcote,Georgia's Paddock
+949,40123,Torbreck Descendant,Red,2022,4.65,Barossa Valley,Descendant
+950,40123,Torbreck Descendant,Red,2021,4.55,Barossa Valley,Descendant
+951,40123,Torbreck Descendant,Red,2020,4.65,Barossa Valley,Descendant
+952,40123,Torbreck Descendant,Red,2019,4.6,Barossa Valley,Descendant
+953,40123,Torbreck Descendant,Red,2018,4.65,Barossa Valley,Descendant
+954,40123,Torbreck Descendant,Red,2017,4.6,Barossa Valley,Descendant
+955,40123,Torbreck Descendant,Red,2016,4.65,Barossa Valley,Descendant
+956,40123,Torbreck Descendant,Red,2015,4.6,Barossa Valley,Descendant
+957,40123,Torbreck Descendant,Red,2014,4.55,Barossa Valley,Descendant
+958,40123,Torbreck Descendant,Red,2013,4.6,Barossa Valley,Descendant
+959,40123,Torbreck Descendant,Red,2012,4.65,Barossa Valley,Descendant
+960,40123,Torbreck Descendant,Red,2010,4.55,Barossa Valley,Descendant
+961,40123,Torbreck Descendant,Red,2009,4.6,Barossa Valley,Descendant
+962,40123,Torbreck Descendant,Red,2008,4.65,Barossa Valley,Descendant
+963,40123,Torbreck Descendant,Red,2007,4.55,Barossa Valley,Descendant
+964,40123,Torbreck Descendant,Red,2006,4.6,Barossa Valley,Descendant
+965,40123,Torbreck Descendant,Red,2005,4.65,Barossa Valley,Descendant
+966,40123,Torbreck Descendant,Red,2004,4.6,Barossa Valley,Descendant
+967,40123,Torbreck Descendant,Red,2003,4.6,Barossa Valley,Descendant
+968,40123,Torbreck Descendant,Red,2002,4.6,Barossa Valley,Descendant
+969,40123,Torbreck Descendant,Red,2001,4.6,Barossa Valley,Descendant
+970,40123,Torbreck Descendant,Red,2000,4.55,Barossa Valley,Descendant
+971,40123,Torbreck Descendant,Red,1999,4.5,Barossa Valley,Descendant
+972,40123,Torbreck Descendant,Red,1998,4.65,Barossa Valley,Descendant
+973,40123,Torbreck Descendant,Red,1997,,Barossa Valley,Descendant
+974,52493,Winderlea Pinot Noir Weber Vineyard,Red,2022,4.7,Dundee Hills,Weber Vineyard
+975,52493,Winderlea Pinot Noir Weber Vineyard,Red,2021,4.55,Dundee Hills,Weber Vineyard
+976,52493,Winderlea Pinot Noir Weber Vineyard,Red,2019,4.45,Dundee Hills,Weber Vineyard
+977,52493,Winderlea Pinot Noir Weber Vineyard,Red,2018,4.5,Dundee Hills,Weber Vineyard
+978,52493,Winderlea Pinot Noir Weber Vineyard,Red,2017,4.5,Dundee Hills,Weber Vineyard
+979,52493,Winderlea Pinot Noir Weber Vineyard,Red,2016,4.55,Dundee Hills,Weber Vineyard
+980,52493,Winderlea Pinot Noir Weber Vineyard,Red,2015,4.6,Dundee Hills,Weber Vineyard
+981,52493,Winderlea Pinot Noir Weber Vineyard,Red,2014,4.55,Dundee Hills,Weber Vineyard
+982,52493,Winderlea Pinot Noir Weber Vineyard,Red,2013,4.45,Dundee Hills,Weber Vineyard
+983,52493,Winderlea Pinot Noir Weber Vineyard,Red,2011,,Dundee Hills,Weber Vineyard
+984,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2020,,Clare Valley,St. Andrews Single Vineyard Release
+985,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2019,,Clare Valley,St. Andrews Single Vineyard Release
+986,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2018,,Clare Valley,St. Andrews Single Vineyard Release
+987,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2017,3.85,Clare Valley,St. Andrews Single Vineyard Release
+988,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2016,4.45,Clare Valley,St. Andrews Single Vineyard Release
+989,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2015,,Clare Valley,St. Andrews Single Vineyard Release
+990,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2014,,Clare Valley,St. Andrews Single Vineyard Release
+991,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2013,,Clare Valley,St. Andrews Single Vineyard Release
+992,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2012,,Clare Valley,St. Andrews Single Vineyard Release
+993,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2010,,Clare Valley,St. Andrews Single Vineyard Release
+994,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2009,,Clare Valley,St. Andrews Single Vineyard Release
+995,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2006,4.65,Clare Valley,St. Andrews Single Vineyard Release
+996,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,2004,,Clare Valley,St. Andrews Single Vineyard Release
+997,40099,Taylors Cabernet Sauvignon Single Vineyard Release St Andrews,Red,1985,,Clare Valley,St. Andrews Single Vineyard Release
+998,148,La Vis Bianco dei Sorni,White,2004,,Trentino,Bianco dei Sorni
+999,148,La Vis Bianco dei Sorni,White,2002,,Trentino,Bianco dei Sorni
+1000,148,La Vis Bianco dei Sorni,White,2001,,Trentino,Bianco dei Sorni
+1001,148,La Vis Bianco dei Sorni,White,1999,0.1,Trentino,Bianco dei Sorni
+1002,53811,Kynsi Pinot Noir Paragon Vineyard,Red,2000,4.25,Edna Valley,Paragon Vineyard
+1003,53811,Kynsi Pinot Noir Paragon Vineyard,Red,1999,4.45,Edna Valley,Paragon Vineyard
+1004,53811,Kynsi Pinot Noir Paragon Vineyard,Red,1997,,Edna Valley,Paragon Vineyard
+1005,53811,Kynsi Syrah Paragon Vineyard,Red,2003,,Edna Valley,Paragon Vineyard
+1006,53811,Kynsi Syrah Paragon Vineyard,Red,2000,4.25,Edna Valley,Paragon Vineyard
+1007,53811,Kynsi Syrah Paragon Vineyard,Red,1999,4.55,Edna Valley,Paragon Vineyard
+1008,153,Cantina Terlan Müller-Thurgau Classico,White,2011,4.4,Terlano,Terlano Classico
+1009,153,Cantina Terlan Müller-Thurgau Classico,White,2010,4.4,Terlano,Terlano Classico
+1010,153,Cantina Terlan Müller-Thurgau Classico,White,2009,,Terlano,Terlano Classico
+1011,153,Cantina Terlan Pinot Bianco Classico,White,2023,,Terlano,Terlano Classico
+1012,153,Cantina Terlan Pinot Bianco Classico,White,2022,,Terlano,Terlano Classico
+1013,153,Cantina Terlan Pinot Bianco Classico,White,2021,,Terlano,Terlano Classico
+1014,153,Cantina Terlan Pinot Bianco Classico,White,2020,4.45,Terlano,Terlano Classico
+1015,153,Cantina Terlan Pinot Bianco Classico,White,2019,,Terlano,Terlano Classico
+1016,153,Cantina Terlan Pinot Bianco Classico,White,2017,0.1,Terlano,Terlano Classico
+1017,153,Cantina Terlan Pinot Bianco Classico,White,2015,,Terlano,Terlano Classico
+1018,153,Cantina Terlan Pinot Bianco Classico,White,2013,4.35,Terlano,Terlano Classico
+1019,153,Cantina Terlan Pinot Bianco Classico,White,2012,4.4,Terlano,Terlano Classico
+1020,153,Cantina Terlan Pinot Bianco Classico,White,2011,4.3,Terlano,Terlano Classico
+1021,153,Cantina Terlan Pinot Bianco Classico,White,2010,4.4,Terlano,Terlano Classico
+1022,153,Cantina Terlan Pinot Bianco Classico,White,2009,,Terlano,Terlano Classico
+1023,153,Cantina Terlan Pinot Bianco Classico,White,2008,4.35,Terlano,Terlano Classico
+1024,153,Cantina Terlan Pinot Bianco Classico,White,2007,4.4,Terlano,Terlano Classico
+1025,153,Cantina Terlan Pinot Bianco Classico,White,2006,4.4,Terlano,Terlano Classico
+1026,153,Cantina Terlan Pinot Bianco Classico,White,2005,4.4,Terlano,Terlano Classico
+1027,153,Cantina Terlan Pinot Bianco Classico,White,2004,4.35,Terlano,Terlano Classico
+1028,153,Cantina Terlan Pinot Bianco Classico,White,2003,,Terlano,Terlano Classico
+1029,153,Cantina Terlan Pinot Bianco Classico,White,2002,,Terlano,Terlano Classico
+1030,153,Cantina Terlan Pinot Bianco Classico,White,1996,4.6,Terlano,Terlano Classico
+1031,153,Cantina Terlan Pinot Bianco Classico,White,1991,,Terlano,Terlano Classico
+1032,153,Cantina Terlan Pinot Bianco Classico,White,1979,,Terlano,Terlano Classico
+1033,57273,McGregor Vineyard Riesling Riesling,White - Off-dry,2019,,Finger Lakes,Dry
+1034,57273,McGregor Vineyard Riesling Riesling,White - Off-dry,2015,,Finger Lakes,Dry
+1035,57273,McGregor Vineyards Dry Gewürztraminer,White,2024,,Finger Lakes,Dry
+1036,57273,McGregor Vineyards Dry Gewürztraminer,White,2023,,Finger Lakes,Dry
+1037,57273,McGregor Vineyards Dry Gewürztraminer,White,2021,4.4,Finger Lakes,Dry
+1038,57273,McGregor Vineyards Dry Gewürztraminer,White,2020,4.65,Finger Lakes,Dry
+1039,57273,McGregor Vineyards Dry Gewürztraminer,White,2019,4.4,Finger Lakes,Dry
+1040,57273,McGregor Vineyards Dry Gewürztraminer,White,2018,,Finger Lakes,Dry
+1041,57273,McGregor Vineyards Dry Gewürztraminer,White,2016,,Finger Lakes,Dry
+1042,57273,McGregor Vineyards Dry Gewürztraminer,White,2015,,Finger Lakes,Dry
+1043,57273,McGregor Vineyards Dry Gewürztraminer,White,2013,,Finger Lakes,Dry
+1044,57273,McGregor Vineyards Dry Gewürztraminer,White,2012,,Finger Lakes,Dry
+1045,57273,McGregor Vineyards Dry Gewürztraminer,White,2008,,Finger Lakes,Dry
+1046,57273,McGregor Vineyards Dry Gewürztraminer,White,2007,4.25,Finger Lakes,Dry
+1047,57273,McGregor Vineyards Dry Riesling,White,2023,,Finger Lakes,Dry
+1048,57273,McGregor Vineyards Dry Riesling,White,2022,,Finger Lakes,Dry
+1049,57273,McGregor Vineyards Dry Riesling,White,2021,4.35,Finger Lakes,Dry
+1050,57273,McGregor Vineyards Dry Riesling,White,2020,4.45,Finger Lakes,Dry
+1051,57273,McGregor Vineyards Dry Riesling,White,2019,,Finger Lakes,Dry
+1052,57273,McGregor Vineyards Dry Riesling,White,2018,,Finger Lakes,Dry
+1053,57273,McGregor Vineyards Dry Riesling,White,2017,4.3,Finger Lakes,Dry
+1054,57273,McGregor Vineyards Dry Riesling,White,2016,4.35,Finger Lakes,Dry
+1055,57273,McGregor Vineyards Dry Riesling,White,2013,4.2,Finger Lakes,Dry
+1056,57273,McGregor Vineyards Dry Riesling,White,2012,4.2,Finger Lakes,Dry
+1057,57273,McGregor Vineyards Dry Riesling,White,2011,4.15,Finger Lakes,Dry
+1058,42752,Guardian Cellars Confidential Source,Red,2022,,Columbia Valley,Confidential Source
+1059,42752,Guardian Cellars Confidential Source,Red,2021,4.5,Columbia Valley,Confidential Source
+1060,42752,Guardian Cellars Confidential Source,Red,2020,,Columbia Valley,Confidential Source
+1061,42752,Guardian Cellars Confidential Source,Red,2019,4.45,Columbia Valley,Confidential Source
+1062,42752,Guardian Cellars Confidential Source,Red,2018,4.45,Columbia Valley,Confidential Source
+1063,42752,Guardian Cellars Confidential Source,Red,2017,,Columbia Valley,Confidential Source
+1064,42752,Guardian Cellars Confidential Source,Red,2016,4.45,Columbia Valley,Confidential Source
+1065,42752,Guardian Cellars Confidential Source,Red,2015,4.45,Columbia Valley,Confidential Source
+1066,42752,Guardian Cellars Confidential Source,Red,2014,4.5,Columbia Valley,Confidential Source
+1067,42752,Guardian Cellars Confidential Source,Red,2013,4.5,Columbia Valley,Confidential Source
+1068,42752,Guardian Cellars Confidential Source,Red,2012,4.5,Columbia Valley,Confidential Source
+1069,42752,Guardian Cellars Confidential Source,Red,2011,4.35,Columbia Valley,Confidential Source
+1070,42752,Guardian Cellars Confidential Source,Red,2010,4.45,Columbia Valley,Confidential Source
+1071,42752,Guardian Cellars Confidential Source,Red,2009,4.5,Columbia Valley,Confidential Source
+1072,49510,Kerloo Cellars Cabernet Franc Reserve Blue Mountain Vineyard,Red,2021,4.6,Walla Walla Valley,Blue Mountain Vineyard
+1073,49510,Kerloo Cellars Cabernet Franc Reserve Blue Mountain Vineyard,Red,2020,,Walla Walla Valley,Blue Mountain Vineyard
+1074,49510,Kerloo Cellars Cabernet Franc Rosé Blue Mountain Vineyard,Rosé,2021,,Walla Walla Valley,Blue Mountain Vineyard
+1075,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyard,White,2021,,Walla Walla Valley,Blue Mountain Vineyard
+1076,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyard,White,2019,,Walla Walla Valley,Blue Mountain Vineyard
+1077,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyard,White,2012,,Walla Walla Valley,Blue Mountain Vineyard
+1078,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyards,White,2021,4.45,Walla Walla Valley,Blue Mountain Vineyard
+1079,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyards,White,2020,4.55,Walla Walla Valley,Blue Mountain Vineyard
+1080,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyards,White,2019,4.5,Walla Walla Valley,Blue Mountain Vineyard
+1081,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyards,White,2018,4.45,Walla Walla Valley,Blue Mountain Vineyard
+1082,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyards,White,2017,4.45,Walla Walla Valley,Blue Mountain Vineyard
+1083,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyards,White,2016,4.4,Walla Walla Valley,Blue Mountain Vineyard
+1084,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyards,White,2015,4.45,Walla Walla Valley,Blue Mountain Vineyard
+1085,49510,Kerloo Cellars Grenache Blanc Blue Mountain Vineyards,White,2014,4.45,Walla Walla Valley,Blue Mountain Vineyard
+1086,49510,Kerloo Cellars Syrah Block 8 Blue Mountain Vineyard,Red,2014,,Walla Walla Valley,Blue Mountain Vineyard
+1087,49510,Kerloo Cellars Syrah Blue Mountain Vineyard,Red,2015,4.4,Walla Walla Valley,Blue Mountain Vineyard
+1088,49510,Kerloo Cellars Syrah Blue Mountain Vineyard,Red,2014,4.45,Walla Walla Valley,Blue Mountain Vineyard
+1089,49510,Kerloo Cellars Syrah Blue Mountain Vineyard,Red,2012,4.5,Walla Walla Valley,Blue Mountain Vineyard
+1090,49510,Kerloo Cellars Syrah Carbon Leaf Blue Mountain Vineyard,Red,2015,,Walla Walla Valley,Blue Mountain Vineyard
+1091,49510,Kerloo Cellars Syrah Carbon Leaf Blue Mountain Vineyard,Red,2013,4.4,Walla Walla Valley,Blue Mountain Vineyard
+1092,26248,Las Positas Verdigris,White,2017,4.4,Livermore Valley,Verdigris
+1093,26248,Las Positas Verdigris,White,2015,,Livermore Valley,Verdigris
+1094,26248,Las Positas Verdigris,White,2014,,Livermore Valley,Verdigris
+1095,26248,Las Positas Verdigris,White,2013,,Livermore Valley,Verdigris
+1096,26248,Las Positas Verdigris,White,2012,,Livermore Valley,Verdigris
+1097,46585,Lieb Cellars Bridge Lane,Red,2021,,North Fork,Bridge Lane
+1098,46585,Lieb Cellars Bridge Lane,Red,2020,,North Fork,Bridge Lane
+1099,46585,Lieb Cellars Bridge Lane,Red,2019,,North Fork,Bridge Lane
+1100,46585,Lieb Cellars Bridge Lane,Red,2018,,North Fork,Bridge Lane
+1101,46585,Lieb Cellars Bridge Lane,Red,2017,4.35,North Fork,Bridge Lane
+1102,46585,Lieb Cellars Bridge Lane,White,2016,0.05,New York,Bridge Lane
+1103,46585,Lieb Cellars Bridge Lane,Red,2016,0.05,North Fork,Bridge Lane
+1104,46585,Lieb Cellars Bridge Lane,White,2014,4.2,New York,Bridge Lane
+1105,46585,Lieb Cellars Bridge Lane,Red,2014,0.05,North Fork,Bridge Lane
+1106,46585,Lieb Cellars Bridge Lane,Red,2013,4.3,North Fork,Bridge Lane
+1107,46585,Lieb Cellars Bridge Lane,Red,2012,,North Fork,Bridge Lane
+1108,46585,Lieb Cellars Bridge Lane Bubbly,White - Sparkling,2022,,North Fork,Bridge Lane
+1109,46585,Lieb Cellars Bridge Lane Bubbly,White - Sparkling,2013,4.25,North Fork,Bridge Lane
+1110,46585,Lieb Cellars Bridge Lane Dry Rosé,Rosé,2023,,North Fork,Bridge Lane
+1111,46585,Lieb Cellars Bridge Lane Dry Rosé,Rosé,2022,,North Fork,Bridge Lane
+1112,46585,Lieb Cellars Bridge Lane Dry Rosé,Rosé,2021,,North Fork,Bridge Lane
+1113,46585,Lieb Cellars Bridge Lane Dry Rosé,Rosé,2020,4.35,North Fork,Bridge Lane
+1114,46585,Lieb Cellars Bridge Lane Dry Rosé,Rosé,2019,4.25,North Fork,Bridge Lane
+1115,46585,Lieb Cellars Bridge Lane Dry Rosé,Rosé,2018,,North Fork,Bridge Lane
+1116,46585,Lieb Cellars Bridge Lane Dry Rosé,Rosé,2017,,North Fork,Bridge Lane
+1117,46585,Lieb Cellars Bridge Lane Dry Rosé,Rosé,2016,,North Fork,Bridge Lane
+1118,46585,Lieb Cellars Bridge Lane Dry Rosé,Rosé,2015,,North Fork,Bridge Lane
+1119,46585,Lieb Cellars Bridge Lane Vineyard,White,2014,4.35,North Fork,Bridge Lane
+1120,18734,Ojai Sauvignon Blanc McGinley,White,2023,4.5,Santa Ynez Valley,McGinley Vineyard
+1121,18734,Ojai Sauvignon Blanc McGinley,White,2022,,Santa Ynez Valley,McGinley Vineyard
+1122,18734,Ojai Sauvignon Blanc McGinley,White,2021,4.1,Santa Ynez Valley,McGinley Vineyard
+1123,18734,Ojai Sauvignon Blanc McGinley,White,2020,4.35,Santa Ynez Valley,McGinley Vineyard
+1124,18734,Ojai Sauvignon Blanc McGinley,White,2019,,Santa Ynez Valley,McGinley Vineyard
+1125,18734,Ojai Sauvignon Blanc McGinley,White,2018,4.45,Santa Ynez Valley,McGinley Vineyard
+1126,18734,Ojai Sauvignon Blanc McGinley,White,2017,4.35,Santa Ynez Valley,McGinley Vineyard
+1127,18734,Ojai Sauvignon Blanc McGinley,White,2016,4.5,Santa Ynez Valley,McGinley Vineyard
+1128,18734,Ojai Sauvignon Blanc McGinley,White,2015,4.45,Santa Ynez Valley,McGinley Vineyard
+1129,18734,Ojai Sauvignon Blanc McGinley,White,2014,0.05,Santa Ynez Valley,McGinley Vineyard
+1130,18734,Ojai Sauvignon Blanc McGinley,White,2013,4.5,Santa Ynez Valley,McGinley Vineyard
+1131,18734,Ojai Sauvignon Blanc McGinley,White,2012,0.1,Santa Ynez Valley,McGinley Vineyard
+1132,18734,Ojai Sauvignon Blanc McGinley,White,2011,4.45,Santa Ynez Valley,McGinley Vineyard
+1133,18734,Ojai Sauvignon Blanc McGinley,White,2010,4.35,Santa Ynez Valley,McGinley Vineyard
+1134,18734,Ojai Sauvignon Blanc McGinley,White,2009,4.4,Santa Ynez Valley,McGinley Vineyard
+1135,18734,Ojai Sauvignon Blanc McGinley,White,2008,4.45,Santa Ynez Valley,McGinley Vineyard
+1136,18734,Ojai Sauvignon Blanc McGinley,White,2007,4.45,Santa Ynez Valley,McGinley Vineyard
+1137,18734,Ojai Sauvignon Blanc McGinley,White,1995,,Santa Ynez Valley,McGinley Vineyard
+1138,18734,Ojai Sauvignon Blanc McGinley,White,1992,,Santa Ynez Valley,McGinley Vineyard
+1139,18734,Ojai Sauvignon Blanc McGinley,White,1990,3.75,Santa Ynez Valley,McGinley Vineyard
+1140,51288,Idilico Graciano Late Harvest Upland Vineyard,Red - Sweet/Dessert,2012,4.55,Yakima Valley Snipes Mountain,Upland Vineyard
+1141,51288,Idilico Graciano Reserva Upland Vineyard,Red,2019,,Yakima Valley Snipes Mountain,Upland Vineyard
+1142,51288,Idilico Graciano Reserva Upland Vineyard,Red,2018,,Yakima Valley Snipes Mountain,Upland Vineyard
+1143,51288,Idilico Graciano Reserva Upland Vineyard,Red,2016,,Yakima Valley Snipes Mountain,Upland Vineyard
+1144,51288,Idilico Graciano Reserva Upland Vineyard,Red,2014,0.1,Yakima Valley Snipes Mountain,Upland Vineyard
+1145,51288,Idilico Graciano Reserva Upland Vineyard,Red,2013,4.55,Yakima Valley Snipes Mountain,Upland Vineyard
+1146,51288,Idilico Graciano Reserva Upland Vineyard,Red,2012,4.55,Yakima Valley Snipes Mountain,Upland Vineyard
+1147,51288,Idilico Graciano Reserva Upland Vineyard,Red,2011,4.55,Yakima Valley Snipes Mountain,Upland Vineyard
+1148,51288,Idilico Graciano Reserva Upland Vineyard,Red,2010,4.3,Yakima Valley Snipes Mountain,Upland Vineyard
+1149,51288,Pomum Cellars Riesling Upland Vineyard,White,2016,,Yakima Valley Snipes Mountain,Upland Vineyard
+1150,51288,Pomum Cellars Riesling Upland Vineyard,White,2015,4.35,Yakima Valley Snipes Mountain,Upland Vineyard
+1151,51288,Pomum Cellars Riesling Upland Vineyard,White,2014,,Yakima Valley Snipes Mountain,Upland Vineyard
+1152,51288,Pomum Cellars Riesling Upland Vineyard,White,2013,4.4,Yakima Valley Snipes Mountain,Upland Vineyard
+1153,51288,Pomum Cellars Riesling Upland Vineyard,White,2012,4.5,Yakima Valley Snipes Mountain,Upland Vineyard
+1154,51288,Pomum Cellars Riesling Upland Vineyard,White,2011,,Yakima Valley Snipes Mountain,Upland Vineyard
+1155,18737,Prospect 772 Grenache Blanc Stepping Stones,White,2019,4.45,Santa Barbara County,Stepping Stones
+1156,18737,Prospect 772 Grenache Blanc Stepping Stones,White,2018,,Santa Barbara County,Stepping Stones
+1157,18737,Prospect 772 Grenache Blanc Stepping Stones,White,2016,4.25,Santa Barbara County,Stepping Stones
+1158,18737,Prospect 772 Grenache Blanc Stepping Stones,White,2014,,Santa Barbara County,Stepping Stones
+1159,18737,Prospect 772 Grenache Blanc Stepping Stones,White,2013,,Santa Barbara County,Stepping Stones
+1160,18737,Prospect 772 Grenache Blanc Stepping Stones Camp Four Vineyard,White,2021,,Santa Barbara County,Stepping Stones
+1161,18737,Prospect 772 Grenache Blanc Stepping Stones Camp Four Vineyard,White,2020,,Santa Barbara County,Stepping Stones
+1162,24784,Trione Henry's Blend,Red,2019,,Alexander Valley,Henry's Blend
+1163,24784,Trione Henry's Blend,Red,2018,4.6,Alexander Valley,Henry's Blend
+1164,24784,Trione Henry's Blend,Red,2017,4.6,Alexander Valley,Henry's Blend
+1165,24784,Trione Henry's Blend,Red,2016,4.45,Alexander Valley,Henry's Blend
+1166,24784,Trione Henry's Blend,Red,2015,,Alexander Valley,Henry's Blend
+1167,24784,Trione Henry's Blend,Red,2014,,Alexander Valley,Henry's Blend
+1168,24784,Trione Henry's Blend,Red,2013,4.3,Alexander Valley,Henry's Blend
+1169,24784,Trione Henry's Blend,Red,2012,,Alexander Valley,Henry's Blend
+1170,24784,Trione Henry's Blend,Red,2011,0.05,Alexander Valley,Henry's Blend
+1171,24784,Trione Henry's Blend Geyserville Ranch,Red,2019,,Alexander Valley,Henry's Blend
+1172,24784,Trione Henry's Blend Geyserville Ranch,Red,2018,4.6,Alexander Valley,Henry's Blend
+1173,24784,Trione Henry's Blend Geyserville Ranch,Red,2017,4.5,Alexander Valley,Henry's Blend
+1174,24784,Trione Henry's Blend Geyserville Ranch,Red,2016,4.55,Alexander Valley,Henry's Blend
+1175,24784,Trione Henry's Blend Geyserville Ranch,Red,2015,4.45,Alexander Valley,Henry's Blend
+1176,24784,Trione Henry's Blend Geyserville Ranch,Red,2014,4.65,Alexander Valley,Henry's Blend
+1177,24784,Trione Henry's Blend Geyserville Ranch,Red,2013,,Alexander Valley,Henry's Blend
+1178,24784,Trione Henry's Blend Geyserville Ranch,Red,2012,4.6,Alexander Valley,Henry's Blend
+1179,24784,Trione Henry's Blend Geyserville Ranch,Red,2011,4.55,Alexander Valley,Henry's Blend
+1180,24784,Trione Henry's Blend Geyserville Ranch,Red,2010,,Alexander Valley,Henry's Blend
+1181,175,Fattorie Romeo Del Castello Etna Vigorosa Rosato,Rosé,2020,,Etna DOC,Vigorosa Rosato
+1182,175,Fattorie Romeo Del Castello Etna Vigorosa Rosato,Rosé,2019,,Etna DOC,Vigorosa Rosato
+1183,175,Fattorie Romeo Del Castello Etna Vigorosa Rosato,Rosé,2018,4.05,Etna DOC,Vigorosa Rosato
+1184,175,Fattorie Romeo Del Castello Etna Vigorosa Rosato,Rosé,2017,4.5,Etna DOC,Vigorosa Rosato
+1185,175,Fattorie Romeo Del Castello Etna Vigorosa Rosato,Rosé,2016,4.45,Etna DOC,Vigorosa Rosato
+1186,175,Fattorie Romeo Del Castello Etna Vigorosa Rosato,Rosé,2015,0.1,Etna DOC,Vigorosa Rosato
+1187,175,Fattorie Romeo Del Castello Etna Vigorosa Rosato,Rosé,2014,,Etna DOC,Vigorosa Rosato
+1188,56250,Pillitteri Estates Winery Cabernet Franc Reserve Icewine,Red - Sweet/Dessert,2019,,Niagara-on-the-Lake VQA,Reserve Icewine
+1189,56250,Pillitteri Estates Winery Cabernet Franc Reserve Icewine,Red - Sweet/Dessert,2017,,Niagara-on-the-Lake VQA,Reserve Icewine
+1190,56250,Pillitteri Estates Winery Cabernet Franc Reserve Icewine,Red - Sweet/Dessert,2016,,Niagara-on-the-Lake VQA,Reserve Icewine
+1191,56250,Pillitteri Estates Winery Cabernet Franc Reserve Icewine,Red - Sweet/Dessert,2015,,Niagara-on-the-Lake VQA,Reserve Icewine
+1192,56250,Pillitteri Estates Winery Cabernet Franc Reserve Icewine,Red - Sweet/Dessert,2012,4,Niagara-on-the-Lake VQA,Reserve Icewine
+1193,56250,Pillitteri Estates Winery Cabernet Franc Reserve Icewine,Red - Sweet/Dessert,2011,,Niagara-on-the-Lake VQA,Reserve Icewine
+1194,56250,Pillitteri Estates Winery Cabernet Sauvignon Exclamation Reserve Icewine,Red - Sweet/Dessert,2017,,Niagara-on-the-Lake VQA,Reserve Icewine
+1195,56250,Pillitteri Estates Winery Cabernet Sauvignon Icewine Reserve,Red - Sweet/Dessert,2014,,Niagara-on-the-Lake VQA,Reserve Icewine
+1196,56250,Pillitteri Estates Winery Cabernet Sauvignon Icewine Reserve,Red - Sweet/Dessert,2013,,Niagara-on-the-Lake VQA,Reserve Icewine
+1197,56250,Pillitteri Estates Winery Cabernet Sauvignon Icewine Reserve,Red - Sweet/Dessert,2011,,Niagara-on-the-Lake VQA,Reserve Icewine
+1198,56250,Pillitteri Estates Winery Cabernet Sauvignon Icewine Reserve,Red - Sweet/Dessert,2007,,Niagara-on-the-Lake VQA,Reserve Icewine
+1199,56250,Pillitteri Estates Winery Cabernet Sauvignon Reserve Icewine,Red - Sweet/Dessert,2012,4.5,Niagara-on-the-Lake VQA,Reserve Icewine
+1200,56250,Pillitteri Estates Winery Gewürztraminer Reserve Icewine,White - Sweet/Dessert,2012,4.45,Niagara-on-the-Lake VQA,Reserve Icewine
+1201,56250,Pillitteri Estates Winery Kerner Reserve Icewine,White - Sweet/Dessert,2013,4.65,Niagara-on-the-Lake VQA,Reserve Icewine
+1202,56250,Pillitteri Estates Winery Kerner Reserve Icewine,White - Sweet/Dessert,2012,,Niagara-on-the-Lake VQA,Reserve Icewine
+1203,56250,Pillitteri Estates Winery Riesling Icewine Reserve,White - Sweet/Dessert,2017,,Niagara-on-the-Lake VQA,Reserve Icewine
+1204,56250,Pillitteri Estates Winery Riesling Icewine Reserve,White - Sweet/Dessert,2013,,Niagara-on-the-Lake VQA,Reserve Icewine
+1205,56250,Pillitteri Estates Winery Riesling Icewine Reserve,White - Sweet/Dessert,2012,,Niagara-on-the-Lake VQA,Reserve Icewine
+1206,56250,Pillitteri Estates Winery Vidal Icewine Reserve,White - Sweet/Dessert,2016,,Niagara-on-the-Lake VQA,Reserve Icewine
+1207,56250,Pillitteri Estates Winery Vidal Icewine Reserve,White - Sweet/Dessert,2014,,Niagara-on-the-Lake VQA,Reserve Icewine
+1208,56250,Pillitteri Estates Winery Vidal Icewine Reserve,White - Sweet/Dessert,2013,,Niagara-on-the-Lake VQA,Reserve Icewine
+1209,56250,Pillitteri Estates Winery Vidal Icewine Reserve,White - Sweet/Dessert,2012,,Niagara-on-the-Lake VQA,Reserve Icewine
+1210,56250,Pillitteri Estates Winery Vidal Reserve Icewine,White - Sweet/Dessert,2016,,Niagara-on-the-Lake VQA,Reserve Icewine
+1211,56250,Pillitteri Estates Winery Vidal Reserve Icewine,White - Sweet/Dessert,2015,,Niagara-on-the-Lake VQA,Reserve Icewine
+1212,56250,Pillitteri Estates Winery Vidal Reserve Icewine,White - Sweet/Dessert,2014,,Niagara-on-the-Lake VQA,Reserve Icewine
+1213,57698,Roederer Estate 25th Anniversary Reserve Brut,White - Sparkling,2018,,Anderson Valley,Brut
+1214,57698,Roederer Estate Apple Alley Vineyard,White - Sparkling,2021,,Anderson Valley,Brut
+1215,57698,Roederer Estate Apple Alley Vineyard,White - Sparkling,2020,4.45,Anderson Valley,Brut
+1216,56694,Chehalem Gamay Noir Ridgecrest Vineyards,Red,2016,4.25,Ribbon Ridge,Ridgecrest Vineyards
+1217,56694,Chehalem Gamay Noir Ridgecrest Vineyards,Red,2015,4.45,Ribbon Ridge,Ridgecrest Vineyards
+1218,56694,Chehalem Gamay Noir Ridgecrest Vineyards,Red,2014,4.4,Ribbon Ridge,Ridgecrest Vineyards
+1219,56694,Chehalem Gamay Noir Ridgecrest Vineyards,Red,2013,4.35,Ribbon Ridge,Ridgecrest Vineyards
+1220,56694,Chehalem Gamay Noir Ridgecrest Vineyards,Red,2012,4.4,Ribbon Ridge,Ridgecrest Vineyards
+1221,56694,Chehalem Gamay Noir Ridgecrest Vineyards,Red,2011,4.35,Ribbon Ridge,Ridgecrest Vineyards
+1222,56694,Chehalem Gamay Noir Ridgecrest Vineyards,Red,2010,4.4,Ribbon Ridge,Ridgecrest Vineyards
+1223,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2023,,Dundee Hills,Evenstad Reserve
+1224,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2022,4.4,Dundee Hills,Evenstad Reserve
+1225,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2021,4.55,Dundee Hills,Evenstad Reserve
+1226,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2020,4.55,Dundee Hills,Evenstad Reserve
+1227,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2019,4.5,Dundee Hills,Evenstad Reserve
+1228,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2018,4.6,Dundee Hills,Evenstad Reserve
+1229,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2017,4.55,Dundee Hills,Evenstad Reserve
+1230,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2016,4.6,Dundee Hills,Evenstad Reserve
+1231,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2015,4.55,Dundee Hills,Evenstad Reserve
+1232,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2014,4.6,Dundee Hills,Evenstad Reserve
+1233,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2013,4.5,Dundee Hills,Evenstad Reserve
+1234,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2012,4.55,Dundee Hills,Evenstad Reserve
+1235,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2011,4.55,Dundee Hills,Evenstad Reserve
+1236,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2010,4.55,Dundee Hills,Evenstad Reserve
+1237,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2008,,Dundee Hills,Evenstad Reserve
+1238,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2007,0.05,Dundee Hills,Evenstad Reserve
+1239,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2006,,Dundee Hills,Evenstad Reserve
+1240,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2005,,Dundee Hills,Evenstad Reserve
+1241,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2004,,Dundee Hills,Evenstad Reserve
+1242,52301,Domaine Serene Chardonnay Evenstad Reserve,White,2002,,Dundee Hills,Evenstad Reserve
+1243,203,Mica Cellars Cabernet Franc Block 1 Babcock Vineyards,Red,2009,,Suisun Valley,Babcock Vineyard
+1244,203,Mica Cellars Cabernet Franc Block 1 Babcock Vineyards,Red,2007,,Suisun Valley,Babcock Vineyard
+1245,203,Mica Cellars Cabernet Franc Block 1 Babcock Vineyards,Red,2006,,Suisun Valley,Babcock Vineyard
+1246,203,Mica Cellars Cabernet Franc Block 1 Babcock Vineyards,Red,2004,,Suisun Valley,Babcock Vineyard
+1247,203,Mica Cellars Charbono Babcock Vineyards,Red,2010,,Suisun Valley,Babcock Vineyard
+1248,203,Mica Cellars Charbono Babcock Vineyards,Red,2009,,Suisun Valley,Babcock Vineyard
+1249,203,Mica Cellars Meritage Babcock Vineyards,Red,2010,4.35,Suisun Valley,Babcock Vineyard
+1250,203,Mica Cellars Meritage Babcock Vineyards,Red,2001,,Suisun Valley,Babcock Vineyard
+1251,45387,Fenestra Barbera Silvaspoons Vineyards,Red,2017,,Lodi,Silvaspoons Vineyard
+1252,45387,Fenestra Silvaspoons Vineyards,Red,2005,,Lodi,Silvaspoons Vineyard
+1253,45387,Fenestra Silvaspoons Vineyards,Red,2004,,Lodi,Silvaspoons Vineyard
+1254,53805,Camaraderie Cellars Syrah Clifton Vineyard,Red,2020,,Wahluke Slope,Clifton Vineyard
+1255,53805,Camaraderie Cellars Syrah Clifton Vineyard,Red,2018,,Wahluke Slope,Clifton Vineyard
+1256,53805,Camaraderie Cellars Syrah Clifton Vineyard,Red,2016,,Wahluke Slope,Clifton Vineyard
+1257,53805,Camaraderie Cellars Syrah Clifton Vineyard,Red,2015,,Wahluke Slope,Clifton Vineyard
+1258,53805,Camaraderie Cellars Syrah Clifton Vineyard,Red,2009,,Wahluke Slope,Clifton Vineyard
+1259,53805,Camaraderie Cellars Syrah Clifton Vineyard,Red,2008,4.15,Wahluke Slope,Clifton Vineyard
+1260,53805,Camaraderie Cellars Syrah Clifton Vineyard,Red,2007,4.35,Wahluke Slope,Clifton Vineyard
+1261,53805,Camaraderie Cellars Syrah Clifton Vineyard,Red,2006,4.45,Wahluke Slope,Clifton Vineyard
+1262,53805,Camaraderie Cellars Syrah Clifton Vineyard,Red,2005,4.5,Wahluke Slope,Clifton Vineyard
+1263,53805,Camaraderie Cellars Syrah Clifton Vineyard,Red,2004,4.4,Wahluke Slope,Clifton Vineyard
+1264,209,Beringer Vineyards Cabernet Sauvignon Quantum Red Wine,Red,2019,,Napa Valley,Quantum
+1265,209,Beringer Vineyards Cabernet Sauvignon Quantum Red Wine,Red,2018,,Napa Valley,Quantum
+1266,209,Beringer Vineyards Cabernet Sauvignon Quantum Red Wine,Red,2017,,Napa Valley,Quantum
+1267,209,Beringer Vineyards Cabernet Sauvignon Quantum Red Wine,Red,2015,,Napa Valley,Quantum
+1268,209,Beringer Vineyards Quantum Red Wine,Red,2021,,Napa Valley,Quantum
+1269,209,Beringer Vineyards Quantum Red Wine,Red,2020,,Napa Valley,Quantum
+1270,209,Beringer Vineyards Quantum Red Wine,Red,2019,4.55,Napa Valley,Quantum
+1271,209,Beringer Vineyards Quantum Red Wine,Red,2018,4.5,Napa Valley,Quantum
+1272,209,Beringer Vineyards Quantum Red Wine,Red,2017,4.5,Napa Valley,Quantum
+1273,209,Beringer Vineyards Quantum Red Wine,Red,2016,4.55,Napa Valley,Quantum
+1274,209,Beringer Vineyards Quantum Red Wine,Red,2015,4.5,Napa Valley,Quantum
+1275,209,Beringer Vineyards Quantum Red Wine,Red,2014,4.5,Napa Valley,Quantum
+1276,209,Beringer Vineyards Quantum Red Wine,Red,2013,4.55,Napa Valley,Quantum
+1277,209,Beringer Vineyards Quantum Red Wine,Red,2012,4.45,Napa Valley,Quantum
+1278,209,Beringer Vineyards Quantum Red Wine,Red,2011,4.5,Napa Valley,Quantum
+1279,209,Beringer Vineyards Quantum Red Wine,Red,2010,4.5,Napa Valley,Quantum
+1280,209,Beringer Vineyards Quantum Red Wine,Red,2008,,Napa Valley,Quantum
+1281,209,Beringer Vineyards Quantum Red Wine,Red,2007,,Napa Valley,Quantum
+1282,51438,Big Basin Vineyards Altitude 2292 Coastview Vineyard,Red,2021,,Monterey County,Coastview Vineyard
+1283,51438,Big Basin Vineyards Altitude 2292 Coastview Vineyard,Red,2019,4.25,Monterey County,Coastview Vineyard
+1284,51438,Big Basin Vineyards Altitude 2292 Coastview Vineyard,Red,2018,4.7,Monterey County,Coastview Vineyard
+1285,51438,Big Basin Vineyards Altitude 2292 Coastview Vineyard,Red,2017,4.5,Monterey County,Coastview Vineyard
+1286,51438,Big Basin Vineyards Altitude 2292 Coastview Vineyard,Red,2016,4.6,Monterey County,Coastview Vineyard
+1287,51438,Big Basin Vineyards Altitude 2292 Coastview Vineyard,Red,2015,4.6,Monterey County,Coastview Vineyard
+1288,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2023,,Monterey County,Coastview Vineyard
+1289,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2022,,Monterey County,Coastview Vineyard
+1290,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2021,,Monterey County,Coastview Vineyard
+1291,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2020,,Monterey County,Coastview Vineyard
+1292,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2019,4.55,Monterey County,Coastview Vineyard
+1293,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2018,4.6,Monterey County,Coastview Vineyard
+1294,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2017,4.5,Monterey County,Coastview Vineyard
+1295,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2016,4.5,Monterey County,Coastview Vineyard
+1296,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2015,4.35,Monterey County,Coastview Vineyard
+1297,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2014,4.55,Monterey County,Coastview Vineyard
+1298,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2013,4.55,Monterey County,Coastview Vineyard
+1299,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2012,4.4,Monterey County,Coastview Vineyard
+1300,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2011,4.6,Monterey County,Coastview Vineyard
+1301,51438,Big Basin Vineyards Chardonnay Coastview Vineyard,White,2010,4.5,Monterey County,Coastview Vineyard
+1302,51438,Big Basin Vineyards Grenache Coastview Vineyard,Red,2019,,Monterey County,Coastview Vineyard
+1303,51438,Big Basin Vineyards Grenache Coastview Vineyard,Red,2017,4.4,Monterey County,Coastview Vineyard
+1304,51438,Big Basin Vineyards Grenache Coastview Vineyard,Red,2016,4.45,Monterey County,Coastview Vineyard
+1305,51438,Big Basin Vineyards Grenache Coastview Vineyard,Red,2014,4.15,Monterey County,Coastview Vineyard
+1306,53677,Prospect 772 The Brat,Red,2021,,Calaveras County,The Brat
+1307,53677,Prospect 772 The Brat,Red,2020,,Calaveras County,The Brat
+1308,53677,Prospect 772 The Brat,Red,2019,,Calaveras County,The Brat
+1309,53677,Prospect 772 The Brat,Red,2018,4.5,Calaveras County,The Brat
+1310,53677,Prospect 772 The Brat,Red,2017,4.5,Calaveras County,The Brat
+1311,53677,Prospect 772 The Brat,Red,2016,4.2,Calaveras County,The Brat
+1312,53677,Prospect 772 The Brat,Red,2015,4.5,Calaveras County,The Brat
+1313,53677,Prospect 772 The Brat,Red,2014,4.4,Calaveras County,The Brat
+1314,53677,Prospect 772 The Brat,Red,2013,4.4,Calaveras County,The Brat
+1315,53677,Prospect 772 The Brat,Red,2012,4.5,Calaveras County,The Brat
+1316,53677,Prospect 772 The Brat,Red,2011,4.4,Calaveras County,The Brat
+1317,53677,Prospect 772 The Brat,Red,2010,4.5,Calaveras County,The Brat
+1318,53677,Prospect 772 The Brat,Red,2009,4.55,Calaveras County,The Brat
+1319,53677,Prospect 772 The Brat,Red,2008,4.55,Calaveras County,The Brat
+1320,53677,Prospect 772 The Brat,Red,2007,4.55,Calaveras County,The Brat
+1321,53677,Prospect 772 The Brat,Red,2006,4.5,Calaveras County,The Brat
+1322,53677,Prospect 772 The Brat,Red,2005,,Calaveras County,The Brat
+1323,53677,Prospect 772 The Brat Appaloosa Estate Vineyard,Red,2011,,Calaveras County,The Brat
+1324,53677,Prospect 772 The Brat Appaloosa Estate Vineyard,Red,2009,,Calaveras County,The Brat
+1325,53677,Prospect 772 The Brat Appaloosa Estate Vineyard,Red,2006,,Calaveras County,The Brat
+1326,53677,Prospect 772 The Brat Appaloosa Estate Vineyard,Red,2005,4.45,Calaveras County,The Brat
+1327,31181,Rex Hill Chardonnay Sims Vineyard,White,2021,,Dundee Hills,Sims Vineyard
+1328,31181,Rex Hill Chardonnay Sims Vineyard,White,2018,,Dundee Hills,Sims Vineyard
+1329,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2023,,Dundee Hills,Sims Vineyard
+1330,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2022,,Dundee Hills,Sims Vineyard
+1331,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2021,,Dundee Hills,Sims Vineyard
+1332,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2019,4.75,Dundee Hills,Sims Vineyard
+1333,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2018,0.05,Dundee Hills,Sims Vineyard
+1334,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2017,,Dundee Hills,Sims Vineyard
+1335,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2016,,Dundee Hills,Sims Vineyard
+1336,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2015,,Dundee Hills,Sims Vineyard
+1337,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2014,0.05,Dundee Hills,Sims Vineyard
+1338,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2013,4.6,Dundee Hills,Sims Vineyard
+1339,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2011,4.55,Dundee Hills,Sims Vineyard
+1340,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2008,4.75,Dundee Hills,Sims Vineyard
+1341,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2007,0.05,Dundee Hills,Sims Vineyard
+1342,31181,Rex Hill Pinot Noir Sims Vineyard,Red,2006,4.85,Dundee Hills,Sims Vineyard
+1343,223,Structure Cellars Cabernet Sauvignon Wallula Vineyard,Red,2022,,Horse Heaven Hills,Wallula
+1344,223,Structure Cellars Cabernet Sauvignon Wallula Vineyard,Red,2021,4.55,Horse Heaven Hills,Wallula
+1345,223,Structure Cellars Cabernet Sauvignon Wallula Vineyard,Red,2020,4.55,Horse Heaven Hills,Wallula
+1346,223,Structure Cellars Cabernet Sauvignon Wallula Vineyard,Red,2019,,Horse Heaven Hills,Wallula
+1347,223,Structure Cellars Cabernet Sauvignon Wallula Vineyard,Red,2018,,Horse Heaven Hills,Wallula
+1348,223,Structure Cellars Cabernet Sauvignon Wallula Vineyard,Red,2017,4.4,Horse Heaven Hills,Wallula
+1349,223,Structure Cellars Cabernet Sauvignon Wallula Vineyard,Red,2016,,Horse Heaven Hills,Wallula
+1350,223,Structure Cellars Cabernet Sauvignon Wallula Vineyard,Red,2015,4.5,Horse Heaven Hills,Wallula
+1351,223,Structure Cellars Syrah Wallula Vineyard,Red,2021,,Horse Heaven Hills,Wallula
+1352,223,Structure Cellars Syrah Wallula Vineyard,Red,2019,,Horse Heaven Hills,Wallula
+1353,223,Structure Cellars Syrah Wallula Vineyard,Red,2018,,Horse Heaven Hills,Wallula
+1354,223,Structure Cellars Syrah Wallula Vineyard,Red,2017,,Horse Heaven Hills,Wallula
+1355,223,Structure Cellars Syrah Wallula Vineyard,Red,2015,4.5,Horse Heaven Hills,Wallula
+1356,223,Structure Cellars Syrah Wallula Vineyard,Red,2014,4.5,Horse Heaven Hills,Wallula
+1357,51815,Testarossa Chardonnay Rincon Vineyard,White,2023,,Arroyo Grande Valley,Rincon Vineyard
+1358,51815,Testarossa Chardonnay Rincon Vineyard,White,2022,,Arroyo Grande Valley,Rincon Vineyard
+1359,51815,Testarossa Chardonnay Rincon Vineyard,White,2021,,Arroyo Grande Valley,Rincon Vineyard
+1360,51815,Testarossa Chardonnay Rincon Vineyard,White,2020,,Arroyo Grande Valley,Rincon Vineyard
+1361,51815,Testarossa Chardonnay Rincon Vineyard,White,2019,4.55,Arroyo Grande Valley,Rincon Vineyard
+1362,51815,Testarossa Chardonnay Rincon Vineyard,White,2018,4.5,Arroyo Grande Valley,Rincon Vineyard
+1363,51815,Testarossa Chardonnay Rincon Vineyard,White,2017,4.55,Arroyo Grande Valley,Rincon Vineyard
+1364,51815,Testarossa Chardonnay Rincon Vineyard,White,2016,4.6,Arroyo Grande Valley,Rincon Vineyard
+1365,51815,Testarossa Chardonnay Rincon Vineyard,White,2015,4.55,Arroyo Grande Valley,Rincon Vineyard
+1366,51815,Testarossa Chardonnay Rincon Vineyard,White,2014,4.55,Arroyo Grande Valley,Rincon Vineyard
+1367,51815,Testarossa Chardonnay Rincon Vineyard,White,2013,4.45,Arroyo Grande Valley,Rincon Vineyard
+1368,51815,Testarossa Chardonnay Rincon Vineyard,White,2012,4.6,Arroyo Grande Valley,Rincon Vineyard
+1369,51815,Testarossa Chardonnay Rincon Vineyard,White,2011,4.45,Arroyo Grande Valley,Rincon Vineyard
+1370,51815,Testarossa Chardonnay Rincon Vineyard,White,2010,4.35,Arroyo Grande Valley,Rincon Vineyard
+1371,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2023,,Arroyo Grande Valley,Rincon Vineyard
+1372,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2022,4.6,Arroyo Grande Valley,Rincon Vineyard
+1373,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2021,,Arroyo Grande Valley,Rincon Vineyard
+1374,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2020,4.6,Arroyo Grande Valley,Rincon Vineyard
+1375,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2019,4.5,Arroyo Grande Valley,Rincon Vineyard
+1376,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2018,4.5,Arroyo Grande Valley,Rincon Vineyard
+1377,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2017,4.55,Arroyo Grande Valley,Rincon Vineyard
+1378,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2016,4.6,Arroyo Grande Valley,Rincon Vineyard
+1379,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2015,4.55,Arroyo Grande Valley,Rincon Vineyard
+1380,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2014,4.55,Arroyo Grande Valley,Rincon Vineyard
+1381,51815,Testarossa Pinot Noir Rincon Vineyard,Red,2013,4.5,Arroyo Grande Valley,Rincon Vineyard
+1382,54986,Joseph Jewell Pinot Noir Bucher Vineyard,Red,2021,,Russian River Valley,Bucher Vineyard
+1383,54986,Joseph Jewell Pinot Noir Bucher Vineyard,Red,2020,,Russian River Valley,Bucher Vineyard
+1384,54986,Joseph Jewell Pinot Noir Bucher Vineyard,Red,2019,4.6,Russian River Valley,Bucher Vineyard
+1385,54986,Joseph Jewell Pinot Noir Bucher Vineyard,Red,2018,4.55,Russian River Valley,Bucher Vineyard
+1386,54986,Joseph Jewell Pinot Noir Bucher Vineyard,Red,2017,4.6,Russian River Valley,Bucher Vineyard
+1387,54986,Joseph Jewell Pinot Noir Bucher Vineyard,Red,2016,4.45,Russian River Valley,Bucher Vineyard
+1388,54986,Joseph Jewell Pinot Noir Bucher Vineyard,Red,2015,4.5,Russian River Valley,Bucher Vineyard
+1389,54986,Joseph Jewell Pinot Noir Bucher Vineyard,Red,2014,4.55,Russian River Valley,Bucher Vineyard
+1390,54986,Joseph Jewell Pinot Noir Bucher Vineyard,Red,2013,,Russian River Valley,Bucher Vineyard
+1391,54981,Le Cadeau Pinot Noir Blanc de Noir,White - Sparkling,2017,4.5,Willamette Valley,Blanc de Noir
+1392,54981,Le Cadeau Pinot Noir Blanc de Noir,White - Sparkling,2011,4.4,Willamette Valley,Blanc de Noir
+1393,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2021,,Paso Robles,Di Domenico
+1394,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2019,,Paso Robles,Di Domenico
+1395,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2018,,Paso Robles,Di Domenico
+1396,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2017,,Paso Robles,Di Domenico
+1397,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2015,,Paso Robles,Di Domenico
+1398,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2013,,Paso Robles,Di Domenico
+1399,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2012,,Paso Robles,Di Domenico
+1400,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2007,4.45,Paso Robles,Di Domenico
+1401,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2006,4.4,Paso Robles,Di Domenico
+1402,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2004,0.05,Paso Robles,Di Domenico
+1403,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2003,4.5,Paso Robles,Di Domenico
+1404,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,2002,,Paso Robles,Di Domenico
+1405,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,1999,,Paso Robles,Di Domenico
+1406,49512,Le Vigne Cabernet Franc Le Vigne di Domenico,Red,1996,,Paso Robles,Di Domenico
+1407,49512,Le Vigne Cabernet Sauvignon Di Domenico Reserve,Red,2021,,Paso Robles,Di Domenico
+1408,49512,Le Vigne Cabernet Sauvignon Di Domenico Reserve,Red,2019,,Paso Robles,Di Domenico
+1409,49512,Le Vigne Cabernet Sauvignon Di Domenico Reserve,Red,2018,,Paso Robles,Di Domenico
+1410,49512,Le Vigne Cabernet Sauvignon Di Domenico Reserve,Red,2017,4.65,Paso Robles,Di Domenico
+1411,49512,Le Vigne Cabernet Sauvignon Di Domenico Reserve,Red,2015,,Paso Robles,Di Domenico
+1412,49512,Le Vigne Cabernet Sauvignon Le Vigne di Domenico,Red,2021,4.4,Paso Robles,Di Domenico
+1413,49512,Le Vigne Cabernet Sauvignon Le Vigne di Domenico,Red,2019,,Paso Robles,Di Domenico
+1414,49512,Le Vigne Cabernet Sauvignon Le Vigne di Domenico,Red,2018,,Paso Robles,Di Domenico
+1415,49512,Le Vigne Cabernet Sauvignon Le Vigne di Domenico,Red,2017,,Paso Robles,Di Domenico
+1416,49512,Le Vigne Cabernet Sauvignon Le Vigne di Domenico,Red,2016,,Paso Robles,Di Domenico
+1417,49512,Le Vigne Cabernet Sauvignon Le Vigne di Domenico,Red,2015,,Paso Robles,Di Domenico
+1418,52729,Paul O'Brien Pinot Noir Bradley Vineyard,Red,2017,,Umpqua Valley,Bradley Vineyard
+1419,52729,Paul O'Brien Pinot Noir Bradley Vineyard,Red,2016,,Umpqua Valley,Bradley Vineyard
+1420,233,Claiborne and Churchill 35th Anniversary Brut Cuvée,White - Sparkling,2020,,Edna Valley,Twin Creeks Estate
+1421,233,Claiborne and Churchill 35th Anniversary Brut Cuvée,White - Sparkling,2016,,Edna Valley,Twin Creeks Estate
+1422,233,Claiborne and Churchill Blanc de Blancs,White - Sparkling,2012,,California,Twin Creeks Estate
+1423,233,Claiborne and Churchill Brandy - Eau de Vie de Fraise,Spirits,1999,,Central Coast,Twin Creeks Estate
+1424,233,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2010,4.3,Central Coast,Twin Creeks Estate
+1425,233,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2008,4.4,Central Coast,Twin Creeks Estate
+1426,233,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2006,,Central Coast,Twin Creeks Estate
+1427,233,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2004,,Central Coast,Twin Creeks Estate
+1428,233,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2003,,Central Coast,Twin Creeks Estate
+1429,233,Claiborne and Churchill Brut Rosé,Rosé - Sparkling,2000,,Central Coast,Twin Creeks Estate
+1430,233,Claiborne and Churchill Cabernet Sauvignon,Red,2017,,San Luis Obispo County,Twin Creeks Estate
+1431,233,Claiborne and Churchill Cabernet Sauvignon,Red,2012,,Central Coast,Twin Creeks Estate
+1432,233,Claiborne and Churchill Cabernet Sauvignon,Red,2008,,San Luis Obispo County,Twin Creeks Estate
+1433,233,Claiborne and Churchill Cabernet Sauvignon,Red,2006,4.25,San Luis Obispo County,Twin Creeks Estate
+1434,233,Claiborne and Churchill Cabernet Sauvignon,Red,2005,,San Luis Obispo County,Twin Creeks Estate
+1435,233,Claiborne and Churchill Cabernet Sauvignon,Red,2003,4.5,San Luis Obispo County,Twin Creeks Estate
+1436,233,Claiborne and Churchill Cabernet Sauvignon,Red,2000,,San Luis Obispo County,Twin Creeks Estate
+1437,233,Claiborne and Churchill Cabernet Sauvignon,Red,1999,,San Luis Obispo County,Twin Creeks Estate
+1438,233,Claiborne and Churchill Cabernet Sauvignon,Red,1998,,San Luis Obispo County,Twin Creeks Estate
+1439,233,Claiborne and Churchill Cabernet Sauvignon,Red,1997,,San Luis Obispo County,Twin Creeks Estate
+1440,233,Claiborne and Churchill Chardonnay,White,2023,,Edna Valley,Twin Creeks Estate
+1441,233,Claiborne and Churchill Chardonnay,White,2022,,Edna Valley,Twin Creeks Estate
+1442,233,Claiborne and Churchill Chardonnay,White,2022,,San Luis Obispo County,Twin Creeks Estate
+1443,233,Claiborne and Churchill Chardonnay,White,2021,,Edna Valley,Twin Creeks Estate
+1444,233,Claiborne and Churchill Chardonnay,White,2020,,Edna Valley,Twin Creeks Estate
+1445,57325,Flying Goat Cellars Pinot Noir Bien Nacido Vineyard,Red,2018,4.5,Santa Maria Valley,Bien Nacido Vineyard
+1446,57325,Flying Goat Cellars Pinot Noir Bien Nacido Vineyard,Red,2017,4.5,Santa Maria Valley,Bien Nacido Vineyard
+1447,57325,Flying Goat Cellars Pinot Noir Bien Nacido Vineyard,Red,2016,4.6,Santa Maria Valley,Bien Nacido Vineyard
+1448,57325,Flying Goat Cellars Pinot Noir Bien Nacido Vineyard,Red,2015,4.5,Santa Maria Valley,Bien Nacido Vineyard
+1449,57325,Flying Goat Cellars Pinot Noir Bien Nacido Vineyard,Red,2014,4.6,Santa Maria Valley,Bien Nacido Vineyard
+1450,57325,Flying Goat Cellars Pinot Noir Bien Nacido Vineyard,Red,2013,4.5,Santa Maria Valley,Bien Nacido Vineyard
+1451,57325,Flying Goat Cellars Pinot Noir Bien Nacido Vineyard,Red,2012,4.55,Santa Maria Valley,Bien Nacido Vineyard
+1452,57325,Flying Goat Cellars Pinot Noir Bien Nacido Vineyard,Red,2011,4.35,Santa Maria Valley,Bien Nacido Vineyard
+1453,57325,Flying Goat Cellars Pinot Noir Bien Nacido Vineyard,Red,2010,4.6,Santa Maria Valley,Bien Nacido Vineyard
+1454,57325,Flying Goat Cellars Pinot Noir Bien Nacido Vineyard,Red,2009,,Santa Maria Valley,Bien Nacido Vineyard
+1455,57325,Flying Goat Cellars Pinot Noir Goat Bubbles Blanc de Noirs Bien Nacido Vineyard,White - Sparkling,2018,4.7,Santa Maria Valley,Bien Nacido Vineyard
+1456,57325,Flying Goat Cellars Pinot Noir Goat Bubbles Blanc de Noirs Bien Nacido Vineyard,White - Sparkling,2017,4.7,Santa Maria Valley,Bien Nacido Vineyard
+1457,57325,Flying Goat Cellars Pinot Noir Goat Bubbles Blanc de Noirs Bien Nacido Vineyard,White - Sparkling,2016,4.65,Santa Maria Valley,Bien Nacido Vineyard
+1458,57325,Flying Goat Cellars Pinot Noir Goat Bubbles Blanc de Noirs Bien Nacido Vineyard,White - Sparkling,2015,4.55,Santa Maria Valley,Bien Nacido Vineyard
+1459,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2022,,Valle Isarco / Eisacktaler,Praepositus Passito
+1460,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2021,,Valle Isarco / Eisacktaler,Praepositus Passito
+1461,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2020,,Valle Isarco / Eisacktaler,Praepositus Passito
+1462,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2019,4.45,Valle Isarco / Eisacktaler,Praepositus Passito
+1463,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2018,,Valle Isarco / Eisacktaler,Praepositus Passito
+1464,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2017,,Valle Isarco / Eisacktaler,Praepositus Passito
+1465,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2016,,Valle Isarco / Eisacktaler,Praepositus Passito
+1466,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2015,,Valle Isarco / Eisacktaler,Praepositus Passito
+1467,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2014,,Valle Isarco / Eisacktaler,Praepositus Passito
+1468,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2013,,Valle Isarco / Eisacktaler,Praepositus Passito
+1469,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2012,,Valle Isarco / Eisacktaler,Praepositus Passito
+1470,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2011,4.55,Valle Isarco / Eisacktaler,Praepositus Passito
+1471,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2009,,Valle Isarco / Eisacktaler,Praepositus Passito
+1472,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2007,4.65,Valle Isarco / Eisacktaler,Praepositus Passito
+1473,236,Abbazia di Novacella (Stiftskellerei Neustift) Kerner Passito Praepositus,White - Sweet/Dessert,2005,,Valle Isarco / Eisacktaler,Praepositus Passito
+1474,53927,Les Belles Collines Cabernet Sauvignon Les Sommets,Red,2013,,Napa Valley,Les Sommets
+1475,53927,Les Belles Collines Cabernet Sauvignon Les Sommets,Red,2012,,Napa Valley,Les Sommets
+1476,53927,Les Belles Collines Cabernet Sauvignon Les Sommets,Red,2010,,Napa Valley,Les Sommets
+1477,57208,Lutum Chardonnay Gap’s Crown Vineyard,White,2016,4.55,Sonoma Coast,Gap's Crown Vineyard
+1478,57208,Lutum Chardonnay Gap’s Crown Vineyard,White,2015,4.45,Sonoma Coast,Gap's Crown Vineyard
+1479,57208,Lutum Chardonnay Gap’s Crown Vineyard,White,2014,4.55,Sonoma Coast,Gap's Crown Vineyard
+1480,57208,Lutum Chardonnay Gap’s Crown Vineyard,White,2013,4.55,Sonoma Coast,Gap's Crown Vineyard
+1481,57208,Lutum Pinot Noir Gap’s Crown Vineyard,Red,2018,,Sonoma Coast,Gap's Crown Vineyard
+1482,57208,Lutum Pinot Noir Gap’s Crown Vineyard,Red,2017,,Sonoma Coast,Gap's Crown Vineyard
+1483,57208,Lutum Pinot Noir Gap’s Crown Vineyard,Red,2016,4.55,Sonoma Coast,Gap's Crown Vineyard
+1484,57208,Lutum Pinot Noir Gap’s Crown Vineyard,Red,2015,4.7,Sonoma Coast,Gap's Crown Vineyard
+1485,57208,Lutum Pinot Noir Gap’s Crown Vineyard,Red,2014,4.5,Sonoma Coast,Gap's Crown Vineyard
+1486,57208,Lutum Pinot Noir Gap’s Crown Vineyard,Red,2013,4.55,Sonoma Coast,Gap's Crown Vineyard
+1487,38179,Turiya Wines Sangiovese Stolpman Vineyard,Red,2014,,Ballard Canyon,Stolpman Vineyard
+1488,38179,Turiya Wines Sangiovese Stolpman Vineyard,Red,2012,,Ballard Canyon,Stolpman Vineyard
+1489,38179,Turiya Wines Sangiovese Stolpman Vineyard,Red,2011,0.05,Ballard Canyon,Stolpman Vineyard
+1490,53926,Iron Horse Vineyards Chardonnay Blanc de Blancs Thomas Road Vineyard,White - Sparkling,1991,,Green Valley of Russian River Valley,Thomas Road
+1491,53926,Iron Horse Vineyards Chardonnay Thomas Road,White,2001,,Green Valley of Russian River Valley,Thomas Road
+1492,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2019,4.45,Green Valley of Russian River Valley,Thomas Road
+1493,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2018,4.5,Green Valley of Russian River Valley,Thomas Road
+1494,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2016,4.5,Green Valley of Russian River Valley,Thomas Road
+1495,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2015,4.45,Green Valley of Russian River Valley,Thomas Road
+1496,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2014,4.4,Green Valley of Russian River Valley,Thomas Road
+1497,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2013,4.5,Green Valley of Russian River Valley,Thomas Road
+1498,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2012,4.45,Green Valley of Russian River Valley,Thomas Road
+1499,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2011,4.45,Green Valley of Russian River Valley,Thomas Road
+1500,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2010,4.5,Green Valley of Russian River Valley,Thomas Road
+1501,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2009,4.45,Green Valley of Russian River Valley,Thomas Road
+1502,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2008,4.5,Green Valley of Russian River Valley,Thomas Road
+1503,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2007,4.5,Green Valley of Russian River Valley,Thomas Road
+1504,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2005,4.5,Green Valley of Russian River Valley,Thomas Road
+1505,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2004,4.5,Green Valley of Russian River Valley,Thomas Road
+1506,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2001,4.25,Green Valley of Russian River Valley,Thomas Road
+1507,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,2000,4.5,Green Valley of Russian River Valley,Thomas Road
+1508,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,1999,4,Green Valley of Russian River Valley,Thomas Road
+1509,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,1998,,Green Valley of Russian River Valley,Thomas Road
+1510,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,1997,,Green Valley of Russian River Valley,Thomas Road
+1511,53926,Iron Horse Vineyards Pinot Noir Thomas Road Vineyard,Red,1996,,Green Valley of Russian River Valley,Thomas Road
+1512,56013,Carlisle Alicante Bouschet Pagani Ranch,Red,2022,,Sonoma Valley,Pagani Ranch
+1513,56013,Carlisle Alicante Bouschet Pagani Ranch,Red,2021,4.65,Sonoma Valley,Pagani Ranch
+1514,56013,Carlisle Alicante Bouschet Pagani Ranch,Red,2019,4.6,Sonoma Valley,Pagani Ranch
+1515,56013,Carlisle Alicante Bouschet Pagani Ranch,Red,2018,4.55,Sonoma Valley,Pagani Ranch
+1516,56013,Carlisle Alicante Bouschet Pagani Ranch,Red,2016,4.6,Sonoma Valley,Pagani Ranch
+1517,56013,Carlisle Alicante Bouschet Pagani Ranch,Red,2013,4.6,Sonoma Valley,Pagani Ranch
+1518,246,Clos d'Argentine Cabernet Sauvignon Winemaker's Selection Reserva,Red,2022,,Mendoza,Winemaker's Selection Reserva
+1519,246,Clos d'Argentine Cabernet Sauvignon Winemaker's Selection Reserva,Red,2021,,Mendoza,Winemaker's Selection Reserva
+1520,246,Clos d'Argentine Cabernet Sauvignon Winemaker's Selection Reserva,Red,2017,4.45,Mendoza,Winemaker's Selection Reserva
+1521,246,Clos d'Argentine Cabernet Sauvignon Winemaker's Selection Reserva,Red,2016,4.35,Mendoza,Winemaker's Selection Reserva
+1522,246,Clos d'Argentine Chardonnay Winemaker's Selection Reserva,White,2023,,Mendoza,Winemaker's Selection Reserva
+1523,246,Clos d'Argentine Chardonnay Winemaker's Selection Reserva,White,2022,,Mendoza,Winemaker's Selection Reserva
+1524,246,Clos d'Argentine Chardonnay Winemaker's Selection Reserva,White,2020,3.9,Mendoza,Winemaker's Selection Reserva
+1525,246,Clos d'Argentine Chardonnay Winemaker's Selection Reserva,White,2017,,Mendoza,Winemaker's Selection Reserva
+1526,246,Clos d'Argentine Malbec Winemaker's Selection Reserva,Red,2023,,Mendoza,Winemaker's Selection Reserva
+1527,246,Clos d'Argentine Malbec Winemaker's Selection Reserva,Red,2022,,Mendoza,Winemaker's Selection Reserva
+1528,246,Clos d'Argentine Malbec Winemaker's Selection Reserva,Red,2021,4.3,Mendoza,Winemaker's Selection Reserva
+1529,246,Clos d'Argentine Malbec Winemaker's Selection Reserva,Red,2020,4.25,Mendoza,Winemaker's Selection Reserva
+1530,246,Clos d'Argentine Malbec Winemaker's Selection Reserva,Red,2019,,Mendoza,Winemaker's Selection Reserva
+1531,246,Clos d'Argentine Malbec Winemaker's Selection Reserva,Red,2018,,Mendoza,Winemaker's Selection Reserva
+1532,246,Clos d'Argentine Malbec Winemaker's Selection Reserva,Red,2015,,Mendoza,Winemaker's Selection Reserva
+1533,246,Clos d'Argentine Malbec Winemaker's Selection Reserva,Red,2014,4.3,Mendoza,Winemaker's Selection Reserva
+1534,246,Clos d'Argentine Malbec Winemaker's Selection Reserva,Red,2013,4.35,Mendoza,Winemaker's Selection Reserva
+1535,246,Clos d'Argentine Malbec Winemaker's Selection Reserva,Red,2011,,Mendoza,Winemaker's Selection Reserva
+1536,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2019,,Santa Maria Valley,Bien Nacido Vineyard
+1537,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2018,,Santa Maria Valley,Bien Nacido Vineyard
+1538,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2017,4.25,Santa Maria Valley,Bien Nacido Vineyard
+1539,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2016,,Santa Maria Valley,Bien Nacido Vineyard
+1540,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2015,4.55,Santa Maria Valley,Bien Nacido Vineyard
+1541,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2014,4.45,Santa Maria Valley,Bien Nacido Vineyard
+1542,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2013,4.5,Santa Maria Valley,Bien Nacido Vineyard
+1543,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2012,4.4,Santa Maria Valley,Bien Nacido Vineyard
+1544,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2011,4.35,Santa Maria Valley,Bien Nacido Vineyard
+1545,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2010,4.45,Santa Maria Valley,Bien Nacido Vineyard
+1546,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2009,4.5,Santa Maria Valley,Bien Nacido Vineyard
+1547,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2008,4.4,Santa Maria Valley,Bien Nacido Vineyard
+1548,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2007,4.45,Santa Maria Valley,Bien Nacido Vineyard
+1549,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2006,4.45,Santa Maria Valley,Bien Nacido Vineyard
+1550,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2005,4.35,Santa Maria Valley,Bien Nacido Vineyard
+1551,57325,Sanctuary Estates Pinot Noir Bien Nacido Vineyard,Red,2004,4.45,Santa Maria Valley,Bien Nacido Vineyard
+1552,57214,Domaine de la Terre Rouge Enigma,White,2019,,Sierra Foothills,Enigma
+1553,57214,Domaine de la Terre Rouge Enigma,White,2015,,Sierra Foothills,Enigma
+1554,57214,Domaine de la Terre Rouge Enigma,White,2014,4.45,Sierra Foothills,Enigma
+1555,57214,Domaine de la Terre Rouge Enigma,White,2013,4.5,Sierra Foothills,Enigma
+1556,57214,Domaine de la Terre Rouge Enigma,White,2012,4.9,Sierra Foothills,Enigma
+1557,57214,Domaine de la Terre Rouge Enigma,White,2011,4.5,Sierra Foothills,Enigma
+1558,57214,Domaine de la Terre Rouge Enigma,White,2010,4.45,Sierra Foothills,Enigma
+1559,57214,Domaine de la Terre Rouge Enigma,White,2009,4.35,Sierra Foothills,Enigma
+1560,57214,Domaine de la Terre Rouge Enigma,White,2008,4.35,Sierra Foothills,Enigma
+1561,57214,Domaine de la Terre Rouge Enigma,White,2007,4.3,Sierra Foothills,Enigma
+1562,57214,Domaine de la Terre Rouge Enigma,White,2006,4.3,Sierra Foothills,Enigma
+1563,57214,Domaine de la Terre Rouge Enigma,White,2005,4.35,Sierra Foothills,Enigma
+1564,57214,Domaine de la Terre Rouge Enigma,White,2004,4.25,Sierra Foothills,Enigma
+1565,57214,Domaine de la Terre Rouge Enigma,White,2003,4.65,Sierra Foothills,Enigma
+1566,57214,Domaine de la Terre Rouge Enigma,White,2002,4.4,Sierra Foothills,Enigma
+1567,57214,Domaine de la Terre Rouge Enigma,White,2001,,Sierra Foothills,Enigma
+1568,57214,Domaine de la Terre Rouge Enigma,White,2000,4.25,Sierra Foothills,Enigma
+1569,57214,Domaine de la Terre Rouge Enigma,White,1999,,Sierra Foothills,Enigma
+1570,57214,Domaine de la Terre Rouge Enigma,White,1998,,Sierra Foothills,Enigma
+1571,5952,Limerick Lane Hail Mary,Red,2017,4.5,Russian River Valley,Hail Mary
+1572,5952,Limerick Lane Hail Mary,Red,2016,4.45,Russian River Valley,Hail Mary
+1573,5952,Limerick Lane Hail Mary,Red,2015,4.55,Russian River Valley,Hail Mary
+1574,5952,Limerick Lane Hail Mary,Red,2014,4.55,Russian River Valley,Hail Mary
+1575,5952,Limerick Lane Hail Mary,Red,2013,4.55,Russian River Valley,Hail Mary
+1576,5952,Limerick Lane Hail Mary,Red,2012,4.55,Russian River Valley,Hail Mary
+1577,5952,Limerick Lane Hail Mary,Red,2011,4.65,Russian River Valley,Hail Mary
+1578,26494,Limerick Lane Syrah Headpruned Block,Red,2022,,Russian River Valley,Headpruned Block
+1579,26494,Limerick Lane Syrah Headpruned Block,Red,2017,4.55,Russian River Valley,Headpruned Block
+1580,26494,Limerick Lane Syrah Headpruned Block,Red,2016,4.55,Russian River Valley,Headpruned Block
+1581,26494,Limerick Lane Syrah Headpruned Block,Red,2015,4.55,Russian River Valley,Headpruned Block
+1582,26494,Limerick Lane Syrah Headpruned Block,Red,2014,4.55,Russian River Valley,Headpruned Block
+1583,26494,Limerick Lane Syrah Headpruned Block,Red,2013,4.55,Russian River Valley,Headpruned Block
+1584,26494,Limerick Lane Syrah Headpruned Block,Red,2012,4.65,Russian River Valley,Headpruned Block
+1585,26494,Limerick Lane Syrah Headpruned Block,Red,2011,4.4,Russian River Valley,Headpruned Block
+1586,26494,Limerick Lane Syrah Headpruned Block,Red,2010,4.5,Russian River Valley,Headpruned Block
+1587,57721,Loring Wine Company Chardonnay Durell Vineyard,White,2014,4.5,Sonoma Coast,Durell Vineyard
+1588,57721,Loring Wine Company Chardonnay Durell Vineyard,White,2013,4.5,Sonoma Coast,Durell Vineyard
+1589,57721,Loring Wine Company Chardonnay Durell Vineyard,White,2012,0.2,Sonoma Coast,Durell Vineyard
+1590,57721,Loring Wine Company Chardonnay Durell Vineyard,White,2011,4.5,Sonoma Coast,Durell Vineyard
+1591,57721,Loring Wine Company Chardonnay Durell Vineyard,White,2010,4.35,Sonoma Coast,Durell Vineyard
+1592,57721,Loring Wine Company Chardonnay Durell Vineyard,White,2008,4.3,Sonoma Coast,Durell Vineyard
+1593,57721,Loring Wine Company Chardonnay Durell Vineyard,White,2004,,Sonoma Coast,Durell Vineyard
+1594,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2014,4.55,Sonoma Coast,Durell Vineyard
+1595,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2013,4.55,Sonoma Coast,Durell Vineyard
+1596,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2012,4.5,Sonoma Coast,Durell Vineyard
+1597,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2011,4.5,Sonoma Coast,Durell Vineyard
+1598,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2010,4.55,Sonoma Coast,Durell Vineyard
+1599,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2009,4.45,Sonoma Coast,Durell Vineyard
+1600,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2008,4.4,Sonoma Coast,Durell Vineyard
+1601,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2007,4.45,Sonoma Coast,Durell Vineyard
+1602,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2006,4.4,Sonoma Coast,Durell Vineyard
+1603,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2005,4.45,Sonoma Coast,Durell Vineyard
+1604,57721,Loring Wine Company Pinot Noir Durell Vineyard,Red,2004,4.5,Sonoma Coast,Durell Vineyard
+1605,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2019,,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1606,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2018,4.6,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1607,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2017,4.45,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1608,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2016,4.5,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1609,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2015,4.6,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1610,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2014,4.6,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1611,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2013,4.55,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1612,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2012,4.6,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1613,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2011,4.5,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1614,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2010,4.55,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1615,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2009,4.5,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1616,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2008,4.55,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1617,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2007,4.45,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1618,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2006,4.45,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1619,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2005,4.55,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1620,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2004,4.5,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1621,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2003,4.1,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1622,25554,Flying Goat Cellars Pinot Noir Rancho Santa Rosa Vineyard,Red,2002,0.05,Sta. Rita Hills,Rancho Santa Rosa Vineyard
+1623,38433,Four Lanterns Syrah Fire Light,Red,2019,,Paso Robles Willow Creek District,Fire Light
+1624,38433,Four Lanterns Syrah Fire Light,Red,2018,4.5,Paso Robles Willow Creek District,Fire Light
+1625,38433,Four Lanterns Syrah Fire Light,Red,2017,4.6,Paso Robles Willow Creek District,Fire Light
+1626,38433,Four Lanterns Syrah Fire Light,Red,2016,4.4,Paso Robles Willow Creek District,Fire Light
+1627,38433,Four Lanterns Syrah Fire Light,Red,2015,4.35,Paso Robles Willow Creek District,Fire Light
+1628,38433,Four Lanterns Syrah Fire Light,Red,2014,4.4,Paso Robles,Fire Light
+1629,38433,Four Lanterns Syrah Fire Light,Red,2013,4.45,Paso Robles,Fire Light
+1630,38433,Four Lanterns Syrah Fire Light,Red,2012,,Paso Robles,Fire Light
+1631,256,Turiya Wines Shapeshifter,Red,2011,,Central Coast,Shapeshifter
+1632,18324,World's End Cabernet Sauvignon If Six Was Nine Reserve,Red,2020,,Napa Valley,If Six Was Nine Reserve
+1633,18324,World's End Cabernet Sauvignon If Six Was Nine Reserve,Red,2019,4.6,Napa Valley,If Six Was Nine Reserve
+1634,18324,World's End Cabernet Sauvignon If Six Was Nine Reserve,Red,2018,4.45,Napa Valley,If Six Was Nine Reserve
+1635,18324,World's End Cabernet Sauvignon If Six Was Nine Reserve,Red,2017,4.45,Napa Valley,If Six Was Nine Reserve
+1636,18324,World's End Cabernet Sauvignon If Six Was Nine Reserve,Red,2016,4.5,Napa Valley,If Six Was Nine Reserve
+1637,18324,World's End Cabernet Sauvignon If Six Was Nine Reserve,Red,2015,4.45,Napa Valley,If Six Was Nine Reserve
+1638,18324,World's End Cabernet Sauvignon If Six Was Nine Reserve,Red,2014,4.55,Napa Valley,If Six Was Nine Reserve
+1639,18324,World's End Cabernet Sauvignon If Six Was Nine Reserve,Red,2013,4.5,Napa Valley,If Six Was Nine Reserve
+1640,18324,World's End Cabernet Sauvignon If Six Was Nine Reserve,Red,2010,4.5,Napa Valley,If Six Was Nine Reserve
+1641,18324,World's End Cabernet Sauvignon If Six Was Nine Reserve,Red,2009,4.5,Napa Valley,If Six Was Nine Reserve
+1642,56324,Alleromb Winery Chardonnay La Reyna Blanca Vineyard,White,2021,,Columbia Valley,La Reyna Blanca Vineyard
+1643,56324,Alleromb Winery Chardonnay La Reyna Blanca Vineyard,White,2014,,Columbia Valley,La Reyna Blanca Vineyard
+1644,56324,Alleromb Winery Chardonnay La Reyna Blanca Vineyard,White,2013,,Columbia Valley,La Reyna Blanca Vineyard
+1645,56324,Alleromb Winery Chardonnay La Reyna Blanca Vineyard,White,2012,4.55,Columbia Valley,La Reyna Blanca Vineyard
+1646,56324,Alleromb Winery Chardonnay Vineyard Collection La Reyna Blanca Vineyard,White,2014,4.55,Columbia Valley,La Reyna Blanca Vineyard
+1647,56324,Alleromb Winery Chardonnay Vineyard Collection La Reyna Blanca Vineyard,White,2013,,Columbia Valley,La Reyna Blanca Vineyard
+1648,56324,Alleromb Winery Sauvignon Blanc La Reyna Blanca Vineyard,White,2020,,Columbia Valley,La Reyna Blanca Vineyard
+1649,56324,Alleromb Winery Sauvignon Blanc La Reyna Blanca Vineyard,White,2019,,Columbia Valley,La Reyna Blanca Vineyard
+1650,56324,Alleromb Winery Sauvignon Blanc La Reyna Blanca Vineyard,White,2018,,Columbia Valley,La Reyna Blanca Vineyard
+1651,56324,Alleromb Winery Sauvignon Blanc La Reyna Blanca Vineyard,White,2017,0.05,Columbia Valley,La Reyna Blanca Vineyard
+1652,56324,Alleromb Winery Sauvignon Blanc La Reyna Blanca Vineyard,White,2013,,Columbia Valley,La Reyna Blanca Vineyard
+1653,56324,Alleromb Winery Sauvignon Blanc La Reyna Blanca Vineyard,White,2012,4.45,Columbia Valley,La Reyna Blanca Vineyard
+1654,49636,Ardor Cellars Mourvèdre Art Den Hoed Vineyard,Red,2015,,Yakima Valley,Art Den Hoed Vineyard
+1655,49636,Ardor Cellars Mourvèdre Art Den Hoed Vineyard,Red,2014,,Yakima Valley,Art Den Hoed Vineyard
+1656,49636,Ardor Cellars Mourvèdre Art Den Hoed Vineyard,Red,2013,,Yakima Valley,Art Den Hoed Vineyard
+1657,55514,Chateau Lafayette Reneau Pinot Noir,Red,2019,,Seneca Lake,Pinot Noir
+1658,55514,Chateau Lafayette Reneau Pinot Noir,Red,2018,4.45,Seneca Lake,Pinot Noir
+1659,55514,Chateau Lafayette Reneau Pinot Noir,Red,2017,,Seneca Lake,Pinot Noir
+1660,55514,Chateau Lafayette Reneau Pinot Noir,Red,2013,4.25,Seneca Lake,Pinot Noir
+1661,55514,Chateau Lafayette Reneau Pinot Noir,Red,2012,,Seneca Lake,Pinot Noir
+1662,55514,Chateau Lafayette Reneau Pinot Noir,Red,2007,0.05,Seneca Lake,Pinot Noir
+1663,55514,Chateau Lafayette Reneau Pinot Noir,Red,2006,,Seneca Lake,Pinot Noir
+1664,55514,Chateau Lafayette Reneau Pinot Noir,Red,2005,0.05,Seneca Lake,Pinot Noir
+1665,55514,Chateau Lafayette Reneau Pinot Noir,Red,2003,4.25,Seneca Lake,Pinot Noir
+1666,55514,Chateau Lafayette Reneau Pinot Noir,Red,2002,4.15,Seneca Lake,Pinot Noir
+1667,55514,Chateau Lafayette Reneau Pinot Noir,Red,2001,,Seneca Lake,Pinot Noir
+1668,55514,Chateau Lafayette Reneau Pinot Noir,Red,2000,,Seneca Lake,Pinot Noir
+1669,55514,Chateau Lafayette Reneau Pinot Noir,Red,1999,,Seneca Lake,Pinot Noir
+1670,55514,Chateau Lafayette Reneau Pinot Noir,Red,1998,,Seneca Lake,Pinot Noir
+1671,55514,Chateau Lafayette Reneau Pinot Noir,Red,1996,,Seneca Lake,Pinot Noir
+1672,55514,Chateau Lafayette Reneau Pinot Noir & Rose Wine,Rosé,2021,,Seneca Lake,Pinot Noir
+1673,55514,Chateau Lafayette Reneau Pinot Noir & Rose Wine,Rosé,2020,,Seneca Lake,Pinot Noir
+1674,55514,Chateau Lafayette Reneau Pinot Noir & Rose Wine,Rosé,2019,4.25,Seneca Lake,Pinot Noir
+1675,55514,Chateau Lafayette Reneau Pinot Noir & Rose Wine,Rosé,2018,4.4,Seneca Lake,Pinot Noir
+1676,55514,Chateau Lafayette Reneau Pinot Noir & Rose Wine,Rosé,2017,4.3,Seneca Lake,Pinot Noir
+1677,55514,Chateau Lafayette Reneau Pinot Noir & Rose Wine,Rosé,2016,3.4,Seneca Lake,Pinot Noir
+1678,55514,Chateau Lafayette Reneau Pinot Noir & Rose Wine,Rosé,2014,4.55,Seneca Lake,Pinot Noir
+1679,55514,Chateau Lafayette Reneau Pinot Noir Blanc,Rosé,2014,4.6,Seneca Lake,Pinot Noir
+1680,55514,Chateau Lafayette Reneau Pinot Noir Blanc,Rosé,2013,5,Seneca Lake,Pinot Noir
+1681,55514,Chateau Lafayette Reneau Pinot Noir Blanc,Rosé,2011,,Seneca Lake,Pinot Noir
+1682,266,Savage Grace Wines Gewürztraminer Orange Oak Ridge Vineyard,Orange,2023,,Columbia Gorge,Orange Oak Ridge Vineyard
+1683,266,Savage Grace Wines Gewürztraminer Orange Oak Ridge Vineyard,Orange,2022,4.5,Columbia Gorge,Orange Oak Ridge Vineyard
+1684,266,Savage Grace Wines Gewürztraminer Orange Oak Ridge Vineyard,Orange,2021,,Columbia Gorge,Orange Oak Ridge Vineyard
+1685,266,Savage Grace Wines Gewürztraminer Orange Oak Ridge Vineyard,Orange,2020,0.05,Columbia Gorge,Orange Oak Ridge Vineyard
+1686,266,Savage Grace Wines Gewürztraminer Orange Oak Ridge Vineyard,Orange,2019,4.55,Columbia Gorge,Orange Oak Ridge Vineyard
+1687,266,Savage Grace Wines Gewürztraminer Orange Oak Ridge Vineyard,Orange,2018,,Columbia Gorge,Orange Oak Ridge Vineyard
+1688,266,Savage Grace Wines Gewürztraminer Orange Oak Ridge Vineyard,Orange,2017,4.45,Columbia Gorge,Orange Oak Ridge Vineyard
+1689,266,Savage Grace Wines Gewürztraminer Orange Oak Ridge Vineyard,Orange,2016,4.55,Columbia Gorge,Orange Oak Ridge Vineyard
+1690,266,Savage Grace Wines Gewürztraminer Skin Contact Vieilles Vignes Oak Ridge Vineyard,Orange,2023,,Columbia Gorge,Orange Oak Ridge Vineyard
+1691,266,Savage Grace Wines Gewürztraminer Skin Contact Vieilles Vignes Oak Ridge Vineyard,Orange,2022,,Columbia Gorge,Orange Oak Ridge Vineyard
+1692,266,Savage Grace Wines Gewürztraminer Skin Contact Vieilles Vignes Oak Ridge Vineyard,Orange,2021,,Columbia Gorge,Orange Oak Ridge Vineyard
+1693,266,Savage Grace Wines Gewürztraminer Skin Contact Vieilles Vignes Oak Ridge Vineyard,Orange,2017,,Columbia Gorge,Orange Oak Ridge Vineyard
+1694,268,Stevens Chardonnay StevensSteel,White,2017,,Yakima Valley,StevensSteel
+1695,268,Stevens Chardonnay StevensSteel,White,2016,,Yakima Valley,StevensSteel
+1696,35148,Kontos Cellars Malbec Baker Blend Summit View Vineyard,Red,2022,,Walla Walla Valley,Summit View Vineyard
+1697,35148,Kontos Cellars Malbec Baker Blend Summit View Vineyard,Red,2021,,Walla Walla Valley,Summit View Vineyard
+1698,35148,Kontos Cellars Malbec Baker Blend Summit View Vineyard,Red,2020,,Walla Walla Valley,Summit View Vineyard
+1699,35148,Kontos Cellars Malbec Baker Summit View Vineyard,Red,2022,,Walla Walla Valley,Summit View Vineyard
+1700,35148,Kontos Cellars Malbec Baker Summit View Vineyard,Red,2021,,Walla Walla Valley,Summit View Vineyard
+1701,35148,Kontos Cellars Malbec Baker Summit View Vineyard,Red,2020,4.65,Walla Walla Valley,Summit View Vineyard
+1702,35148,Kontos Cellars Malbec Summit View Vineyard,Red,2019,4.5,Walla Walla Valley,Summit View Vineyard
+1703,35148,Kontos Cellars Malbec Summit View Vineyard,Red,2018,4.6,Walla Walla Valley,Summit View Vineyard
+1704,35148,Kontos Cellars Malbec Summit View Vineyard,Red,2017,4.5,Walla Walla Valley,Summit View Vineyard
+1705,35148,Kontos Cellars Malbec Summit View Vineyard,Red,2016,,Walla Walla Valley,Summit View Vineyard
+1706,35148,Kontos Cellars Malbec Summit View Vineyard,Red,2015,4.4,Walla Walla Valley,Summit View Vineyard
+1707,35148,Kontos Cellars Malbec Summit View Vineyard,Red,2014,4.5,Walla Walla Valley,Summit View Vineyard
+1708,35148,Kontos Cellars Malbec Summit View Vineyard,Red,2013,4.5,Walla Walla Valley,Summit View Vineyard
+1709,35148,Kontos Cellars Malbec Summit View Vineyard,Red,2012,4.45,Walla Walla Valley,Summit View Vineyard
+1710,35148,Kontos Cellars Malbec Summit View Vineyard,Red,2011,4.45,Walla Walla Valley,Summit View Vineyard
+1711,270,Midnight Cellars Sangiovese Starlight,Red,2022,,Paso Robles,Starlight
+1712,270,Midnight Cellars Sangiovese Starlight,Red,2020,,Paso Robles,Starlight
+1713,270,Midnight Cellars Sangiovese Starlight,Red,2019,,Paso Robles,Starlight
+1714,270,Midnight Cellars Sangiovese Starlight,Red,2017,,Paso Robles,Starlight
+1715,270,Midnight Cellars Sangiovese Starlight,Red,2014,4.6,Paso Robles,Starlight
+1716,270,Midnight Cellars Sangiovese Starlight,Red,2013,,Paso Robles,Starlight
+1717,270,Midnight Cellars Sangiovese Starlight,Red,2012,,Paso Robles,Starlight
+1718,270,Midnight Cellars Sangiovese Starlight,Red,2011,,Paso Robles,Starlight
+1719,270,Midnight Cellars Sangiovese Starlight,Red,2009,4.6,Paso Robles,Starlight
+1720,270,Midnight Cellars Sangiovese Starlight,Red,2008,4.4,Paso Robles,Starlight
+1721,270,Midnight Cellars Sangiovese Starlight,Red,2007,,Paso Robles,Starlight
+1722,270,Midnight Cellars Sangiovese Starlight,Red,2006,,Paso Robles,Starlight
+1723,270,Midnight Cellars Sangiovese Starlight,Red,2000,,Paso Robles,Starlight
+1724,272,Proemio Winemaker's Selection Grand Reserve,Red,2019,,Mendoza,Gran Reserve Winemaker's Selection
+1725,272,Proemio Winemaker's Selection Grand Reserve,Red,2018,,Mendoza,Gran Reserve Winemaker's Selection
+1726,272,Proemio Winemaker's Selection Grand Reserve,Red,2016,,Mendoza,Gran Reserve Winemaker's Selection
+1727,272,Proemio Winemaker's Selection Grand Reserve,Red,2014,4.6,Mendoza,Gran Reserve Winemaker's Selection
+1728,272,Proemio Winemaker's Selection Grand Reserve,Red,2013,4.45,Mendoza,Gran Reserve Winemaker's Selection
+1729,272,Proemio Winemaker's Selection Grand Reserve,Red,2011,,Mendoza,Gran Reserve Winemaker's Selection
+1730,273,Quady North Bomba,Red,2022,,Rogue Valley,Bomba
+1731,273,Quady North Bomba,Red,2021,,Rogue Valley,Bomba
+1732,273,Quady North Bomba,Red,2020,,Rogue Valley,Bomba
+1733,273,Quady North Bomba,Red,2019,0.05,Rogue Valley,Bomba
+1734,273,Quady North Bomba,Red,2018,,Rogue Valley,Bomba
+1735,273,Quady North Bomba,Red,2017,4.6,Rogue Valley,Bomba
+1736,273,Quady North Bomba,Red,2016,,Rogue Valley,Bomba
+1737,273,Quady North Bomba,Red,2015,,Rogue Valley,Bomba
+1738,273,Quady North Bomba,Red,2014,4.5,Rogue Valley,Bomba
+1739,273,Quady North Bomba,Red,2012,4.35,Rogue Valley,Bomba
+1740,273,Quady North Bomba,Red,2011,4.4,Rogue Valley,Bomba
+1741,273,Quady North Bomba,Red,2010,4.35,Rogue Valley,Bomba
+1742,273,Quady North Grenache Bomba,Red,2022,,Rogue Valley,Bomba
+1743,273,Quady North Grenache Bomba,Red,2020,,Rogue Valley,Bomba
+1744,273,Quady North Grenache Bomba,Red,2019,4.45,Rogue Valley,Bomba
+1745,273,Quady North Grenache Bomba,Red,2017,4.5,Rogue Valley,Bomba
+1746,273,Quady North Grenache Bomba,Red,2016,,Rogue Valley,Bomba
+1747,273,Quady North Grenache Bomba,Red,2015,,Rogue Valley,Bomba
+1748,273,Quady North Grenache Bomba,Red,2014,,Rogue Valley,Bomba
+1749,273,Quady North Grenache Bomba,Red,2012,4,Rogue Valley,Bomba
+1750,57540,Raptor Ridge Estate Cuvée Blanc de Noirs Extra Brut,White - Sparkling,2020,,Chehalem Mountains,Estate
+1751,57540,Raptor Ridge Grüner Veltliner Estate,White,2024,,Chehalem Mountains,Estate
+1752,57540,Raptor Ridge Grüner Veltliner Estate,White,2023,,Chehalem Mountains,Estate
+1753,57540,Raptor Ridge Grüner Veltliner Estate,White,2022,,Chehalem Mountains,Estate
+1754,57540,Raptor Ridge Grüner Veltliner Estate,White,2021,,Chehalem Mountains,Estate
+1755,57540,Raptor Ridge Grüner Veltliner Estate,White,2020,,Chehalem Mountains,Estate
+1756,57540,Raptor Ridge Grüner Veltliner Estate,White,2019,,Chehalem Mountains,Estate
+1757,57540,Raptor Ridge Grüner Veltliner Estate,White,2018,,Chehalem Mountains,Estate
+1758,57540,Raptor Ridge Grüner Veltliner Estate,White,2017,,Chehalem Mountains,Estate
+1759,57540,Raptor Ridge Grüner Veltliner Estate,White,2016,,Chehalem Mountains,Estate
+1760,57540,Raptor Ridge Grüner Veltliner Estate,White,2015,3.9,Chehalem Mountains,Estate
+1761,57540,Raptor Ridge Grüner Veltliner Estate,White,2014,,Chehalem Mountains,Estate
+1762,57540,Raptor Ridge Grüner Veltliner Estate,White,2013,4.45,Chehalem Mountains,Estate
+1763,57540,Raptor Ridge Grüner Veltliner Estate,White,2012,4.35,Chehalem Mountains,Estate
+1764,57540,Raptor Ridge Grüner Veltliner Tuscowallame Estate,White,2024,,Chehalem Mountains,Estate
+1765,57540,Raptor Ridge Grüner Veltliner Tuscowallame Estate,White,2023,,Chehalem Mountains,Estate
+1766,57540,Raptor Ridge Grüner Veltliner Tuscowallame Estate,White,2022,,Chehalem Mountains,Estate
+1767,57540,Raptor Ridge Grüner Veltliner Tuscowallame Estate,White,2021,4.6,Chehalem Mountains,Estate
+1768,57540,Raptor Ridge Grüner Veltliner Tuscowallame Estate,White,2020,,Chehalem Mountains,Estate
+1769,57540,Raptor Ridge Grüner Veltliner Tuscowallame Estate,White,2019,4.45,Chehalem Mountains,Estate
+1770,57540,Raptor Ridge Grüner Veltliner Tuscowallame Estate,White,2018,4.25,Chehalem Mountains,Estate
+1771,57540,Raptor Ridge Grüner Veltliner Tuscowallame Estate,White,2017,,Chehalem Mountains,Estate
+1772,57540,Raptor Ridge Grüner Veltliner Tuscowallame Estate,White,2016,,Chehalem Mountains,Estate
+1773,57540,Raptor Ridge Pinot Noir Estate,Red,2021,,Chehalem Mountains,Estate
+1774,57540,Raptor Ridge Pinot Noir Estate,Red,2020,,Chehalem Mountains,Estate

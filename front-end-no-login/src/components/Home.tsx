@@ -5,8 +5,6 @@ import axios from 'axios';
 import { useRouter } from "next/navigation";
 import { createClient } from "../../lib/supabase/client";
 
-const wineListApi = "http://localhost:8080/api-wine-list";
-
 type Wine = {
   wine_id: number;
   name: string;
@@ -16,6 +14,8 @@ type Wine = {
   price: number;
   rating: number;
   region?: string;
+  country?: string;
+  appelation?: string;
   reviews: string[];
   foodPairings?: string[];
   vineyard?: any;
@@ -28,56 +28,88 @@ interface HomeProps {
   username: string;
 }
 
+const classificationColors: { [key: string]: string } = {
+  "Orange": "#ffb347",
+  "White - Sparkling": "#e6e6e6",
+  "Red": "#b22222",
+  "White - Off-dry": "#f7e7b0",
+  "Rosé": "#ff69b4",
+  "White - Sweet/Dessert": "#ffe4b5",
+  "White": "#fffacd",
+  "Red - Sweet/Dessert": "#c71585",
+  "Spirits": "#8b5c2a",
+  "Rosé - Sparkling": "#ffb6c1",
+};
+
 function Home({ setCellar, setProfile, username }: HomeProps) {
+  const [supabase] = useState(() => createClient());
   const [query, setQuery] = useState("");
   const [wines, setWines] = useState<Wine[]>([]);
   const [expandedWineId, setExpandedWineId] = useState<number | null>(null);
-  const [filter, setFilter] = useState<"name" | "price" | "year" | "food" | "vineyard">("name");
+  const [filter, setFilter] = useState<
+    "name" | "year" | "food" | "vineyard" | "country" | "appelation" | "region"
+  >("food");
+  // Advanced Search Toggle
+  const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
   const [newReviews, setNewReviews] = useState<{ [wineId: number]: string }>({});
   const [newRatings, setNewRatings] = useState<{ [wineId: number]: number }>({});
   const [toast, setToast] = useState<string | null>(null);
-  const [email, setEmail] = useState("");
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
     const getWines = async () => {
       try {
-        const wineResponse = await axios.get(wineListApi);
-        if (wineResponse.status === 200) {
-          const wineList = wineResponse.data.wines.map((wine: any) => ({
+        const { data: wineList, error } = await supabase
+          .from('wine')
+          .select('*')
+          .not('rating', 'is', null)
+          .gt('year', 2020)
+          .order('rating', { ascending: false })
+          .limit(5);
+
+        if (error) {
+          console.error("Error fetching wines:", error);
+          throw error;
+        }
+
+        if (wineList) {
+          const wineListWithReviews = wineList.map((wine: any) => ({
             ...wine,
             reviews: []
           }));
           
           // Initialize default ratings for all wines
           const initialRatings: { [key: number]: number } = {};
-          wineList.forEach((wine: any) => {
+          wineListWithReviews.forEach((wine: any) => {
             initialRatings[wine.wine_id] = 5; // Default rating of 5
           });
           setNewRatings(initialRatings);
           
           // Fetch foodPairings and vineyard for each wine
           const winesWithDetails = await Promise.all(
-            wineList.map(async (wine: any) => {
+            wineListWithReviews.map(async (wine: any) => {
               // Fetch food pairings
-              let foodPairings: string[] = [];
-              try {
-                const foodRes = await axios.get(`http://localhost:8080/api/food-pairings/${wine.wine_id}`);
-                foodPairings = foodRes.data.pairings;
-              } catch {
-                foodPairings = [];
-              }
+              const { data: foodPairingsData, error: foodError } = await supabase
+                .from('food-pairing')
+                .select('name')
+                .eq('wine_id', wine.wine_id);
+
+              if(foodError) console.error("Error fetching food pairings:", foodError)
+
+              const foodPairings = foodPairingsData ? foodPairingsData.map((p: any) => p.name) : [];
 
               // Fetch vineyard info
               let vineyard = null;
               if (wine.vineyard_id) {
-                try {
-                  const vineyardRes = await axios.get(`http://localhost:8080/api/vineyard/${wine.vineyard_id}`);
-                  vineyard = vineyardRes.data;
-                } catch {
-                  vineyard = null;
-                }
+                const { data: vineyardData, error: vineyardError } = await supabase
+                  .from('vineyard')
+                  .select('*')
+                  .eq('vineyard_id', wine.vineyard_id)
+                  .single();
+
+                if(vineyardError) console.error("Error fetching vineyard:", vineyardError);
+                
+                vineyard = vineyardData;
               }
 
               return {
@@ -91,28 +123,37 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
           setWines(winesWithDetails);
         }
       } catch (error) {
-        console.error("Error communicating with backend", error);
+        console.error("Error communicating with Supabase", error);
       }
     };
 
     getWines();
-  }, []);
+  }, [supabase]);
 
-  const filteredWines = wines.filter(w => {
-    const q = query.toLowerCase();
-    switch (filter) {
-      case "price":
-        return w.price?.toString().includes(q);
-      case "year":
-        return w.year?.toString().includes(q);
-      case "food":
-        return w.foodPairings?.some((food: string) => food.toLowerCase().includes(q));
-      case "vineyard":
-        return (w.vineyard?.name?.toLowerCase().includes(q) ?? false);
-      default:
-        return w.name.toLowerCase().includes(q);
-    }
-  });
+  // Add a helper to determine if the user is searching
+  const isSearching = showAdvancedSearch || query.trim() !== '';
+
+  const filteredWines = isSearching
+    ? wines.filter(w => {
+        const q = query.toLowerCase();
+        switch (filter) {
+          case "year":
+            return w.year?.toString().includes(q);
+          case "food":
+            return w.foodPairings?.some((food: string) => food.toLowerCase().includes(q));
+          case "vineyard":
+            return (w.vineyard?.name?.toLowerCase().includes(q) ?? false);
+          case "country":
+            return (w.vineyard?.country?.toLowerCase().includes(q) ?? false);
+          case "appelation":
+            return (w.appelation?.toLowerCase().includes(q) ?? false);
+          case "region":
+            return (w.region?.toLowerCase().includes(q) ?? false);
+          default:
+            return w.name.toLowerCase().includes(q);
+        }
+      })
+    : wines;
 
   const handleAddToCellar = async (wineId: number) => {
     const rating = newRatings[wineId];
@@ -134,39 +175,15 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
     }
   };
 
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    try {
-      const supabase = await createClient();
-      const { data, error } = await supabase.from('user-signup-emails').insert({ email: email, created_at: new Date().toISOString() });
-      if (error) throw error;
-      setEmailSubmitted(true);
-      setEmail("");
-      setToast("Thanks for sharing your email! We'll keep you updated on new releases.");
-      setTimeout(() => {
-        setToast(null);
-        setEmailSubmitted(false);
-      }, 3000);
-    } catch (err) {
-      setToast("Failed to share your email with us. Please try again.");
-      setTimeout(() => setToast(null), 2000);
-      console.error(err);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-[#181818] text-[#f1f1f1]">
       <div className="p-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-5xl font-bold text-[#ffccbb] mb-4">WineDB</h1>
-            <p className="text-xl text-[#ccc]">Explore our collection of wines and find your perfect match</p>
           </div>
-
           <div className="flex flex-wrap gap-4 items-center justify-center mb-6">
-            <button 
+            <button
               onClick={() => {
                 setCellar(true);
                 router.push("/cellar");
@@ -175,37 +192,61 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             >
               My Cellar
             </button>
-            {/* <button 
-              onClick={() => {
-                setProfile(true);
-                router.push("/profile");
-              }}
-              className="px-6 py-3 bg-[#a03e4e] text-white font-bold rounded-lg hover:bg-[#c45768] transition-colors duration-200"
-            >
-              Profile
-            </button> */}
-            
-            <select
-              value={filter}
-              onChange={e => setFilter(e.target.value as any)}
-              className="px-4 py-3 bg-[#2c2c2c] text-[#f1f1f1] border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a03e4e]"
-            >
-              <option value="name">Search by Name</option>
-              <option value="price">Search by Price</option>
-              <option value="year">Search by Year</option>
-              <option value="food">Search by Food Pairings</option>
-              <option value="vineyard">Search by Vineyard</option>
-            </select>
           </div>
 
-          <div className="max-w-2xl mx-auto mb-8">
+          {!showAdvancedSearch && ( 
+            <div className="text-center mb-4">
+              <p className="text-lg text-[#ccc]">Need a recommendation? Let our virtual sommelier help you find the perfect wine.</p>
+            </div>
+          )}
+
+          <div className="max-w-2xl mx-auto mb-8 relative">
             <input
-              placeholder={`Search for wines by ${filter}...`}
+              placeholder={showAdvancedSearch ? `Search for wines by ${filter}...` : "What are you in the mood to eat?"}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full px-6 py-4 text-lg bg-[#2c2c2c] text-[#f1f1f1] border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a03e4e] placeholder-[#aaa]"
+              className="w-full px-4 py-4 text-lg bg-[#2c2c2c] text-[#f1f1f1] border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a03e4e] placeholder-[#aaa] pr-48"
             />
+            <button
+              onClick={() => setShowAdvancedSearch(prev => !prev)}
+              className={`absolute right-2 top-1/2 -translate-y-1/2 px-4 py-2 font-bold rounded-lg transition-colors duration-200
+                ${showAdvancedSearch
+                  ? 'bg-[#a03e4e] text-white hover:bg-[#c45768]'
+                  : 'bg-[#ffccbb] text-[#181818] hover:bg-[#a03e4e] hover:text-white'}
+              `}
+            >
+              {showAdvancedSearch ? 'Sommelier Search' : 'Advanced Search'}
+            </button>
+            {!showAdvancedSearch && (
+              <button
+                onClick={() => console.log('button pressed')}
+                className="absolute right-46 top-1/2 -translate-y-1/2 p-2 bg-[#a03e4e] rounded-lg hover:bg-[#c45768] transition-colors duration-200"
+                aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={2}>
+                  <circle cx="11" cy="11" r="7" stroke="white" strokeWidth="2" fill="none"/>
+                  <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="white" strokeWidth="2" />
+                </svg>
+              </button>
+            )}
           </div>
+
+          {showAdvancedSearch && (
+            <div className="flex flex-wrap gap-4 items-center justify-center mb-6">
+              <select
+                value={filter}
+                onChange={e => setFilter(e.target.value as any)}
+                className="px-4 py-3 bg-[#2c2c2c] text-[#f1f1f1] border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a03e4e]"
+              >
+                <option value="name">Search by Name</option>
+                <option value="year">Search by Year</option>
+                <option value="food">Search by Food Pairings</option>
+                <option value="vineyard">Search by Vineyard</option>
+                <option value="appelation">Search by Appelation</option>
+                <option value="region">Search by Region</option>
+                <option value="country">Search by Country</option>
+              </select>
+            </div>
+          )}
 
           <h2 className="text-2xl font-semibold text-[#ccc] mb-6 text-center">Some of our favorite wines:</h2>
 
@@ -216,17 +257,24 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                   onClick={() => setExpandedWineId(prev => prev === wine.wine_id ? null : wine.wine_id)}
                   className="p-3 bg-[#292929] rounded-lg font-bold cursor-pointer transition-colors duration-200 hover:bg-[#3a3a3a]"
                 >
-                  <strong className="text-[#f1f1f1]">{wine.name}</strong>
+                  <strong
+                    style={{ color: classificationColors[wine.classification] || "#f1f1f1" }}
+                  >
+                    {wine.name}
+                  </strong>
                 </div>
 
                 {expandedWineId === wine.wine_id && (
                   <div className="mt-2 bg-[#1f1f1f] p-4 rounded-lg border border-[#444] text-[#ddd]">
                     <div className="space-y-2 mb-4">
+                      <p>
+                        <strong style={{ color: classificationColors[wine.classification] || "#f1f1f1" }}>
+                          {wine.classification}
+                        </strong>
+                      </p>
                       <p><strong>Grape:</strong> {wine.grape}</p>
                       <p><strong>Year:</strong> {wine.year}</p>
-                      <p><strong>Users Rating:</strong> {wine.rating}/5</p>
-                      <p><strong>Price:</strong> ${wine.price}</p>
-                      
+                      <p><strong>Rating:</strong> {wine.rating}/5</p>            
                       {wine.vineyard && (
                         <p><strong>Vineyard:</strong> {wine.vineyard.name}</p>
                       )}
@@ -234,6 +282,21 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                       {wine.foodPairings && wine.foodPairings.length > 0 && (
                         <p><strong>Food Pairings:</strong> {wine.foodPairings.join(", ")}</p>
                       )}
+
+                      <button
+                        onClick={() => {
+                          const url = `https://www.wine-searcher.com/find/${encodeURIComponent(
+                            `${wine.classification} ${wine.name} ${wine.year}`
+                              .replace(/\s+/g, '+')
+                              .toLowerCase()
+                          )}/usa`;
+                          window.open(url, "_blank");
+                        }}
+                        className="px-3 py-1 bg-[#a03e4e] text-white rounded hover:bg-[#c45768] transition-colors"
+                        type="button"
+                      >
+                      Lookup Price
+                    </button>
                     </div>
 
                     <div className="mb-4">
@@ -245,7 +308,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                           {wine.reviews.map((r, i) => <li key={i}>"{r}"</li>)}
                         </ul>
                       )}
-                    </div>
+                    </div>  
 
                     <div className="bg-[#2a2a2a] rounded-lg p-4 border border-[#555]">
                       <h3 className="font-bold mb-4 text-center">Add To My Cellar</h3>
@@ -314,52 +377,6 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
           </ul>
         </div>
       </div>
-
-      {/* Footer Section */}
-      <footer className="bg-[#1f1f1f] border-t border-[#444] py-12">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-[#ffccbb] mb-4">Stay Updated with WineDB</h3>
-            <p className="text-[#ccc] mb-6 max-w-2xl mx-auto">
-              Be the first to know about new features, wine recommendations, and exciting updates to our platform. 
-              Join our community of wine enthusiasts!
-            </p>
-
-            {!emailSubmitted ? (
-              <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto flex gap-3">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
-                  required
-                  className="flex-1 px-4 py-3 bg-[#2c2c2c] text-[#f1f1f1] border border-[#555] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a03e4e] placeholder-[#aaa]"
-                />
-                <button
-                  type="submit"
-                  className="px-6 py-3 bg-[#a03e4e] text-white font-bold rounded-lg hover:bg-[#c45768] transition-colors duration-200 whitespace-nowrap"
-                >
-                  Subscribe
-                </button>
-              </form>
-            ) : (
-              <div className="max-w-md mx-auto p-4 bg-[#2a2a2a] border border-[#555] rounded-lg">
-                <div className="flex items-center justify-center gap-2 text-[#a03e4e]">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="font-bold">Thanks for sharing your email!</span>
-                </div>
-                <p className="text-[#ccc] text-sm mt-2">We'll keep you updated on new features and developments.</p>
-              </div>
-            )}
-
-            <div className="mt-8 pt-6 border-t border-[#444] text-[#aaa] text-sm">
-              <p>&copy; 2025 WineDB. Quit whining, start tasting.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
 
       {toast && (
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#a03e4e] text-white px-9 py-5 rounded-lg shadow-2xl z-50 text-xl text-center opacity-97 animate-pulse">

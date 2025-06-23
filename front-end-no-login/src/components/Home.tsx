@@ -48,7 +48,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
   const [expandedWineId, setExpandedWineId] = useState<number | null>(null);
   const [filter, setFilter] = useState<
     "name" | "year" | "food" | "vineyard" | "country" | "appelation" | "region"
-  >("food");
+  >("name");
   // Advanced Search Toggle
   const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
   const [newReviews, setNewReviews] = useState<{ [wineId: number]: string }>({});
@@ -116,6 +116,9 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                 ...wine,
                 foodPairings,
                 vineyard,
+                appelation: vineyard?.appelation,
+                region: vineyard?.region,
+                country: vineyard?.country
               };
             })
           );
@@ -129,6 +132,143 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
 
     getWines();
   }, [supabase]);
+
+  // New useEffect for real-time search when in advanced search mode
+  useEffect(() => {
+    const searchWines = async () => {
+      if (!showAdvancedSearch || !query.trim()) {
+        return; // Don't search if not in advanced mode or query is empty
+      }
+
+      try {
+        console.log(`Searching for wines by ${filter}: ${query}`);
+        
+        let supabaseQuery = supabase
+          .from('wine')
+          .select(`
+            *,
+            vineyard:vineyard_id(*)
+          `);
+        // Apply filter based on the selected filter type
+        switch (filter) {
+          case "name":
+            supabaseQuery = supabaseQuery.ilike('name', `%${query}%`);
+            break;
+          case "year":
+            supabaseQuery = supabaseQuery.eq('year', parseInt(query) || 0);
+            break;
+          case "food":
+            // For food pairings, we need to join with food-pairing table
+            supabaseQuery = supabase
+              .from('wine')
+              .select(`
+                *,
+                vineyard:vineyard_id(*),
+                food_pairings:food-pairing(name)
+              `)
+              .ilike('food-pairing.name', `%${query}%`);
+            break;
+          case "vineyard":
+            supabaseQuery = supabase
+              .from('wine')
+              .select(`
+                *,
+                vineyard:vineyard_id(*)
+              `)
+              .ilike('vineyard.name', `%${query}%`);
+            break;
+          case "appelation":
+            supabaseQuery = supabase
+              .from('wine')
+              .select(`
+                *,
+                vineyard:vineyard_id(*)
+              `)
+              .ilike('vineyard.appelation', `%${query}%`);
+            break;
+          case "region":
+            supabaseQuery = supabase
+              .from('wine')
+              .select(`
+                *,
+                vineyard:vineyard_id(*)
+              `)
+              .ilike('vineyard.region', `%${query}%`);
+            break;
+          case "country":
+            supabaseQuery = supabase
+              .from('wine')
+              .select(`
+                *,
+                vineyard:vineyard_id(*)
+              `)
+              .ilike('vineyard.country', `%${query}%`);
+            break;
+          default:
+            supabaseQuery = supabaseQuery.ilike('name', `%${query}%`);
+        }
+
+        const { data: wineList, error } = await supabaseQuery.limit(20);
+
+        if (error) {
+          console.error("Error searching wines:", error);
+          return;
+        }
+
+        if (wineList) {
+          const wineListWithReviews = wineList.map((wine: any) => ({
+            ...wine,
+            reviews: []
+          }));
+          
+          // Initialize default ratings for all wines
+          const initialRatings: { [key: number]: number } = {};
+          wineListWithReviews.forEach((wine: any) => {
+            initialRatings[wine.wine_id] = 5; // Default rating of 5
+          });
+          setNewRatings(initialRatings);
+          
+          // Fetch foodPairings for each wine (if not already fetched)
+          const winesWithDetails = await Promise.all(
+            wineListWithReviews.map(async (wine: any) => {
+              let foodPairings = [];
+              
+              // If we didn't fetch food pairings in the main query, fetch them separately
+              if (filter !== "food") {
+                const { data: foodPairingsData, error: foodError } = await supabase
+                  .from('food-pairing')
+                  .select('name')
+                  .eq('wine_id', wine.wine_id);
+
+                if(foodError) console.error("Error fetching food pairings:", foodError);
+                foodPairings = foodPairingsData ? foodPairingsData.map((p: any) => p.name) : [];
+              } else {
+                // Food pairings were already fetched in the main query
+                foodPairings = wine.food_pairings ? wine.food_pairings.map((p: any) => p.name) : [];
+              }
+
+              return {
+                ...wine,
+                foodPairings,
+                vineyard: wine.vineyard,
+                appelation: wine.vineyard?.appelation,
+                region: wine.vineyard?.region,
+                country: wine.vineyard?.country
+              };
+            })
+          );
+
+          setWines(winesWithDetails);
+        }
+      } catch (error) {
+        console.error("Error searching wines:", error);
+      }
+    };
+
+    // Add debouncing to avoid too many requests
+    const timeoutId = setTimeout(searchWines, 300);
+    return () => clearTimeout(timeoutId);
+  }, [query, filter, showAdvancedSearch, supabase]);
 
   // Add a helper to determine if the user is searching
   const isSearching = showAdvancedSearch || query.trim() !== '';
@@ -248,7 +388,17 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             </div>
           )}
 
+        {!showAdvancedSearch && (
           <h2 className="text-2xl font-semibold text-[#ccc] mb-6 text-center">Some of our favorite wines:</h2>
+        )}
+
+        {showAdvancedSearch && query.trim() !== '' && filteredWines.length === 0 && (
+          <div className="text-center py-12">
+            <div className="text-6xl mb-4">🍷</div>
+            <h2 className="text-2xl font-semibold text-[#ccc] mb-2">No wines found</h2>
+            <p className="text-[#aaa]">Try adjusting your search criteria</p>
+          </div>
+        )}
 
           <ul className="space-y-2 mb-16">
             {filteredWines.map(wine => (
@@ -262,6 +412,8 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                   >
                     {wine.name}
                   </strong>
+                  <span> </span>
+                  ({wine.year})
                 </div>
 
                 {expandedWineId === wine.wine_id && (
@@ -278,6 +430,9 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                       {wine.vineyard && (
                         <p><strong>Vineyard:</strong> {wine.vineyard.name}</p>
                       )}
+                      <p><strong>Appelation:</strong> {wine.appelation}</p>
+                      <p><strong>Region:</strong> {wine.region}</p>
+                      <p><strong>Country:</strong> {wine.country}</p>
                       
                       {wine.foodPairings && wine.foodPairings.length > 0 && (
                         <p><strong>Food Pairings:</strong> {wine.foodPairings.join(", ")}</p>
@@ -299,77 +454,12 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                     </button>
                     </div>
 
-                    <div className="mb-4">
-                      <h4 className="font-bold mb-2">Reviews:</h4>
-                      {wine.reviews.length === 0 ? (
-                        <p className="text-[#aaa] text-sm">No reviews yet.</p>
-                      ) : (
-                        <ul className="list-disc list-inside space-y-1 text-sm">
-                          {wine.reviews.map((r, i) => <li key={i}>"{r}"</li>)}
-                        </ul>
-                      )}
-                    </div>  
-
-                    <div className="bg-[#2a2a2a] rounded-lg p-4 border border-[#555]">
-                      <h3 className="font-bold mb-4 text-center">Add To My Cellar</h3>
-
-                      <div className="mb-4">
-                        <p className="text-sm font-medium mb-2 text-[#a03e4e]">Leave a Rating:</p>
-                        <div className="flex items-center justify-center gap-3">
-                          <button
-                            onClick={() =>
-                              setNewRatings(ratings => {
-                                const base = ratings[wine.wine_id] ?? 5;
-                                return {
-                                  ...ratings,
-                                  [wine.wine_id]: Math.max(base - 1, 1),
-                                };
-                              })
-                            }
-                            className="w-8 h-8 bg-[#a03e4e] text-white rounded font-bold hover:bg-[#c45768] transition-colors"
-                          >
-                            -
-                          </button>
-                          <span className="text-lg font-bold min-w-[2rem] text-center">
-                            {newRatings[wine.wine_id] ?? 5}
-                          </span>
-                          <button
-                            onClick={() =>
-                              setNewRatings(ratings => ({
-                                ...ratings,
-                                [wine.wine_id]: Math.min((ratings[wine.wine_id] ?? 5) + 1, 5)
-                              }))
-                            }
-                            className="w-8 h-8 bg-[#a03e4e] text-white rounded font-bold hover:bg-[#c45768] transition-colors"
-                          >
-                            +
-                          </button>
-                        </div>
-                      </div>
-
-                      <div className="mb-4">
-                        <p className="text-sm font-medium mb-2 text-[#a03e4e]">Leave a Review:</p>
-                        <textarea
-                          placeholder="Write your review..."
-                          value={newReviews[wine.wine_id] ?? ""}
-                          onChange={e =>
-                            setNewReviews(reviews => ({
-                              ...reviews,
-                              [wine.wine_id]: e.target.value
-                            }))
-                          }
-                          className="w-full p-3 bg-[#2a2a2a] text-white border border-[#555] rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-[#a03e4e] placeholder-[#aaa]"
-                          rows={3}
-                        />
-                      </div>
-
-                      <button 
+                    <button 
                         onClick={() => handleAddToCellar(wine.wine_id)}
                         className="w-full py-3 bg-[#a03e4e] text-white font-bold rounded-lg hover:bg-[#c45768] transition-colors duration-200"
                       >
                         Add to My Cellar
                       </button>
-                    </div>
                   </div>
                 )}
               </li>

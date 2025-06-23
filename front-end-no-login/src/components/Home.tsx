@@ -54,9 +54,12 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
   const [newReviews, setNewReviews] = useState<{ [wineId: number]: string }>({});
   const [newRatings, setNewRatings] = useState<{ [wineId: number]: number }>({});
   const [toast, setToast] = useState<string | null>(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
+    // Check if user is logged in
+    localStorage.getItem("username") ? setIsLoggedIn(true) : setIsLoggedIn(false);
     const getWines = async () => {
       try {
         const { data: wineList, error } = await supabase
@@ -183,17 +186,36 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             <h1 className="text-5xl font-bold text-[#ffccbb] mb-4">WineDB</h1>
           </div>
           <div className="flex flex-wrap gap-4 items-center justify-center mb-6">
-            <button
-              onClick={() => {
-                setCellar(true);
-                router.push("/cellar");
-              }}
+          {isLoggedIn ? (
+            <>
+              <button
+                onClick={() => {
+                  setCellar(true);
+                  router.push("/cellar");
+                }}
+                className="px-6 py-3 bg-[#a03e4e] text-white font-bold rounded-lg hover:bg-[#c45768] transition-colors duration-200"
+              >
+                My Cellar
+              </button>
+              <button 
+                onClick={() => {
+                  setProfile(true);
+                  router.push("/profile");
+                }}
+                className="px-6 py-3 bg-[#a03e4e] text-white font-bold rounded-lg hover:bg-[#c45768] transition-colors duration-200"
+              >
+                Profile
+              </button>
+            </>
+          ) : (
+            <button 
+              onClick={() => router.push("/account")}
               className="px-6 py-3 bg-[#a03e4e] text-white font-bold rounded-lg hover:bg-[#c45768] transition-colors duration-200"
             >
-              My Cellar
+              Login / Sign Up
             </button>
-          </div>
-
+          )}
+        </div>
           {!showAdvancedSearch && ( 
             <div className="text-center mb-4">
               <p className="text-lg text-[#ccc]">Need a recommendation? Let our virtual sommelier help you find the perfect wine.</p>

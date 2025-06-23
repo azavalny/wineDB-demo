@@ -1,17 +1,16 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import axios from "axios";
-
-const loginApi = "http://localhost:8080/api-login";
-const createAPI = "http://localhost:8080/api-create";
+import { useRouter } from "next/navigation";
+import { createClient } from "../../lib/supabase/client";
 
 type AccountProps = {
-  setStatus: (val: boolean) => void;
   setUsernameMain: (val: string) => void;
 };
 
-function Account({ setStatus, setUsernameMain }: AccountProps) {
+function Account({ setUsernameMain }: AccountProps) {
+  const router = useRouter();
+  const [supabase] = useState(() => createClient());
   const [email, setEmail] = useState("");
   const [username, setUsernameLocal] = useState("");
   const [password, setPassword] = useState("");
@@ -41,7 +40,7 @@ function Account({ setStatus, setUsernameMain }: AccountProps) {
           
           createAccount().then(() => {
             setUsernameMain(username);
-            setStatus(true);
+            router.push("/");
           });
         }
       }
@@ -68,43 +67,179 @@ function Account({ setStatus, setUsernameMain }: AccountProps) {
     console.log("User Logging in");
     sendLogInData().then(() => {
       setUsernameMain(username);
+      router.push("/");
     });
   }
 
   async function sendLogInData() {
     try {
-      const userData = {
-        username,
-        password
-      };
-      console.log("sending userData: ", username);
-      const response = await axios.post(loginApi, userData);
-      console.log(response.data);
-      if (response.status === 200) {
-        setStatus(true);
-        console.log("status updated: ");
-      } else {
-        setStatus(false);
-      }
+      console.log("Attempting login for user:", username);
+      const response = await handleLogin(username, password);
+      
+      // If we get here, login was successful
+      console.log("Login successful, user data:", response);
+      return response;
+      
     } catch (error) {
-      console.log("send error");
+      // TypeScript type narrowing for error handling
+      if (error instanceof Error) {
+        console.error("Login failed:", error.message);
+        
+        // Update UI with error message
+        if (messageRef.current) {
+          messageRef.current.innerText = error.message;
+        }
+      } else {
+        console.error("Unexpected login error:", error);
+        if (messageRef.current) {
+          messageRef.current.innerText = "An unexpected error occurred";
+        }
+      }
+      
+      // Re-throw if you need to handle this elsewhere
+      throw error;
+    }
+}
+
+  async function handleLogin(username: string, password: string) {
+    // Validate inputs first
+    if (!username.trim() || !password.trim()) {
+      throw new Error("Username and password are required");
+    }
+
+    try {
+      // 1. Lookup email by username
+      const { data: userData, error: lookupError } = await supabase
+        .from('users')
+        .select('email')
+        .eq('username', username)
+        .single();
+
+      if (lookupError) {
+        console.error("Username lookup error:", lookupError.message);
+        throw new Error("User not found");
+      }
+
+      if (!userData?.email) {
+        throw new Error("Invalid credentials");
+      }
+
+      // 2. Authenticate with Supabase
+      const { data, error: authError } = await supabase.auth.signInWithPassword({
+        email: userData.email,
+        password
+      });
+
+      if (authError) {
+        console.error("Authentication error:", authError.message);
+        throw new Error(authError.message);
+      }
+
+      // 3. Store user data
+      localStorage.setItem("username", JSON.stringify(username));
+      console.log("User logged in successfully:", data.user?.email);
+      
+      return {
+        status: 200,
+        user: data.user,
+        session: data.session
+      };
+
+    } catch (error) {
+      console.error("Login process failed:", error);
+      
+      // Clear any partial state on failure
+      localStorage.removeItem("username");
+      
+      // Re-throw for calling function to handle
+      throw error;
     }
   }
+        
 
   async function createAccount() {
     try {
-      const newUser = {
-        'email': email,
-        'username': username,
-        'password': password
-      };
-      console.log("creating new account for user: ", newUser);
-      const response = await axios.post(createAPI, newUser);
-      console.log(response.data);
+      console.log("Creating account for:", username);
+      const response = await handleSignUp(email, username, password);
+      
+      // Only store username if signup was successful
+      localStorage.setItem("username", username); // No need for JSON.stringify on strings
+      
+      console.log("Account created successfully:", response);
+      
+      // Update UI with success message
+      if (messageRef.current) {
+        messageRef.current.innerText = "Account created! Please check your email for verification.";
+        messageRef.current.style.color = "green";
+      }
+      
+      return response;
+      
     } catch (error) {
-      console.log("send error, account was not created");
+      console.error("Account creation failed:", error);
+      
+      // Clear partial data on failure
+      localStorage.removeItem("username");
+      
+      // Provide specific error feedback
+      if (messageRef.current) {
+        const message = error instanceof Error ? error.message : "Account creation failed";
+        messageRef.current.innerText = message;
+        messageRef.current.style.color = "red";
+      }
+      
+      // Re-throw if you need to handle the error elsewhere
+      throw error;
     }
   }
+
+  async function handleSignUp(email: string, username: string, password: string) {
+  if (!email || !username || !password) {
+    throw new Error("All fields are required");
+  }
+
+  try {
+    const { data: authData, error: authError } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { username }, // stored in auth.users.user_metadata
+        emailRedirectTo: `${window.location.origin}/auth/callback`
+      }
+    });
+
+    if (authError) throw authError;
+    if (!authData.user) throw new Error("User creation failed");
+
+    const uid = authData.user.id;
+
+    const { error: dbError } = await supabase
+       .from('users')
+      .insert({
+        id: authData.user.id,
+        email,
+        username
+      });
+
+    if (dbError) throw dbError;
+
+    return authData;
+
+  } catch (error) {
+    if (typeof error === 'object' && error !== null && 'code' in error) {
+      switch (error.code) {
+        case '23505':
+          throw new Error('Username or email already exists');
+        case '422':
+          throw new Error('Invalid email format');
+        default:
+          throw new Error('Registration failed');
+      }
+    }
+    throw new Error('An unexpected error occurred');
+  }
+}
+
 
   function setMain(login: boolean) {
     setTitle("Welcome to WineDB");

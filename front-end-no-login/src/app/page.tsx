@@ -5,6 +5,7 @@ import { use, useEffect, useState } from "react";
 import Home from "@/components/Home";
 import Cellar from "@/components/Cellar";
 import Profile from "@/components/Profile";
+import Account from "@/components/Account"; // Import Account component
 import { useRouter, usePathname } from "next/navigation";
 
 function App() {
@@ -34,10 +35,12 @@ function App() {
     // }
 
     switch (pathname) {
-      case "/cellar":
+      case "/cellar":    
         return <Cellar username={username} />;
       case "/profile":
         return <Profile username={username} />;
+      case "/account":
+        return <Account setUsernameMain={setUsernameMain} />;
       default:
         return (
           <Home

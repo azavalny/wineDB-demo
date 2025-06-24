@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import { useRouter } from "next/navigation";
 import { createClient } from "../../lib/supabase/client";
+import WineSearchBar from './WineSearchBar';
+import AdvancedSearchFilters from './AdvancedSearchFilters';
+import WineList from './WineList';
 
 type Wine = {
   wine_id: number;
@@ -364,51 +367,20 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             </div>
           )}
 
-          <div className="flex w-full max-w-2xl mx-auto mb-8 rounded-lg overflow-hidden shadow-md">
-            <input
-              placeholder={showAdvancedSearch ? `Search for wines by ${filter}...` : "What are you in the mood to eat?"}
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="flex-grow px-4 py-3 text-lg bg-[#2c2c2c] text-[#f1f1f1] placeholder-[#aaa] focus:outline-none"
-            />
-            <button
-              onClick={() => console.log('search')}
-              className="px-4 bg-[#a03e4e] hover:bg-[#c45768] transition text-white flex items-center justify-center"
-              aria-label="Search"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" fill="none"/>
-                <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" strokeWidth="2" />
-              </svg>
-            </button>
-            <button
-              onClick={() => setShowAdvancedSearch(prev => !prev)}
-              className={`px-5 text-sm font-semibold transition whitespace-nowrap
-                ${showAdvancedSearch
-                  ? 'bg-[#a03e4e] text-white hover:bg-[#c45768]'
-                  : 'bg-[#ffccbb] text-[#181818] hover:bg-[#a03e4e] hover:text-white'}
-              `}
-            >
-              {showAdvancedSearch ? 'Sommelier Search' : 'Advanced Search'}
-            </button>
-          </div>
+          <WineSearchBar
+            query={query}
+            setQuery={setQuery}
+            showAdvancedSearch={showAdvancedSearch}
+            setShowAdvancedSearch={setShowAdvancedSearch}
+            filter={filter}
+            setFilter={value => setFilter(value as typeof filter)}
+          />
 
           {showAdvancedSearch && (
-            <div className="flex flex-wrap gap-4 items-center justify-center mb-6">
-              <select
-                value={filter}
-                onChange={e => setFilter(e.target.value as any)}
-                className="px-4 py-3 bg-[#2c2c2c] text-[#f1f1f1] border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a03e4e]"
-              >
-                <option value="name">Search by Name</option>
-                <option value="year">Search by Year</option>
-                <option value="food">Search by Food Pairings</option>
-                <option value="vineyard">Search by Vineyard</option>
-                <option value="appelation">Search by Appelation</option>
-                <option value="region">Search by Region</option>
-                <option value="country">Search by Country</option>
-              </select>
-            </div>
+            <AdvancedSearchFilters
+              filter={filter}
+              setFilter={value => setFilter(value as typeof filter)}
+            />
           )}
 
           {!showAdvancedSearch && (
@@ -423,135 +395,17 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             </div>
           )}
 
-          <ul className="space-y-2 mb-16">
-            {filteredWines.map(wine => (
-              <li key={wine.wine_id}>
-                <div 
-                  onClick={() => setExpandedWineId(prev => prev === wine.wine_id ? null : wine.wine_id)}
-                  className="bg-[#222] p-4 rounded-xl shadow hover:shadow-lg transition cursor-pointer hover:bg-[#333]"
-                >
-                  <h3
-                    className="text-xl font-bold"
-                    style={{ color: classificationColors[wine.classification] || "#f1f1f1" }}
-                  >
-                    {wine.name} ({wine.year})
-                  </h3>
-                </div>
-
-                {expandedWineId === wine.wine_id && (
-                  <div className="mt-2 bg-[#1f1f1f] p-4 rounded-lg border border-[#444] text-[#ddd]">
-                    <div className="space-y-2 mb-4">
-                      <p>
-                        <strong style={{ color: classificationColors[wine.classification] || "#f1f1f1" }}>
-                          {wine.classification}
-                        </strong>
-                      </p>
-                      <p><strong>Grape:</strong> {wine.grape}</p>
-                      <p><strong>Year:</strong> {wine.year}</p>
-                      <p><strong>Rating:</strong> {wine.rating}/5</p>            
-                      {wine.vineyard && (
-                        <p><strong>Vineyard:</strong> {wine.vineyard.name}</p>
-                      )}
-                      <p><strong>Appelation:</strong> {wine.appelation}</p>
-                      <p><strong>Region:</strong> {wine.region}</p>
-                      <p><strong>Country:</strong> {wine.country}</p>
-                      
-                      {wine.foodPairings && wine.foodPairings.length > 0 && (
-                        <p><strong>Food Pairings:</strong> {wine.foodPairings.join(", ")}</p>
-                      )}
-
-                      <button
-                        onClick={() => {
-                          const url = `https://www.wine-searcher.com/find/${encodeURIComponent(
-                            `${wine.classification} ${wine.name} ${wine.year}`
-                              .replace(/\s+/g, '+')
-                              .toLowerCase()
-                          )}/usa`;
-                          window.open(url, "_blank");
-                        }}
-                        className="px-3 py-1 bg-[#a03e4e] text-white rounded hover:bg-[#c45768] transition-colors"
-                        type="button"
-                      >
-                      Lookup Price
-                    </button>
-                    </div>
-
-                    <div className="mb-4">
-                      <h4 className="font-bold mb-2">Reviews:</h4>
-                      {wine.reviews.length === 0 ? (
-                        <p className="text-[#aaa] text-sm">Reviews coming soon!</p>
-                      ) : (
-                        <ul className="list-disc list-inside space-y-1 text-sm">
-                          {wine.reviews.map((r, i) => <li key={i}>"{r}"</li>)}
-                        </ul>
-                      )}
-                    </div>  
-
-                    <div className="bg-[#2a2a2a] rounded-lg p-4 border border-[#555]">
-                      <h3 className="font-bold mb-4 text-center">Add To My Cellar</h3>
-
-                      <div className="mb-4">
-                        <p className="text-sm font-medium mb-2 text-[#a03e4e]">Leave a Rating:</p>
-                        <div className="flex items-center justify-center gap-3">
-                          <button
-                            onClick={() =>
-                              setNewRatings(ratings => {
-                                const base = ratings[wine.wine_id] ?? 5;
-                                return {
-                                  ...ratings,
-                                  [wine.wine_id]: Math.max(base - 1, 1),
-                                };
-                              })
-                            }
-                            className="w-8 h-8 bg-[#a03e4e] text-white rounded font-bold hover:bg-[#c45768] transition-colors"
-                          >
-                            -
-                          </button>
-                          <span className="text-lg font-bold min-w-[2rem] text-center">
-                            {newRatings[wine.wine_id] ?? 5}
-                          </span>
-                          <button
-                            onClick={() =>
-                              setNewRatings(ratings => ({
-                                ...ratings,
-                                [wine.wine_id]: Math.min((ratings[wine.wine_id] ?? 5) + 1, 5)
-                              }))
-                            }
-                            className="w-8 h-8 bg-[#a03e4e] text-white rounded font-bold hover:bg-[#c45768] transition-colors"
-                          >
-                            +
-                          </button>
-                        </div>
-                      </div>
-
-                      <div className="mb-4">
-                        <p className="text-sm font-medium mb-2 text-[#a03e4e]">Leave a Review:</p>
-                        <textarea
-                          placeholder="Write your review..."
-                          value={newReviews[wine.wine_id] ?? ""}
-                          onChange={e =>
-                            setNewReviews(reviews => ({
-                              ...reviews,
-                              [wine.wine_id]: e.target.value
-                            }))
-                          }
-                          className="w-full p-3 bg-[#2a2a2a] text-white border border-[#555] rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-[#a03e4e] placeholder-[#aaa]"
-                          rows={3}
-                        />
-                      </div>
-
-                      <button 
-                        onClick={() => handleAddToCellar(wine.wine_id)}
-                        className="w-full py-3 bg-[#a03e4e] text-white font-bold rounded-lg hover:bg-[#c45768] transition-colors duration-200"
-                      >
-                        Add to My Cellar
-                      </button>
-                    </div>
-                  </div>
-              )}
-            </li>
-            ))}
-          </ul>
+          <WineList
+            wines={filteredWines}
+            expandedWineId={expandedWineId}
+            setExpandedWineId={setExpandedWineId}
+            newRatings={newRatings}
+            setNewRatings={setNewRatings}
+            newReviews={newReviews}
+            setNewReviews={setNewReviews}
+            handleAddToCellar={handleAddToCellar}
+            classificationColors={classificationColors}
+          />
         </div>
 
         {toast && (

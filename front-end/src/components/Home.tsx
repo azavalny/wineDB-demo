@@ -59,6 +59,9 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
   const [toast, setToast] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const router = useRouter();
+  const [aiResponse, setAiResponse] = useState("");
+  const [isAiLoading, setIsAiLoading] = useState(false);
+  const [foodPairingWines, setFoodPairingWines] = useState<Wine[]>([]);
 
   useEffect(() => {
     // Check if user is logged in
@@ -333,6 +336,58 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
     }
   };
 
+  // AI search handler
+  const handleAISearch = async (prompt: string) => {
+    if (!prompt.trim()) return;
+    setAiResponse("");
+    setIsAiLoading(true);
+    setWines([]);
+    try {
+      const res = await fetch("/api/ai-search", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt }),
+      });
+      if (!res.body) throw new Error("No response body");
+      const reader = res.body.getReader();
+      let text = "";
+      let winesFromAI = [];
+      let buffer = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = new TextDecoder().decode(value);
+        buffer += chunk;
+        // Assume the API streams JSON lines: { text: "...", wines: [...] }
+        let lines = buffer.split('\n');
+        buffer = lines.pop() || "";
+        for (const line of lines) {
+          if (!line.trim()) continue;
+          try {
+            const data = JSON.parse(line);
+            if (data.text !== undefined) {
+              text += data.text;
+              setAiResponse(prev => prev + data.text);
+            }
+            if (data.wines !== undefined) {
+              winesFromAI = data.wines;
+              setWines(winesFromAI);
+            }
+            if (data.foodPairingWines !== undefined) {
+              setFoodPairingWines(data.foodPairingWines);
+            }
+          } catch (e) {
+            // Ignore JSON parse errors for incomplete lines
+          }
+        }
+      }
+    } catch (err) {
+      setAiResponse("Sorry, something went wrong.");
+    } finally {
+      setIsAiLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#181818] text-[#f1f1f1]">
       <div className="p-6">
@@ -363,7 +418,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
           </div>
           {!showAdvancedSearch && ( 
             <div className="text-center mb-4">
-              <p className="text-lg text-[#ccc]">Need a recommendation? Let our virtual sommelier help you find the perfect wine.</p>
+              <p className="text-lg text-[#ccc]">Need a recommendation? Let our virtual sommelier help you find the perfect wine based on what you're in the mood to eat.</p>
             </div>
           )}
 
@@ -374,6 +429,8 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             setShowAdvancedSearch={setShowAdvancedSearch}
             filter={filter}
             setFilter={value => setFilter(value as typeof filter)}
+            onSearch={!showAdvancedSearch ? handleAISearch : undefined}
+            isLoading={isAiLoading}
           />
 
           {showAdvancedSearch && (
@@ -383,8 +440,11 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             />
           )}
 
-          {!showAdvancedSearch && (
-            <h2 className="text-2xl font-semibold text-[#ccc] mb-6 text-center">Some of our favorite wines:</h2>
+          {/* AI response streaming text */}
+          {!showAdvancedSearch && aiResponse && (
+            <div className="mb-6 text-center text-[#ffccbb] text-lg whitespace-pre-line min-h-[2em]">
+              {aiResponse}
+            </div>
           )}
 
           {showAdvancedSearch && query.trim() !== '' && filteredWines.length === 0 && (
@@ -393,6 +453,10 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
               <h2 className="text-2xl font-semibold text-[#ccc] mb-2">No wines found</h2>
               <p className="text-[#aaa]">Try adjusting your search criteria</p>
             </div>
+          )}
+
+          {!showAdvancedSearch && !isSearching && (
+            <h2 className="text-2xl font-semibold text-[#ccc] mb-6 text-center">Some of our favorite wines:</h2>
           )}
 
           <WineList
@@ -406,6 +470,23 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             handleAddToCellar={handleAddToCellar}
             classificationColors={classificationColors}
           />
+
+          {!showAdvancedSearch && foodPairingWines.length > 0 && (
+            <>
+              <h2 className="text-xl font-semibold text-[#ccc] mb-2 text-center">Wines that pair with your food:</h2>
+              <WineList
+                wines={foodPairingWines}
+                expandedWineId={expandedWineId}
+                setExpandedWineId={setExpandedWineId}
+                newRatings={newRatings}
+                setNewRatings={setNewRatings}
+                newReviews={newReviews}
+                setNewReviews={setNewReviews}
+                handleAddToCellar={handleAddToCellar}
+                classificationColors={classificationColors}
+              />
+            </>
+          )}
         </div>
 
         {toast && (

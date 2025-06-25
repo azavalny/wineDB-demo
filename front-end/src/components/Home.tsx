@@ -317,22 +317,50 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
     : wines;
 
   const handleAddToCellar = async (wineId: number) => {
-    const rating = newRatings[wineId];
-    const review = newReviews[wineId] ?? "";
     try {
-      console.log(rating);
-      await axios.post("http://localhost:8080/api-add-to-cellar", {
-        username,
-        wine_id: wineId,
-        rating, 
-        review,
-      });
+      const username = localStorage.getItem("username");
+      if (!username) {
+        setToast("Please log in to add wines to your cellar.");
+        setTimeout(() => setToast(null), 2000);
+        return;
+      }
+      // Check if the wine is already in the cellar
+      const { data: existingCellar, error: cellarError } = await supabase
+        .from('cellar')
+        .select('*')
+        .eq('username', username)
+        .eq('wine_id', wineId)
+        .maybeSingle();
+
+      if (cellarError) {
+        console.error("Error checking cellar:", cellarError);
+        setToast("Failed to check cellar.");
+        setTimeout(() => setToast(null), 2000);
+        return;
+      }
+
+      if (existingCellar) {
+        setToast("Wine is already in your cellar.");
+        setTimeout(() => setToast(null), 2000);
+        return;
+      }
+      // Add the wine to the cellar
+      console.log("Adding wine to cellar:", { username, wineId });
+      const { error: addError } = await supabase
+        .from('cellar')
+        .insert({ username, wine_id: wineId });
+      if (addError) {
+        console.error("Error adding wine to cellar:", addError);
+        setToast("Failed to add wine to cellar.");
+        setTimeout(() => setToast(null), 2000);
+        return;
+      }
       setToast("Wine added to your cellar!");
       setTimeout(() => setToast(null), 2000);
-    } catch (err) {
+    } catch (error) {
+      console.error("Error adding wine to cellar:", error);
       setToast("Failed to add wine to cellar.");
       setTimeout(() => setToast(null), 2000);
-      console.error(err);
     }
   };
 
@@ -401,7 +429,11 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
               <div className="flex flex-wrap gap-4 justify-center">
                 {isLoggedIn ? (
                   <>
-                    <button className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition">
+                    <button className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition"
+                    onClick = {() => {
+                    router.push('/cellar');
+                  }}
+                    >
                       My Cellar
                     </button>
                     <button className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition">
@@ -409,7 +441,12 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                     </button>
                   </>
                 ) : (
-                  <button className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition">
+                  <button 
+                  onClick = {() => {
+                    router.push('/account');
+                  }}
+                  className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition"
+                  >
                     Login / Sign Up
                   </button>
                 )}

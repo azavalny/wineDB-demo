@@ -98,43 +98,6 @@ const WineCard: React.FC<WineCardProps> = ({
           )}
         </div>
         <div className="bg-[#2a2a2a] rounded-lg p-4 border border-[#555]">
-          <h3 className="font-bold mb-4 text-center">Add To My Cellar</h3>
-          <div className="mb-4">
-            <p className="text-sm font-medium mb-2 text-[#a03e4e]">Leave a Rating:</p>
-            <div className="flex items-center justify-center gap-3">
-              <button
-                onClick={e => {
-                  e.stopPropagation();
-                  setNewRating(Math.max(newRating - 1, 1));
-                }}
-                className="w-8 h-8 bg-[#a03e4e] text-white rounded font-bold hover:bg-[#c45768] transition-colors"
-              >
-                -
-              </button>
-              <span className="text-lg font-bold min-w-[2rem] text-center">
-                {newRating}
-              </span>
-              <button
-                onClick={e => {
-                  e.stopPropagation();
-                  setNewRating(Math.min(newRating + 1, 5));
-                }}
-                className="w-8 h-8 bg-[#a03e4e] text-white rounded font-bold hover:bg-[#c45768] transition-colors"
-              >
-                +
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-sm font-medium mb-2 text-[#a03e4e]">Leave a Review:</p>
-            <textarea
-              placeholder="Write your review..."
-              value={newReview}
-              onChange={e => setNewReview(e.target.value)}
-              className="w-full p-3 bg-[#2a2a2a] text-white border border-[#555] rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-[#a03e4e] placeholder-[#aaa]"
-              rows={3}
-            />
-          </div>
           <button 
             onClick={e => {
               e.stopPropagation();

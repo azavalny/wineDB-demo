@@ -203,12 +203,23 @@ function Cellar({ username }: WineProps) {
 
   const handleRemove = async (wine: userWine) => {
     try {
-      const response = await axios.delete(`http://localhost:8080/api/cellar/remove/${username}/${encodeURIComponent(wine.name)}`);
-
-      if (response.status === 200) {
-        setUserWines((prevWines) => prevWines.filter((w) => w.name !== wine.name));
-        console.log("Wine removed successfully");
+      const usernameLocal = localStorage.getItem("username");
+      if (!usernameLocal) {
+        console.error("No username found in local storage");
+        return;
       }
+      const {data, error} = await supabase
+        .from('cellar')
+        .delete()
+        .eq('username', usernameLocal)
+        .eq('wine_id', wine.wine_id);
+      if (error) {
+        console.error("Error removing wine from cellar:", error.message);
+        return;
+      }
+
+      setUserWines((prevWines) => prevWines.filter((w) => w.name !== wine.name));
+        
     } catch (error) {
       console.error("Error removing wine:", error);
     }

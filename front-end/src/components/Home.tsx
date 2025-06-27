@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 import { useRouter } from "next/navigation";
 import { createClient } from "../../lib/supabase/client";
-import WineSearchBar from './WineSearchBar';
-import AdvancedSearchFilters from './AdvancedSearchFilters';
-import WineList from './WineList';
+import WineSearchBar from "./WineSearchBar";
+import AdvancedSearchFilters from "./AdvancedSearchFilters";
+import WineList from "./WineList";
 
 type Wine = {
   wine_id: number;
@@ -32,15 +32,15 @@ interface HomeProps {
 }
 
 const classificationColors: { [key: string]: string } = {
-  "Orange": "#ffb347",
+  Orange: "#ffb347",
   "White - Sparkling": "#e6e6e6",
-  "Red": "#b22222",
+  Red: "#b22222",
   "White - Off-dry": "#f7e7b0",
-  "Rosé": "#ff69b4",
+  Rosé: "#ff69b4",
   "White - Sweet/Dessert": "#ffe4b5",
-  "White": "#fffacd",
+  White: "#fffacd",
   "Red - Sweet/Dessert": "#c71585",
-  "Spirits": "#8b5c2a",
+  Spirits: "#8b5c2a",
   "Rosé - Sparkling": "#ffb6c1",
 };
 
@@ -54,8 +54,12 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
   >("name");
   // Advanced Search Toggle
   const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
-  const [newReviews, setNewReviews] = useState<{ [wineId: number]: string }>({});
-  const [newRatings, setNewRatings] = useState<{ [wineId: number]: number }>({});
+  const [newReviews, setNewReviews] = useState<{ [wineId: number]: string }>(
+    {}
+  );
+  const [newRatings, setNewRatings] = useState<{ [wineId: number]: number }>(
+    {}
+  );
   const [toast, setToast] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const router = useRouter();
@@ -65,15 +69,17 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
 
   useEffect(() => {
     // Check if user is logged in
-    localStorage.getItem("username") ? setIsLoggedIn(true) : setIsLoggedIn(false);
+    localStorage.getItem("username")
+      ? setIsLoggedIn(true)
+      : setIsLoggedIn(false);
     const getWines = async () => {
       try {
         const { data: wineList, error } = await supabase
-          .from('wine')
-          .select('*')
-          .not('rating', 'is', null)
-          .gt('year', 2020)
-          .order('rating', { ascending: false })
+          .from("wine")
+          .select("*")
+          .not("rating", "is", null)
+          .gt("year", 2020)
+          .order("rating", { ascending: false })
           .limit(5);
 
         if (error) {
@@ -84,40 +90,46 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
         if (wineList) {
           const wineListWithReviews = wineList.map((wine: any) => ({
             ...wine,
-            reviews: []
+            reviews: [],
           }));
-          
+
           // Initialize default ratings for all wines
           const initialRatings: { [key: number]: number } = {};
           wineListWithReviews.forEach((wine: any) => {
             initialRatings[wine.wine_id] = 5; // Default rating of 5
           });
           setNewRatings(initialRatings);
-          
+
           // Fetch foodPairings and vineyard for each wine
           const winesWithDetails = await Promise.all(
             wineListWithReviews.map(async (wine: any) => {
               // Fetch food pairings
-              const { data: foodPairingsData, error: foodError } = await supabase
-                .from('food-pairing')
-                .select('name')
-                .eq('wine_id', wine.wine_id);
+              const { data: foodPairingsData, error: foodError } =
+                await supabase
+                  .from("food-pairing")
+                  .select("name")
+                  .eq("wine_id", wine.wine_id);
 
-              if(foodError) console.error("Error fetching food pairings:", foodError)
+              if (foodError)
+                console.error("Error fetching food pairings:", foodError);
 
-              const foodPairings = foodPairingsData ? foodPairingsData.map((p: any) => p.name) : [];
+              const foodPairings = foodPairingsData
+                ? foodPairingsData.map((p: any) => p.name)
+                : [];
 
               // Fetch vineyard info
               let vineyard = null;
               if (wine.vineyard_id) {
-                const { data: vineyardData, error: vineyardError } = await supabase
-                  .from('vineyard')
-                  .select('*')
-                  .eq('vineyard_id', wine.vineyard_id)
-                  .single();
+                const { data: vineyardData, error: vineyardError } =
+                  await supabase
+                    .from("vineyard")
+                    .select("*")
+                    .eq("vineyard_id", wine.vineyard_id)
+                    .single();
 
-                if(vineyardError) console.error("Error fetching vineyard:", vineyardError);
-                
+                if (vineyardError)
+                  console.error("Error fetching vineyard:", vineyardError);
+
                 vineyard = vineyardData;
               }
 
@@ -127,7 +139,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                 vineyard,
                 appelation: vineyard?.appelation,
                 region: vineyard?.region,
-                country: vineyard?.country
+                country: vineyard?.country,
               };
             })
           );
@@ -151,82 +163,94 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
 
       try {
         console.log(`Searching for wines by ${filter}: ${query}`);
-        
+
         let supabaseQuery = supabase
-          .from('wine')
-          .select(`
+          .from("wine")
+          .select(
+            `
             *,
             vineyard:vineyard_id(*)
-          `)
-          .not('rating', 'is', null);
+          `
+          )
+          .not("rating", "is", null);
         // Apply filter based on the selected filter type
         switch (filter) {
           case "name":
             supabaseQuery = supabaseQuery
-              .not('rating', 'is', null)
-              .ilike('name', `%${query}%`);
+              .not("rating", "is", null)
+              .ilike("name", `%${query}%`);
             break;
           case "year":
             supabaseQuery = supabaseQuery
-              .not('rating', 'is', null)
-              .eq('year', parseInt(query) || 0);
+              .not("rating", "is", null)
+              .eq("year", parseInt(query) || 0);
             break;
           case "food":
             // For food pairings, we need to join with food-pairing table
             supabaseQuery = supabase
-              .from('wine')
-              .select(`
+              .from("wine")
+              .select(
+                `
                 *,
                 vineyard:vineyard_id(*),
                 food_pairings:food-pairing(name)
-              `)
-              .not('rating', 'is', null)
-              .ilike('food-pairing.name', `%${query}%`);
+              `
+              )
+              .not("rating", "is", null)
+              .ilike("food-pairing.name", `%${query}%`);
             break;
           case "vineyard":
             supabaseQuery = supabase
-              .from('wine')
-              .select(`
+              .from("wine")
+              .select(
+                `
                 *,
                 vineyard:vineyard_id(*)
-              `)
-              .not('rating', 'is', null)
-              .ilike('vineyard.name', `%${query}%`);
+              `
+              )
+              .not("rating", "is", null)
+              .ilike("vineyard.name", `%${query}%`);
             break;
           case "appelation":
             supabaseQuery = supabase
-              .from('wine')
-              .select(`
+              .from("wine")
+              .select(
+                `
                 *,
                 vineyard:vineyard_id(*)
-              `)
-              .not('rating', 'is', null)
-              .ilike('vineyard.appelation', `%${query}%`);
+              `
+              )
+              .not("rating", "is", null)
+              .ilike("vineyard.appelation", `%${query}%`);
             break;
           case "region":
             supabaseQuery = supabase
-              .from('wine')
-              .select(`
+              .from("wine")
+              .select(
+                `
                 *,
                 vineyard:vineyard_id(*)
-              `)
-              .not('rating', 'is', null)
-              .ilike('vineyard.region', `%${query}%`);
+              `
+              )
+              .not("rating", "is", null)
+              .ilike("vineyard.region", `%${query}%`);
             break;
           case "country":
             supabaseQuery = supabase
-              .from('wine')
-              .select(`
+              .from("wine")
+              .select(
+                `
                 *,
                 vineyard:vineyard_id(*)
-              `)
-              .not('rating', 'is', null)
-              .ilike('vineyard.country', `%${query}%`);
+              `
+              )
+              .not("rating", "is", null)
+              .ilike("vineyard.country", `%${query}%`);
             break;
           default:
             supabaseQuery = supabaseQuery
-              .not('rating', 'is', null)
-              .ilike('name', `%${query}%`);
+              .not("rating", "is", null)
+              .ilike("name", `%${query}%`);
         }
 
         const { data: wineList, error } = await supabaseQuery.limit(20);
@@ -239,33 +263,39 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
         if (wineList) {
           const wineListWithReviews = wineList.map((wine: any) => ({
             ...wine,
-            reviews: []
+            reviews: [],
           }));
-          
+
           // Initialize default ratings for all wines
           const initialRatings: { [key: number]: number } = {};
           wineListWithReviews.forEach((wine: any) => {
             initialRatings[wine.wine_id] = 5; // Default rating of 5
           });
           setNewRatings(initialRatings);
-          
+
           // Fetch foodPairings for each wine (if not already fetched)
           const winesWithDetails = await Promise.all(
             wineListWithReviews.map(async (wine: any) => {
               let foodPairings = [];
-              
+
               // If we didn't fetch food pairings in the main query, fetch them separately
               if (filter !== "food") {
-                const { data: foodPairingsData, error: foodError } = await supabase
-                  .from('food-pairing')
-                  .select('name')
-                  .eq('wine_id', wine.wine_id);
+                const { data: foodPairingsData, error: foodError } =
+                  await supabase
+                    .from("food-pairing")
+                    .select("name")
+                    .eq("wine_id", wine.wine_id);
 
-                if(foodError) console.error("Error fetching food pairings:", foodError);
-                foodPairings = foodPairingsData ? foodPairingsData.map((p: any) => p.name) : [];
+                if (foodError)
+                  console.error("Error fetching food pairings:", foodError);
+                foodPairings = foodPairingsData
+                  ? foodPairingsData.map((p: any) => p.name)
+                  : [];
               } else {
                 // Food pairings were already fetched in the main query
-                foodPairings = wine.food_pairings ? wine.food_pairings.map((p: any) => p.name) : [];
+                foodPairings = wine.food_pairings
+                  ? wine.food_pairings.map((p: any) => p.name)
+                  : [];
               }
 
               return {
@@ -274,7 +304,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                 vineyard: wine.vineyard,
                 appelation: wine.vineyard?.appelation,
                 region: wine.vineyard?.region,
-                country: wine.vineyard?.country
+                country: wine.vineyard?.country,
               };
             })
           );
@@ -292,24 +322,26 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
   }, [query, filter, showAdvancedSearch, supabase]);
 
   // Add a helper to determine if the user is searching
-  const isSearching = showAdvancedSearch || query.trim() !== '';
+  const isSearching = showAdvancedSearch || query.trim() !== "";
 
   const filteredWines = isSearching
-    ? wines.filter(w => {
+    ? wines.filter((w) => {
         const q = query.toLowerCase();
         switch (filter) {
           case "year":
             return w.year?.toString().includes(q);
           case "food":
-            return w.foodPairings?.some((food: string) => food.toLowerCase().includes(q));
+            return w.foodPairings?.some((food: string) =>
+              food.toLowerCase().includes(q)
+            );
           case "vineyard":
-            return (w.vineyard?.name?.toLowerCase().includes(q) ?? false);
+            return w.vineyard?.name?.toLowerCase().includes(q) ?? false;
           case "country":
-            return (w.vineyard?.country?.toLowerCase().includes(q) ?? false);
+            return w.vineyard?.country?.toLowerCase().includes(q) ?? false;
           case "appelation":
-            return (w.appelation?.toLowerCase().includes(q) ?? false);
+            return w.appelation?.toLowerCase().includes(q) ?? false;
           case "region":
-            return (w.region?.toLowerCase().includes(q) ?? false);
+            return w.region?.toLowerCase().includes(q) ?? false;
           default:
             return w.name.toLowerCase().includes(q);
         }
@@ -326,10 +358,10 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
       }
       // Check if the wine is already in the cellar
       const { data: existingCellar, error: cellarError } = await supabase
-        .from('cellar')
-        .select('*')
-        .eq('username', username)
-        .eq('wine_id', wineId)
+        .from("cellar")
+        .select("*")
+        .eq("username", username)
+        .eq("wine_id", wineId)
         .maybeSingle();
 
       if (cellarError) {
@@ -347,7 +379,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
       // Add the wine to the cellar
       console.log("Adding wine to cellar:", { username, wineId });
       const { error: addError } = await supabase
-        .from('cellar')
+        .from("cellar")
         .insert({ username, wine_id: wineId });
       if (addError) {
         console.error("Error adding wine to cellar:", addError);
@@ -387,7 +419,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
         const chunk = new TextDecoder().decode(value);
         buffer += chunk;
         // Assume the API streams JSON lines: { text: "...", wines: [...] }
-        let lines = buffer.split('\n');
+        let lines = buffer.split("\n");
         buffer = lines.pop() || "";
         for (const line of lines) {
           if (!line.trim()) continue;
@@ -395,7 +427,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             const data = JSON.parse(line);
             if (data.text !== undefined) {
               text += data.text;
-              setAiResponse(prev => prev + data.text);
+              setAiResponse((prev) => prev + data.text);
             }
             if (data.wines !== undefined) {
               winesFromAI = data.wines;
@@ -422,30 +454,33 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <section className="py-20 bg-gradient-to-b from-[#1b1b1b] to-[#141414] text-center rounded-lg shadow-inner">
-              <h1 className="text-6xl font-serif text-[#ffccbb] drop-shadow-md mb-3">🍷 WineDB</h1>
+              <h1 className="text-6xl font-serif text-[#ffccbb] drop-shadow-md mb-3">
+                🍷 WineDB
+              </h1>
               <p className="text-lg text-[#ffe6dc] italic mb-6">
-                Quit whining starting tasting!
+                Quit whining, starting tasting
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 {isLoggedIn ? (
                   <>
-                    <button className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition"
-                    onClick = {() => {
-                    router.push('/cellar');
-                  }}
+                    <button
+                      className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition"
+                      onClick={() => {
+                        router.push("/cellar");
+                      }}
                     >
                       My Cellar
                     </button>
-                    <button className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition">
+                    {/* <button className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition">
                       Profile
-                    </button>
+                    </button> */}
                   </>
                 ) : (
-                  <button 
-                  onClick = {() => {
-                    router.push('/account');
-                  }}
-                  className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition"
+                  <button
+                    onClick={() => {
+                      router.push("/account");
+                    }}
+                    className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition"
                   >
                     Login / Sign Up
                   </button>
@@ -453,9 +488,12 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
               </div>
             </section>
           </div>
-          {!showAdvancedSearch && ( 
+          {!showAdvancedSearch && (
             <div className="text-center mb-4">
-              <p className="text-lg text-[#ccc]">Need a recommendation? Let our virtual sommelier help you find the perfect wine based on what you're in the mood to eat.</p>
+              <p className="text-lg text-[#ccc]">
+                Let our virtual sommelier help you find the perfect wine:
+              </p>
+              <br></br>
             </div>
           )}
 
@@ -465,7 +503,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             showAdvancedSearch={showAdvancedSearch}
             setShowAdvancedSearch={setShowAdvancedSearch}
             filter={filter}
-            setFilter={value => setFilter(value as typeof filter)}
+            setFilter={(value) => setFilter(value as typeof filter)}
             onSearch={!showAdvancedSearch ? handleAISearch : undefined}
             isLoading={isAiLoading}
           />
@@ -473,7 +511,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
           {showAdvancedSearch && (
             <AdvancedSearchFilters
               filter={filter}
-              setFilter={value => setFilter(value as typeof filter)}
+              setFilter={(value) => setFilter(value as typeof filter)}
             />
           )}
 
@@ -484,16 +522,26 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             </div>
           )}
 
-          {showAdvancedSearch && query.trim() !== '' && filteredWines.length === 0 && (
-            <div className="text-center py-12">
-              <div className="text-6xl mb-4">🍷</div>
-              <h2 className="text-2xl font-semibold text-[#ccc] mb-2">No wines found</h2>
-              <p className="text-[#aaa]">Try adjusting your search criteria</p>
-            </div>
-          )}
+          {showAdvancedSearch &&
+            query.trim() !== "" &&
+            filteredWines.length === 0 && (
+              <div className="text-center py-12">
+                <div className="text-6xl mb-4">🍷</div>
+                <h2 className="text-2xl font-semibold text-[#ccc] mb-2">
+                  No wines found
+                </h2>
+                <p className="text-[#aaa]">
+                  Try adjusting your search criteria
+                </p>
+              </div>
+            )}
+
+          <br></br>
 
           {!showAdvancedSearch && !isSearching && (
-            <h2 className="text-2xl font-semibold text-[#ccc] mb-6 text-center">Some of our favorite wines:</h2>
+            <h2 className="text-2xl font-semibold text-[#ccc] mb-6 text-center">
+              Check out some of our favorite wines:
+            </h2>
           )}
 
           <WineList
@@ -510,7 +558,9 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
 
           {!showAdvancedSearch && foodPairingWines.length > 0 && (
             <>
-              <h2 className="text-xl font-semibold text-[#ccc] mb-2 text-center">Wines that pair with your food:</h2>
+              <h2 className="text-xl font-semibold text-[#ccc] mb-2 text-center">
+                Wines that pair with your food:
+              </h2>
               <WineList
                 wines={foodPairingWines}
                 expandedWineId={expandedWineId}
@@ -534,7 +584,6 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
       </div>
     </div>
   );
-  
 }
 
-export default Home; 
+export default Home;

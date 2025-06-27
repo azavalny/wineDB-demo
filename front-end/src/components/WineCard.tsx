@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type Wine = {
   wine_id: number;
@@ -41,13 +41,15 @@ const WineCard: React.FC<WineCardProps> = ({
   classificationColors,
 }) => (
   <li>
-    <div 
+    <div
       onClick={onToggleExpand}
       className="bg-[#222] p-4 rounded-xl shadow hover:shadow-lg transition cursor-pointer hover:bg-[#333]"
     >
       <h3
         className="text-xl font-bold"
-        style={{ color: classificationColors[wine.classification] || "#f1f1f1" }}
+        style={{
+          color: classificationColors[wine.classification] || "#f1f1f1",
+        }}
       >
         {wine.name} ({wine.year})
       </h3>
@@ -56,27 +58,47 @@ const WineCard: React.FC<WineCardProps> = ({
       <div className="mt-2 bg-[#1f1f1f] p-4 rounded-lg border border-[#444] text-[#ddd]">
         <div className="space-y-2 mb-4">
           <p>
-            <strong style={{ color: classificationColors[wine.classification] || "#f1f1f1" }}>
+            <strong
+              style={{
+                color: classificationColors[wine.classification] || "#f1f1f1",
+              }}
+            >
               {wine.classification}
             </strong>
           </p>
-          <p><strong>Grape:</strong> {wine.grape}</p>
-          <p><strong>Year:</strong> {wine.year}</p>
-          <p><strong>Rating:</strong> {wine.rating}/5</p>
+          <p>
+            <strong>Grape:</strong> {wine.grape}
+          </p>
+          <p>
+            <strong>Year:</strong> {wine.year}
+          </p>
+          <p>
+            <strong>Rating:</strong> {wine.rating}/5
+          </p>
           {wine.vineyard && (
-            <p><strong>Vineyard:</strong> {wine.vineyard.name}</p>
+            <p>
+              <strong>Vineyard:</strong> {wine.vineyard.name}
+            </p>
           )}
-          <p><strong>Appelation:</strong> {wine.appelation}</p>
-          <p><strong>Region:</strong> {wine.region}</p>
-          <p><strong>Country:</strong> {wine.country}</p>
+          <p>
+            <strong>Appelation:</strong> {wine.appelation}
+          </p>
+          <p>
+            <strong>Region:</strong> {wine.region}
+          </p>
+          <p>
+            <strong>Country:</strong> {wine.country}
+          </p>
           {wine.foodPairings && wine.foodPairings.length > 0 && (
-            <p><strong>Food Pairings:</strong> {wine.foodPairings.join(", ")}</p>
+            <p>
+              <strong>Food Pairings:</strong> {wine.foodPairings.join(", ")}
+            </p>
           )}
           <button
             onClick={() => {
               const url = `https://www.wine-searcher.com/find/${encodeURIComponent(
                 `${wine.classification} ${wine.name} ${wine.year}`
-                  .replace(/\s+/g, '+')
+                  .replace(/\s+/g, "+")
                   .toLowerCase()
               )}/usa`;
               window.open(url, "_blank");
@@ -93,13 +115,15 @@ const WineCard: React.FC<WineCardProps> = ({
             <p className="text-[#aaa] text-sm">Reviews coming soon!</p>
           ) : (
             <ul className="list-disc list-inside space-y-1 text-sm">
-              {wine.reviews.map((r: string, i: number) => <li key={i}>"{r}"</li>)}
+              {wine.reviews.map((r: string, i: number) => (
+                <li key={i}>"{r}"</li>
+              ))}
             </ul>
           )}
         </div>
         <div className="bg-[#2a2a2a] rounded-lg p-4 border border-[#555]">
-          <button 
-            onClick={e => {
+          <button
+            onClick={(e) => {
               e.stopPropagation();
               onAddToCellar();
             }}
@@ -113,4 +137,4 @@ const WineCard: React.FC<WineCardProps> = ({
   </li>
 );
 
-export default WineCard; 
+export default WineCard;

@@ -211,8 +211,6 @@ function Account({ setUsernameMain }: AccountProps) {
     if (authError) throw authError;
     if (!authData.user) throw new Error("User creation failed");
 
-    const uid = authData.user.id;
-
     const { error: dbError } = await supabase
        .from('users')
       .insert({

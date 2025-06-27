@@ -114,7 +114,7 @@ export async function POST(req: NextRequest) {
         controller.enqueue(encoder.encode(JSON.stringify({ foodPairingWines: foodPairingWineList }) + '\n'));
 
         // Sommelier checks database for wines we have that pair well with what the user wants
-        const systemPrompt = `You are an expert sommelier who is given a user's current cuisine or flavor they're in the mood for.\nBased on the following wines in our database that match what the user wants:\n${winesMatchingFoodPairing}\nIf there are no wines above, then say that we don't have any wines in our database that will pair well with what you want, but still give a recommendation for a wine that pairs well with what the user wants and do not mention the wine id.`;
+        const systemPrompt = `You are an expert sommelier who is given a user's current cuisine or flavor they're in the mood for.\nBased on the following wines in our database that match what the user wants:\n${winesMatchingFoodPairing}\nIf there are no wines above, then say that we don't have any wines in our database that will pair well with what you want, but still give a recommendation for a wine that pairs well with what the user wants along with descriptions of the flavor and taste of the wine and do not mention the wine id.`;
 
         const chatStream = await openai.chat.completions.create({
           model: 'gpt-4o-mini',

@@ -146,6 +146,21 @@ export async function POST(req: NextRequest) {
           }
         }
 
+        // Store the complete AI response
+        await supabase
+          .from('ai-responses')
+          .insert([
+            {
+              prompt,
+              username,
+              response: fullText,
+              created_at: new Date().toISOString(),
+            },
+          ]);
+
+        // Send the complete response as a final message
+        controller.enqueue(encoder.encode(JSON.stringify({ completeResponse: fullText }) + '\n'));
+
         // 2. Parse the JSON for keywords
         let filterObj: any = {};
         try {

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "../../lib/supabase/client";
+import { usePostHog } from "posthog-js/react";
 
 type AccountProps = {
   setUsernameMain: (val: string) => void;
@@ -15,13 +16,15 @@ function Account({ setUsernameMain }: AccountProps) {
   const [username, setUsernameLocal] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmed, setPasswordConfirmed] = useState("");
-  
+
   const messageRef = useRef<HTMLHeadingElement>(null);
-  
+
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [showButtons, setShowButtons] = useState(true);
   const [titleOfPage, setTitle] = useState("Welcome to WineDB");
+
+  const posthog = usePostHog();
 
   function validatePassword(confirmedPass: string) {
     return password === confirmedPass;
@@ -32,12 +35,17 @@ function Account({ setUsernameMain }: AccountProps) {
       let size = password.length;
       if (size < 8) {
         if (messageRef.current) {
-          messageRef.current.innerText = "Password must be at least 8 characters long!";
+          messageRef.current.innerText =
+            "Password must be at least 8 characters long!";
         }
       } else {
         if (messageRef.current) {
-          messageRef.current.innerText = "Password is valid! Your account has been created!";
-          
+          messageRef.current.innerText =
+            "Password is valid! Your account has been created!";
+          posthog.capture("account_created", {
+            username,
+            email,
+          });
           createAccount().then(() => {
             setUsernameMain(username);
             router.push("/");
@@ -75,16 +83,23 @@ function Account({ setUsernameMain }: AccountProps) {
     try {
       console.log("Attempting login for user:", username);
       const response = await handleLogin(username, password);
-      
+
       // If we get here, login was successful
       console.log("Login successful, user data:", response);
+      posthog.capture("login_successful", {
+        username,
+        email: response.user?.email,
+      });
       return response;
-      
     } catch (error) {
       // TypeScript type narrowing for error handling
       if (error instanceof Error) {
         console.error("Login failed:", error.message);
-        
+        posthog.capture("login_failed", {
+          username,
+          error: error.message,
+        });
+
         // Update UI with error message
         if (messageRef.current) {
           messageRef.current.innerText = error.message;
@@ -95,11 +110,11 @@ function Account({ setUsernameMain }: AccountProps) {
           messageRef.current.innerText = "An unexpected error occurred";
         }
       }
-      
+
       // Re-throw if you need to handle this elsewhere
       throw error;
     }
-}
+  }
 
   async function handleLogin(username: string, password: string) {
     // Validate inputs first
@@ -110,9 +125,9 @@ function Account({ setUsernameMain }: AccountProps) {
     try {
       // 1. Lookup email by username
       const { data: userData, error: lookupError } = await supabase
-        .from('users')
-        .select('email')
-        .eq('username', username)
+        .from("users")
+        .select("email")
+        .eq("username", username)
         .single();
 
       if (lookupError) {
@@ -125,10 +140,12 @@ function Account({ setUsernameMain }: AccountProps) {
       }
 
       // 2. Authenticate with Supabase
-      const { data, error: authError } = await supabase.auth.signInWithPassword({
-        email: userData.email,
-        password
-      });
+      const { data, error: authError } = await supabase.auth.signInWithPassword(
+        {
+          email: userData.email,
+          password,
+        }
+      );
 
       if (authError) {
         console.error("Authentication error:", authError.message);
@@ -138,106 +155,105 @@ function Account({ setUsernameMain }: AccountProps) {
       // 3. Store user data
       localStorage.setItem("username", JSON.stringify(username));
       console.log("User logged in successfully:", data.user?.email);
-      
+
       return {
         status: 200,
         user: data.user,
-        session: data.session
+        session: data.session,
       };
-
     } catch (error) {
       console.error("Login process failed:", error);
-      
+
       // Clear any partial state on failure
       localStorage.removeItem("username");
-      
+
       // Re-throw for calling function to handle
       throw error;
     }
   }
-        
 
   async function createAccount() {
     try {
       console.log("Creating account for:", username);
       const response = await handleSignUp(email, username, password);
-      
+
       // Only store username if signup was successful
       localStorage.setItem("username", username); // No need for JSON.stringify on strings
-      
+
       console.log("Account created successfully:", response);
-      
+
       // Update UI with success message
       if (messageRef.current) {
-        messageRef.current.innerText = "Account created! Please check your email for verification.";
+        messageRef.current.innerText =
+          "Account created! Please check your email for verification.";
         messageRef.current.style.color = "green";
       }
-      
+
       return response;
-      
     } catch (error) {
       console.error("Account creation failed:", error);
-      
+
       // Clear partial data on failure
       localStorage.removeItem("username");
-      
+
       // Provide specific error feedback
       if (messageRef.current) {
-        const message = error instanceof Error ? error.message : "Account creation failed";
+        const message =
+          error instanceof Error ? error.message : "Account creation failed";
         messageRef.current.innerText = message;
         messageRef.current.style.color = "red";
       }
-      
+
       // Re-throw if you need to handle the error elsewhere
       throw error;
     }
   }
 
-  async function handleSignUp(email: string, username: string, password: string) {
-  if (!email || !username || !password) {
-    throw new Error("All fields are required");
-  }
+  async function handleSignUp(
+    email: string,
+    username: string,
+    password: string
+  ) {
+    if (!email || !username || !password) {
+      throw new Error("All fields are required");
+    }
 
-  try {
-    const { data: authData, error: authError } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: { username }, // stored in auth.users.user_metadata
-        emailRedirectTo: `${window.location.origin}/auth/callback`
-      }
-    });
-
-    if (authError) throw authError;
-    if (!authData.user) throw new Error("User creation failed");
-
-    const { error: dbError } = await supabase
-       .from('users')
-      .insert({
-        id: authData.user.id,
+    try {
+      const { data: authData, error: authError } = await supabase.auth.signUp({
         email,
-        username
+        password,
+        options: {
+          data: { username }, // stored in auth.users.user_metadata
+          emailRedirectTo: `${window.location.origin}/auth/callback`,
+        },
       });
 
-    if (dbError) throw dbError;
+      if (authError) throw authError;
+      if (!authData.user) throw new Error("User creation failed");
 
-    return authData;
+      const { error: dbError } = await supabase.from("users").insert({
+        id: authData.user.id,
+        email,
+        username,
+      });
 
-  } catch (error) {
-    if (typeof error === 'object' && error !== null && 'code' in error) {
-      switch (error.code) {
-        case '23505':
-          throw new Error('Username or email already exists');
-        case '422':
-          throw new Error('Invalid email format');
-        default:
-          throw new Error('Registration failed');
+      if (dbError) throw dbError;
+
+      return authData;
+    } catch (error) {
+      if (typeof error === "object" && error !== null && "code" in error) {
+        switch (error.code) {
+          case "23505":
+            throw new Error("Username or email already exists");
+          case "422":
+            throw new Error("Invalid email format");
+          default:
+            throw new Error("Registration failed");
+        }
       }
+      throw new Error("An unexpected error occurred");
     }
-    throw new Error('An unexpected error occurred');
   }
-}
-
 
   function setMain(login: boolean) {
     setTitle("Welcome to WineDB");
@@ -260,17 +276,19 @@ function Account({ setUsernameMain }: AccountProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4">
       <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 w-full max-w-md border border-white/20">
-        <h1 className="text-4xl font-bold text-white text-center mb-8">{titleOfPage}</h1>
-        
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          {titleOfPage}
+        </h1>
+
         {showButtons && (
           <div className="flex flex-col gap-4 mb-6">
-            <button 
+            <button
               onClick={createHandler}
               className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Create Account
             </button>
-            <button 
+            <button
               onClick={logInHandler}
               className="w-full py-3 px-6 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
@@ -283,40 +301,48 @@ function Account({ setUsernameMain }: AccountProps) {
           <div className="space-y-4">
             <div className="space-y-4">
               <div>
-                <label className="block text-white font-medium mb-2">Email:</label>
-                <input 
-                  type="email" 
-                  value={email} 
+                <label className="block text-white font-medium mb-2">
+                  Email:
+                </label>
+                <input
+                  type="email"
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:border-white/50 focus:outline-none transition-all"
                   placeholder="Enter your email"
                 />
               </div>
               <div>
-                <label className="block text-white font-medium mb-2">Username:</label>
-                <input 
-                  type="text" 
-                  value={username} 
+                <label className="block text-white font-medium mb-2">
+                  Username:
+                </label>
+                <input
+                  type="text"
+                  value={username}
                   onChange={(e) => setUsernameLocal(e.target.value)}
                   className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:border-white/50 focus:outline-none transition-all"
                   placeholder="Choose a username"
                 />
               </div>
               <div>
-                <label className="block text-white font-medium mb-2">Password:</label>
-                <input 
-                  type="password" 
-                  value={password} 
+                <label className="block text-white font-medium mb-2">
+                  Password:
+                </label>
+                <input
+                  type="password"
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:border-white/50 focus:outline-none transition-all"
                   placeholder="Create a password"
                 />
               </div>
               <div>
-                <label className="block text-white font-medium mb-2">Confirm Password:</label>
-                <input 
-                  type="password" 
-                  value={passwordConfirmed} 
+                <label className="block text-white font-medium mb-2">
+                  Confirm Password:
+                </label>
+                <input
+                  type="password"
+                  value={passwordConfirmed}
                   onChange={(e) => setPasswordConfirmed(e.target.value)}
                   className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:border-white/50 focus:outline-none transition-all"
                   placeholder="Confirm your password"
@@ -324,13 +350,13 @@ function Account({ setUsernameMain }: AccountProps) {
               </div>
             </div>
             <div className="flex gap-3 mt-6">
-              <button 
+              <button
                 onClick={createAccountSubmit}
                 className="flex-1 py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Submit
               </button>
-              <button 
+              <button
                 onClick={() => setMain(false)}
                 className="flex-1 py-3 px-6 bg-white/20 text-white font-semibold rounded-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
               >
@@ -344,20 +370,24 @@ function Account({ setUsernameMain }: AccountProps) {
           <div className="space-y-4">
             <div className="space-y-4">
               <div>
-                <label className="block text-white font-medium mb-2">Username:</label>
-                <input 
-                  type="text" 
-                  value={username} 
+                <label className="block text-white font-medium mb-2">
+                  Username:
+                </label>
+                <input
+                  type="text"
+                  value={username}
                   onChange={(e) => setUsernameLocal(e.target.value)}
                   className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:border-white/50 focus:outline-none transition-all"
                   placeholder="Enter your username"
                 />
               </div>
               <div>
-                <label className="block text-white font-medium mb-2">Password:</label>
-                <input 
-                  type="password" 
-                  value={password} 
+                <label className="block text-white font-medium mb-2">
+                  Password:
+                </label>
+                <input
+                  type="password"
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:border-white/50 focus:outline-none transition-all"
                   placeholder="Enter your password"
@@ -365,13 +395,13 @@ function Account({ setUsernameMain }: AccountProps) {
               </div>
             </div>
             <div className="flex gap-3 mt-6">
-              <button 
+              <button
                 onClick={loginSubmissionHandler}
                 className="flex-1 py-3 px-6 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
               >
                 Submit
               </button>
-              <button 
+              <button
                 onClick={() => setMain(true)}
                 className="flex-1 py-3 px-6 bg-white/20 text-white font-semibold rounded-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
               >
@@ -381,10 +411,13 @@ function Account({ setUsernameMain }: AccountProps) {
           </div>
         )}
 
-        <h4 ref={messageRef} className="text-red-300 text-center mt-4 font-medium"></h4>
+        <h4
+          ref={messageRef}
+          className="text-red-300 text-center mt-4 font-medium"
+        ></h4>
       </div>
     </div>
   );
 }
 
-export default Account; 
+export default Account;

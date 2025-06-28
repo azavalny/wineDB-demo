@@ -1,5 +1,4 @@
 import React from "react";
-import { usePostHog } from "posthog-js/react";
 
 interface WineSearchBarProps {
   query: string;

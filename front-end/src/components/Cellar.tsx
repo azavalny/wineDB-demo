@@ -137,7 +137,7 @@ function SommelierAdvice({ wineName }: { wineName: string }) {
                           <span className="font-medium capitalize">
                             {k.replace(/_/g, " ")}:
                           </span>{" "}
-                          {v}
+                          {String(v)}
                         </li>
                       ))}
                     </ul>

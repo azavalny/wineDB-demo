@@ -490,7 +490,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
           </div>
           {!showAdvancedSearch && (
             <div className="text-center mb-4">
-              <p className="text-lg text-[#ccc]">
+              <p className="text-xl text-[#ccc]">
                 Let our virtual sommelier help you find the perfect wine:
               </p>
               <br></br>

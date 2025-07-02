@@ -164,12 +164,10 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
         return; // Don't search if not in advanced mode or query is empty
       }
 
-      if (typeof window !== "undefined" && (window as any).posthog) {
-        (window as any).posthog.capture("advanced_search_query", {
-          query,
-          filter,
-        });
-      }
+      posthog.capture("advanced_search_query", {
+        query,
+        filter,
+      });
 
       try {
         console.log(`Searching for wines by ${filter}: ${query}`);
@@ -410,10 +408,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
   const handleAISearch = async (prompt: string) => {
     if (!prompt.trim()) return;
 
-    // PostHog event for AI search
-    if (typeof window !== "undefined" && (window as any).posthog) {
-      (window as any).posthog.capture("ai_search_query", { query: prompt });
-    }
+    posthog.capture("ai_search_query", { query: prompt });
 
     setAiResponse("");
     setIsAiLoading(true);
@@ -494,6 +489,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
                 ) : (
                   <button
                     onClick={() => {
+                      posthog.capture("user sign ups for new account or logged in");
                       router.push("/account");
                     }}
                     className="rounded-full px-6 py-3 bg-[#a03e4e] text-white font-semibold shadow-md hover:bg-[#c45768] transition"
@@ -520,13 +516,10 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             setShowAdvancedSearch={setShowAdvancedSearch}
             filter={filter}
             setFilter={(value) => {
-              // PostHog event for filter change
-              if (typeof window !== "undefined" && (window as any).posthog) {
-                (window as any).posthog.capture(
-                  "advanced_search_filter_change",
-                  { filter: value }
-                );
-              }
+              posthog.capture(
+                "advanced_search_filter_change",
+                { filter: value }
+              );
               setFilter(value as typeof filter);
             }}
             onSearch={!showAdvancedSearch ? handleAISearch : undefined}
@@ -537,13 +530,7 @@ function Home({ setCellar, setProfile, username }: HomeProps) {
             <AdvancedSearchFilters
               filter={filter}
               setFilter={(value) => {
-                // PostHog event for filter change
-                if (typeof window !== "undefined" && (window as any).posthog) {
-                  (window as any).posthog.capture(
-                    "advanced_search_filter_change",
-                    { filter: value }
-                  );
-                }
+                posthog.capture("advanced_search_filter_change", { filter: value });
                 setFilter(value as typeof filter);
               }}
             />
